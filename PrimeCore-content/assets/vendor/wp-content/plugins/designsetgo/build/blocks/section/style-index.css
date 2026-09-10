@@ -1,0 +1,507 @@
+:root {
+  --dsgo-shape--wave: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 0c300 120 900 0 1200 80v40H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--wave-double: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 40c150 60 350-40 600 0s450-40 600 20v60H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--wave-layered: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 60c300-40 600 40 900-20 150-30 250-10 300 10v70H0Z%27 opacity=%27.5%27/%3E%3Cpath d=%27M0 80c200-40 400 20 600-20s400 20 600 0v60H0Z%27 opacity=%27.7%27/%3E%3Cpath d=%27M0 100c150-30 350 10 600-20s400 10 600-10v50H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--wave-asymmetric: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 20C400 120 800 0 1200 60v60H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--tilt: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27m0 0 1200 120H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--tilt-reverse: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120 1200 0v120z%27/%3E%3C/svg%3E");
+  --dsgo-shape--curve: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120q600-120 1200 0z%27/%3E%3C/svg%3E");
+  --dsgo-shape--curve-asymmetric: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 80Q300 0 600 60t600-20v80H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--triangle: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120 600 0l600 120z%27/%3E%3C/svg%3E");
+  --dsgo-shape--triangle-asymmetric: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120 400 0l800 120z%27/%3E%3C/svg%3E");
+  --dsgo-shape--arrow: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 0h500l100 80L700 0h500v120H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--arrow-wide: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 0h400l200 100L800 0h400v120H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--peaks: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27m0 120 200-80 200 60 200-80 200 60 200-70 200 80v30Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--peaks-soft: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120q100-80 200-40 100-60 200-20 100-50 200-10Q700 0 800 40q100-20 200 20 100-20 200 20v40Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--zigzag: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27m0 120 100-60 100 60 100-60 100 60 100-60 100 60 100-60 100 60 100-60 100 60 100-60 100 60Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--book: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120q300-20 600-80 300 60 600 80z%27/%3E%3C/svg%3E");
+  --dsgo-shape--clouds: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120V80q100-40 200 0 100-60 250-10 100-40 200 10 100-60 200-10 100-30 200 10 100-30 150 0v40Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--drops: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120v-20h20a100 95 0 0 1 200 0h40a100 95 0 0 1 200 0h40a100 95 0 0 1 200 0h40a100 95 0 0 1 200 0h40a100 95 0 0 1 200 0h20v20Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--split: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 0h550v80H0Zm650 0h550v80H650ZM0 80v40h1200V80H650V40l-50 40-50-40v40z%27/%3E%3C/svg%3E");
+  --dsgo-shape--fan: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M600 120 0 0h1200Z%27 opacity=%27.16%27/%3E%3Cpath d=%27M600 120 150 0h900Z%27 opacity=%27.3%27/%3E%3Cpath d=%27M600 120 300 0h600Z%27 opacity=%27.44%27/%3E%3Cpath d=%27M600 120 430 0h340Z%27 opacity=%27.6%27/%3E%3Cpath d=%27M600 120 520 0h160Z%27 opacity=%27.8%27/%3E%3Cpath d=%27M600 120 575 0h50Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--steps: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120v-20h120V75h120V50h120V25h120V0h240v25h120v25h120v25h120v25h120v20Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--torn: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27m0 60 40 20 40-30 60 40 40-35 60 30 60-40 60 30 60-20 60 40 60-45 60 30 60-40 60 30 60-20 60 40 60-35 60 30 60-40 60 30 60-15 60 20v40H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--slime: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120V40h67q-10 54 43 54t43-54h100q-5 70 22 70t22-70h117q-9 40 36 40t36-40h128q-6 68 26 68t26-68h122q-11 50 47 50t47-50h112q-5 70 21 70t21-70h83q-7 44 31 44t31-44h19v80Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--triangle-layered: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27m0 112 600-62L0 0Zm1200 0L600 50l600-50Z%27 opacity=%27.5%27/%3E%3Cpath d=%27M0 120h1200v-8L600 50 0 112Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--triangle-layered-extra: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 50h600L0 0Zm1200 0H600l600-50Z%27 opacity=%27.3%27/%3E%3Cpath d=%27m0 112 600-62H0Zm1200 0L600 50h600Z%27 opacity=%27.6%27/%3E%3Cpath d=%27M0 120h1200v-8L600 50 0 112Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--curvy-triangle-layered: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120V0c300 0 550 60 600 120Zm1200 0V0C900 0 650 60 600 120Z%27 opacity=%27.5%27/%3E%3Cpath d=%27M0 120h1200v-13C950 95 720 65 600 5 480 65 250 95 0 107Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--symmetric-waves-layered: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M0 120h1200V55c-150 0-150-40-300-40S750 55 600 55 450 15 300 15 150 55 0 55Z%27 opacity=%27.3%27/%3E%3Cpath d=%27M0 120h1200V30c-150 0-150 40-300 40S750 30 600 30 450 70 300 70 150 30 0 30Z%27 opacity=%27.5%27/%3E%3Cpath d=%27M0 120h1200V82c-150 0-150-40-300-40S750 82 600 82 450 42 300 42 150 82 0 82Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--side-triangle-layered: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M1200 0 0 60v60Z%27 opacity=%27.5%27/%3E%3Cpath d=%27M1200 0v120H0Z%27/%3E%3C/svg%3E");
+  --dsgo-shape--side-triangle-layered-extra: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 preserveAspectRatio=%27none%27 viewBox=%270 0 1200 120%27%3E%3Cpath d=%27M1200 0H0v60Z%27 opacity=%27.25%27/%3E%3Cpath d=%27M1200 0 0 60v60Z%27 opacity=%27.5%27/%3E%3Cpath d=%27M1200 0v120H0Z%27/%3E%3C/svg%3E");
+}
+:where(.dsgo-shape-divider.is-shape-wave) {
+  --dsgo-shape-mask: var(--dsgo-shape--wave);
+}
+:where(.dsgo-shape-divider.is-shape-wave-double) {
+  --dsgo-shape-mask: var(--dsgo-shape--wave-double);
+}
+:where(.dsgo-shape-divider.is-shape-wave-layered) {
+  --dsgo-shape-mask: var(--dsgo-shape--wave-layered);
+}
+:where(.dsgo-shape-divider.is-shape-wave-asymmetric) {
+  --dsgo-shape-mask: var(--dsgo-shape--wave-asymmetric);
+}
+:where(.dsgo-shape-divider.is-shape-tilt) {
+  --dsgo-shape-mask: var(--dsgo-shape--tilt);
+}
+:where(.dsgo-shape-divider.is-shape-tilt-reverse) {
+  --dsgo-shape-mask: var(--dsgo-shape--tilt-reverse);
+}
+:where(.dsgo-shape-divider.is-shape-curve) {
+  --dsgo-shape-mask: var(--dsgo-shape--curve);
+}
+:where(.dsgo-shape-divider.is-shape-curve-asymmetric) {
+  --dsgo-shape-mask: var(--dsgo-shape--curve-asymmetric);
+}
+:where(.dsgo-shape-divider.is-shape-triangle) {
+  --dsgo-shape-mask: var(--dsgo-shape--triangle);
+}
+:where(.dsgo-shape-divider.is-shape-triangle-asymmetric) {
+  --dsgo-shape-mask: var(--dsgo-shape--triangle-asymmetric);
+}
+:where(.dsgo-shape-divider.is-shape-arrow) {
+  --dsgo-shape-mask: var(--dsgo-shape--arrow);
+}
+:where(.dsgo-shape-divider.is-shape-arrow-wide) {
+  --dsgo-shape-mask: var(--dsgo-shape--arrow-wide);
+}
+:where(.dsgo-shape-divider.is-shape-peaks) {
+  --dsgo-shape-mask: var(--dsgo-shape--peaks);
+}
+:where(.dsgo-shape-divider.is-shape-peaks-soft) {
+  --dsgo-shape-mask: var(--dsgo-shape--peaks-soft);
+}
+:where(.dsgo-shape-divider.is-shape-zigzag) {
+  --dsgo-shape-mask: var(--dsgo-shape--zigzag);
+}
+:where(.dsgo-shape-divider.is-shape-book) {
+  --dsgo-shape-mask: var(--dsgo-shape--book);
+}
+:where(.dsgo-shape-divider.is-shape-clouds) {
+  --dsgo-shape-mask: var(--dsgo-shape--clouds);
+}
+:where(.dsgo-shape-divider.is-shape-drops) {
+  --dsgo-shape-mask: var(--dsgo-shape--drops);
+}
+:where(.dsgo-shape-divider.is-shape-split) {
+  --dsgo-shape-mask: var(--dsgo-shape--split);
+}
+:where(.dsgo-shape-divider.is-shape-fan) {
+  --dsgo-shape-mask: var(--dsgo-shape--fan);
+}
+:where(.dsgo-shape-divider.is-shape-steps) {
+  --dsgo-shape-mask: var(--dsgo-shape--steps);
+}
+:where(.dsgo-shape-divider.is-shape-torn) {
+  --dsgo-shape-mask: var(--dsgo-shape--torn);
+}
+:where(.dsgo-shape-divider.is-shape-slime) {
+  --dsgo-shape-mask: var(--dsgo-shape--slime);
+}
+:where(.dsgo-shape-divider.is-shape-triangle-layered) {
+  --dsgo-shape-mask: var(--dsgo-shape--triangle-layered);
+}
+:where(.dsgo-shape-divider.is-shape-triangle-layered-extra) {
+  --dsgo-shape-mask: var(--dsgo-shape--triangle-layered-extra);
+}
+:where(.dsgo-shape-divider.is-shape-curvy-triangle-layered) {
+  --dsgo-shape-mask: var(--dsgo-shape--curvy-triangle-layered);
+}
+:where(.dsgo-shape-divider.is-shape-symmetric-waves-layered) {
+  --dsgo-shape-mask: var(--dsgo-shape--symmetric-waves-layered);
+}
+:where(.dsgo-shape-divider.is-shape-side-triangle-layered) {
+  --dsgo-shape-mask: var(--dsgo-shape--side-triangle-layered);
+}
+:where(.dsgo-shape-divider.is-shape-side-triangle-layered-extra) {
+  --dsgo-shape-mask: var(--dsgo-shape--side-triangle-layered-extra);
+}
+:where(.dsgo-shape-divider.is-shape-inherit) {
+  --dsgo-shape-mask: var(
+    --wp--custom--designsetgo--shape-divider--type,
+    var(--dsgo-shape--wave)
+  );
+}
+:where(.dsgo-shape-divider) {
+  --dsgo-shape-height-resolved: var(
+    --dsgo-shape-height,
+    var(--wp--custom--designsetgo--shape-divider--height, 100px)
+  );
+  --dsgo-shape-width-resolved: var(
+    --dsgo-shape-width,
+    var(--wp--custom--designsetgo--shape-divider--width, 100%)
+  );
+}
+:where(.dsgo-shape-divider) {
+  height: var(--dsgo-shape-height-resolved);
+  left: calc((100% - var(--dsgo-shape-width-resolved)) / 2);
+  pointer-events: none;
+  position: absolute;
+  width: var(--dsgo-shape-width-resolved);
+  z-index: 1;
+}
+:where(.dsgo-shape-divider):before {
+  background-color: var(
+    --dsgo-shape-band,
+    var(--wp--preset--color--base, #fff)
+  );
+  content: "";
+  inset: -1px 0;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-image: linear-gradient(#000, #000), var(--dsgo-shape-mask);
+  mask-image: linear-gradient(#000, #000), var(--dsgo-shape-mask);
+  -webkit-mask-position: center, center;
+  mask-position: center, center;
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-size: 100% 100%, 100% 100%;
+  mask-size: 100% 100%, 100% 100%;
+  position: absolute;
+}
+:where(.dsgo-shape-divider.dsgo-shape-divider--top) {
+  top: 0;
+}
+:where(.dsgo-shape-divider.dsgo-shape-divider--bottom) {
+  bottom: 0;
+}
+:where(.dsgo-shape-divider.is-flip-x):before {
+  transform: scaleX(-1);
+}
+:where(.dsgo-shape-divider.is-flip-y):before {
+  transform: scaleY(-1);
+}
+:where(.dsgo-shape-divider.is-flip-x.is-flip-y):before {
+  transform: scale(-1);
+}
+:where(.dsgo-shape-divider.is-front) {
+  z-index: 2;
+}
+:where(.dsgo-shape-divider.is-shape-fan, .dsgo-shape-divider.is-shape-triangle-layered, .dsgo-shape-divider.is-shape-triangle-layered-extra, .dsgo-shape-divider.is-shape-curvy-triangle-layered, .dsgo-shape-divider.is-shape-symmetric-waves-layered, .dsgo-shape-divider.is-shape-side-triangle-layered, .dsgo-shape-divider.is-shape-side-triangle-layered-extra):before {
+  -webkit-mask-composite: source-over;
+  mask-composite: add;
+  -webkit-mask-image: var(--dsgo-shape-mask);
+  mask-image: var(--dsgo-shape-mask);
+}
+.dsgo-stack--has-shape-divider {
+  overflow-x: clip;
+}
+.dsgo-stack--has-shape-divider > .dsgo-stack__inner {
+  position: relative;
+  z-index: 2;
+}
+.dsgo-stack {
+  --dsgo-shape-clearance-top: initial;
+  --dsgo-shape-clearance-bottom: initial;
+}
+:where(.dsgo-shape-divider--top + .dsgo-stack__inner) {
+  padding-top: var(
+    --dsgo-shape-clearance-top,
+    var(--wp--custom--designsetgo--shape-divider--height, 100px)
+  );
+}
+:where(.dsgo-stack__inner:has(+ .dsgo-shape-divider--bottom)) {
+  padding-bottom: var(
+    --dsgo-shape-clearance-bottom,
+    var(--wp--custom--designsetgo--shape-divider--height, 100px)
+  );
+}
+@media (prefers-reduced-motion: reduce) {
+  .dsgo-shape-divider:before {
+    transition: none;
+  }
+}
+@media print {
+  .dsgo-shape-divider {
+    display: none;
+  }
+}
+.dsgo-stack {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.dsgo-stack:after {
+  background: var(--dsgo-hover-bg-color, transparent);
+  border-radius: inherit;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+.dsgo-stack > :not(.dsgo-stack__inner):not(.dsgo-shape-divider) {
+  position: relative;
+  z-index: 3;
+}
+.dsgo-stack--has-overlay {
+  position: relative;
+}
+.dsgo-stack--has-overlay:before {
+  background-color: var(--dsgo-overlay-color);
+  border-radius: inherit;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: var(--dsgo-overlay-opacity, 0.8);
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.dsgo-stack--has-overlay > .dsgo-stack__inner {
+  position: relative;
+  z-index: 2;
+}
+.dsgo-stack .dsgo-stack__inner {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.dsgo-flex__inner > .dsgo-stack,
+.dsgo-grid__inner > .dsgo-stack,
+.dsgo-stack__inner > .dsgo-stack {
+  width: 100% !important;
+}
+.dsgo-flex__inner > .dsgo-stack.dsgo-no-width-constraint > .dsgo-stack__inner,
+.dsgo-grid__inner > .dsgo-stack.dsgo-no-width-constraint > .dsgo-stack__inner,
+.dsgo-stack__inner > .dsgo-stack.dsgo-no-width-constraint > .dsgo-stack__inner {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+}
+.dsgo-stack .dsgo-stack__inner.is-layout-flex > * {
+  align-self: stretch;
+  float: none !important;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex.is-content-justification-stretch
+  > * {
+  flex-grow: 1;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex.is-content-justification-stretch
+  > .wp-block-image {
+  overflow: hidden;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex.is-content-justification-stretch
+  > .wp-block-image
+  img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+.dsgo-stack .dsgo-stack__inner.is-layout-flex {
+  display: flex;
+  flex-direction: column;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.wp-block-designsetgo-icon-button, .wp-block-designsetgo-counter).aligncenter {
+  align-self: center !important;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.wp-block-designsetgo-icon-button, .wp-block-designsetgo-counter).alignleft {
+  align-self: flex-start !important;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.wp-block-designsetgo-icon-button, .wp-block-designsetgo-counter).alignright {
+  align-self: flex-end !important;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > .aligncenter:not(.wp-block-designsetgo-icon-button):not(.wp-block-designsetgo-counter) {
+  align-self: center !important;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > .alignright:not(.wp-block-designsetgo-icon-button):not(.wp-block-designsetgo-counter) {
+  align-self: flex-end !important;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > .alignleft:not(.wp-block-designsetgo-icon-button):not(.wp-block-designsetgo-counter) {
+  align-self: flex-start !important;
+}
+.dsgo-stack .dsgo-stack__inner.is-layout-flex > .alignfull,
+.dsgo-stack .dsgo-stack__inner.is-layout-flex > .alignwide {
+  align-self: stretch !important;
+  width: 100% !important;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-image:not(.alignleft):not(.alignright):not(.aligncenter):not(.alignwide):not(.alignfull),
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-post-featured-image:not(.alignleft):not(.alignright):not(.aligncenter):not(.alignwide):not(.alignfull) {
+  max-width: 100%;
+}
+.dsgo-stack.dsgo-no-width-constraint
+  .dsgo-stack__inner.is-layout-flex
+  > .dsgo-counter,
+.dsgo-stack.dsgo-no-width-constraint
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-button,
+.dsgo-stack.dsgo-no-width-constraint
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-designsetgo-counter {
+  align-self: flex-start;
+  max-width: none !important;
+  width: auto !important;
+}
+.dsgo-stack.dsgo-no-width-constraint
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.wp-block-heading, .wp-block-paragraph, .wp-block-group, .wp-block-image, .wp-block-video, .wp-block-embed, .wp-block-table, .wp-block-list, .wp-block-buttons, .dsgo-grid, .wp-block-designsetgo-grid, .dsgo-stack, .wp-block-designsetgo-stack, .dsgo-flex, .wp-block-designsetgo-flex, .wp-block-designsetgo-row, .dsgo-tabs, .wp-block-designsetgo-tabs, .dsgo-accordion, .wp-block-designsetgo-accordion, .dsgo-scroll-marquee, .wp-block-designsetgo-scroll-marquee):not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+.dsgo-stack.dsgo-no-width-constraint
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.wp-block-group, .wp-block-designsetgo-stack, .dsgo-stack)
+  :not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)
+  > .wp-block-group__inner-container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+.dsgo-stack.dsgo-no-width-constraint
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.wp-block-group, .dsgo-stack, .wp-block-designsetgo-stack)
+  :is(.is-layout-constrained, .wp-block-group-is-layout-constrained)
+  > .wp-block-group__inner-container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+.dsgo-stack.dsgo-no-width-constraint
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-group:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  width: 100% !important;
+}
+.dsgo-stack:not(.dsgo-no-width-constraint)
+  .dsgo-stack__inner.is-layout-flex
+  > .dsgo-counter,
+.dsgo-stack:not(.dsgo-no-width-constraint)
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-button,
+.dsgo-stack:not(.dsgo-no-width-constraint)
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-designsetgo-counter {
+  align-self: flex-start;
+  width: auto !important;
+}
+.dsgo-stack:not(.dsgo-no-width-constraint)
+  .dsgo-stack__inner.is-layout-flex
+  > .wp-block-buttons:not(.alignleft):not(.alignright) {
+  align-self: stretch;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex.is-content-justification-center
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button):not(.alignleft):not(.alignright):not(.aligncenter) {
+  align-self: center;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex.is-content-justification-right
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button):not(.alignleft):not(.alignright):not(.aligncenter) {
+  align-self: flex-end;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex.is-content-justification-left
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button):not(.alignleft):not(.alignright):not(.aligncenter) {
+  align-self: flex-start;
+}
+.dsgo-stack
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button),
+.dsgo-stack.has-text-align-left
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button),
+.dsgo-stack[style*="text-align:left"]
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button) {
+  align-self: flex-start;
+}
+.dsgo-stack.has-text-align-center
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button),
+.dsgo-stack[style*="text-align:center"]
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button) {
+  align-self: center;
+}
+.dsgo-stack.has-text-align-right
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button),
+.dsgo-stack[style*="text-align:right"]
+  .dsgo-stack__inner.is-layout-flex
+  > :where(.dsgo-counter, .wp-block-designsetgo-counter, .wp-block-button) {
+  align-self: flex-end;
+}
+.dsgo-stack:hover:after {
+  opacity: 1;
+}
+.dsgo-stack--has-hover-text:hover,
+.dsgo-stack--has-hover-text:hover .wp-block-heading,
+.dsgo-stack--has-hover-text:hover .wp-block-paragraph,
+.dsgo-stack--has-hover-text:hover a,
+.dsgo-stack--has-hover-text:hover h1,
+.dsgo-stack--has-hover-text:hover h2,
+.dsgo-stack--has-hover-text:hover h3,
+.dsgo-stack--has-hover-text:hover h4,
+.dsgo-stack--has-hover-text:hover h5,
+.dsgo-stack--has-hover-text:hover h6,
+.dsgo-stack--has-hover-text:hover li,
+.dsgo-stack--has-hover-text:hover p,
+.dsgo-stack--has-hover-text:hover span,
+.dsgo-stack--has-hover-text:hover td,
+.dsgo-stack--has-hover-text:hover th,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover .wp-block-heading,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover .wp-block-paragraph,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover a,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover h1,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover h2,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover h3,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover h4,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover h5,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover h6,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover li,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover p,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover span,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover td,
+.dsgo-stack[style*="--dsgo-hover-text-color"]:hover th {
+  color: var(--dsgo-hover-text-color) !important;
+}
+[class*="wp-container-designsetgo-stack"] > .dsgo-counter,
+[class*="wp-container-designsetgo-stack"] > .wp-block-button,
+[class*="wp-container-designsetgo-stack"] > .wp-block-designsetgo-counter {
+  max-width: none !important;
+  width: auto !important;
+}
+.dsgo-stack.alignfull.dsgo-no-width-constraint
+  > .dsgo-stack__inner[class*="wp-container-"]
+  > :not(.alignleft):not(.alignright):not(.dsgo-has-max-width) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+}

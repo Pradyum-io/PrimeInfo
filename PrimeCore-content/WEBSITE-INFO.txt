@@ -1,0 +1,179 @@
+PRIMECOREINFO WEBSITE
+======================
+
+OVERVIEW
+--------
+Primecoreinfo is an IT transformation and technology services website. It presents Primecoreinfo as a practical technology partner that helps organizations modernize infrastructure, adopt cloud solutions, and maintain dependable IT operations.
+
+The website focuses on:
+- Cloud transformation
+- Infrastructure modernization
+- Managed IT services
+- Technology transformation
+- Business-focused IT solutions
+- Operational clarity, resilience, scalability, and dependable delivery
+
+The website is a static HTML website. It does not require a database or WordPress server to display its pages.
+
+HOMEPAGE
+--------
+The homepage title is:
+Primecoreinfo | Modernize IT with confidence
+
+The homepage contains:
+
+1. Header navigation
+   - Primecoreinfo logo and brand name
+   - About link
+   - Services link
+   - Contact link
+   - Let's Talk link
+   - Responsive mobile menu on smaller screens
+
+2. Hero section
+   - Label: CLOUD TRANSFORMATION
+   - Main message: Modernize IT with confidence.
+   - Supporting message explains that Primecoreinfo accelerates cloud transformation, modernizes infrastructure, and strengthens daily IT operations.
+   - Get Started button links to the Contact page.
+   - A large uploaded cloud image is displayed as the main visual.
+   - Cloud Connected and Systems Aligned labels support the cloud theme.
+
+3. Service panels
+   - Cloud Transformation
+     Explains scalable and secure cloud initiatives.
+     Links to the Cloud Transformation page.
+   - Infrastructure
+     Explains building a stronger foundation for growth.
+     Links to the Infrastructure Modernization page.
+   - Managed IT Services
+     Explains proactive support and business continuity.
+     Links to the Managed IT Services page.
+
+4. Footer
+   - Primecoreinfo / IT Cloud Transformation
+   - Privacy link
+   - Insights link
+   - Email link
+
+The homepage uses a blue cloud atmosphere, a large cloud image, translucent glass panels, rounded service boxes, soft shadows, and responsive typography.
+
+WEBSITE ROUTES
+--------------
+
+/ 
+Homepage. Introduces Primecoreinfo and its three main service areas.
+
+/about/
+About page. Explains the company positioning and its approach to technology transformation, business-first strategy, operational clarity, and dependable execution.
+
+/services/
+Services overview page. Presents the main service categories and explains how Primecoreinfo supports organizations from transformation planning through ongoing IT operations.
+
+/cloud-transformation/
+Cloud Transformation service page. Covers cloud planning, workload assessment, target architecture, migration stages, governance, optimization, cost visibility, security, and operational readiness.
+
+/infrastructure-modernization/
+Infrastructure Modernization service page. Covers infrastructure assessment, architecture reviews, platform upgrades, legacy modernization, hybrid readiness, resilience, monitoring, backup, recovery, security, and phased delivery.
+
+/managed-it-services/
+Managed IT Services page. Covers proactive monitoring, responsive support, operational management, system health, performance, reliability, and ongoing improvement.
+
+/insights/
+Insights page. Provides technology perspectives related to cloud readiness, modern infrastructure, operational resilience, and practical technology decisions.
+
+/contact/
+Contact page. Provides a way to begin a conversation about cloud strategy, infrastructure priorities, or ongoing IT support. The email action uses:
+hello@primecoreinfo.com
+
+/privacy-policy/
+Privacy policy page. Explains how information shared through the static website is used for responding to inquiries and states that personal information is not sold.
+
+/404.html
+Custom not-found page. Explains that the requested route does not exist and provides a link back to the homepage.
+
+NAVIGATION AND INTERACTIONS
+---------------------------
+- Header links navigate to the correct local pages.
+- Services includes links to all three service detail pages.
+- Homepage service panels are fully clickable.
+- Get Started and Let's Talk links open the Contact page.
+- Email links use a mailto action.
+- Mobile navigation opens and closes through a menu button.
+- Service detail pages include links back to Services and Contact.
+- FAQ sections on the Infrastructure Modernization page use expandable disclosure panels.
+- Buttons and panels include hover states with soft movement and shadows.
+- The layout responds to desktop, tablet, and mobile widths.
+- Reduced-motion preferences are respected where animations are used.
+
+VISUAL DESIGN
+-------------
+The current homepage visual direction is inspired by soft cloud and glass interface references.
+
+Main visual characteristics:
+- Deep blue cloud-sky background
+- Uploaded cloud image in the hero
+- Soft atmospheric glow
+- Frosted glass service boxes
+- Rounded corners
+- Translucent surfaces
+- Subtle white highlights
+- Soft shadows
+- Clean, oversized typography
+- Pale cyan and white accents
+- Responsive mobile composition
+
+The service panels intentionally avoid heavy arrows and remain clean, quiet, and clickable.
+
+IMPORTANT FILES
+---------------
+index.html
+The current homepage markup and content.
+
+reference-home.css
+The main homepage layout and visual styling.
+
+cloud-asset.css
+Homepage cloud image, background, and cloud-specific styling.
+
+glass-panels.css
+Frosted glass and soft neumorphic styling for the bottom service panels.
+
+heading-style.css
+Typography override for the main homepage headline.
+
+reference-home.js
+Mobile menu behavior for the current homepage.
+
+SS/cloud-front.png
+Uploaded transparent cloud used as the hero cloud visual.
+
+SS/cloud-blue.jpeg
+Uploaded blue cloud image used as the homepage background.
+
+404.html
+Custom not-found page.
+
+wp-content/uploads/2026/08/
+Original website image assets preserved from the captured reference website.
+
+wp-content/
+Preserved captured WordPress plugin, theme, and upload assets from the original website.
+
+wp-includes/
+Preserved captured WordPress styles and scripts from the original website.
+
+RUNNING THE WEBSITE
+-------------------
+From the folder containing PrimeCore-content, run:
+
+python3 -m http.server 8000
+
+Then open:
+
+http://127.0.0.1:8000/
+
+The website is static and can also be deployed to a static hosting service by uploading the contents of PrimeCore-content.
+
+CONTENT LIMITATIONS
+-------------------
+The original website was captured as static files. Live WordPress administration, database content, server-side forms, APIs, and dynamic CMS functionality are not included. The local Contact page uses a mailto link rather than a server-side form submission.

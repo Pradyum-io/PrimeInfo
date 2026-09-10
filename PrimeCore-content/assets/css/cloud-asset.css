@@ -1,0 +1,187 @@
+.reference-home:before {
+  display: none;
+}
+
+/* Set the HD cloud as the entire background, with a dark gradient overlay on the left to keep text readable */
+.reference-home {
+  background-image: 
+    linear-gradient(to right, rgba(5, 59, 89, 0.95) 0%, rgba(8, 86, 125, 0.7) 45%, rgba(10, 105, 153, 0) 100%),
+    url("../images/hd-cloud.jpg");
+  background-position: right center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Dynamic HTML/CSS Cloud System */
+.dynamic-system {
+  position: absolute;
+  z-index: 1;
+  top: -10%;
+  right: -10%;
+  width: 115%;
+  height: 115%;
+  pointer-events: none;
+  perspective: 1000px;
+}
+
+.ds-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cloud-float 6s ease-in-out infinite;
+}
+
+.ds-core-img {
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 30px rgba(50, 150, 255, 0.4));
+}
+
+.ds-orbit {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+.ds-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(150, 230, 255, 0.3);
+  box-shadow: 0 0 15px rgba(100, 200, 255, 0.2);
+}
+
+.ds-orbit-1 {
+  width: 50%;
+  height: 50%;
+  margin-top: -25%;
+  margin-left: -25%;
+  transform: rotateX(72deg) rotateY(15deg);
+  animation: orbit-spin 25s linear infinite;
+}
+
+.ds-orbit-2 {
+  width: 40%;
+  height: 40%;
+  margin-top: -20%;
+  margin-left: -20%;
+  transform: rotateX(65deg) rotateY(-10deg);
+  animation: orbit-spin-reverse 35s linear infinite;
+}
+
+.ds-orbit-3 {
+  width: 60%;
+  height: 60%;
+  margin-top: -30%;
+  margin-left: -30%;
+  transform: rotateX(80deg) rotateY(5deg);
+  animation: orbit-spin 45s linear infinite;
+}
+
+.ds-node {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  margin-left: -32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.ds-node img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 30, 80, 0.6));
+}
+
+/* Counter-rotations to keep nodes facing forward */
+.ds-orbit-1 .ds-node { animation: node-counter 25s linear infinite; }
+.ds-orbit-2 .ds-node { animation: node-counter-reverse 35s linear infinite; top: 15%; left: 85%; }
+.ds-orbit-3 .ds-node { animation: node-counter 45s linear infinite; top: 85%; left: 15%; }
+
+.ds-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 4px rgba(150, 255, 255, 0.8);
+  top: 0;
+  left: 50%;
+  margin-top: -3px;
+  margin-left: -3px;
+}
+
+.p-1 { animation: particle-move 8s linear infinite; }
+.p-2 { animation: particle-move-reverse 12s linear infinite; }
+.p-3 { animation: particle-move 15s linear infinite; }
+
+@keyframes orbit-spin {
+  0% { transform: rotateX(72deg) rotateY(15deg) rotateZ(0deg); }
+  100% { transform: rotateX(72deg) rotateY(15deg) rotateZ(360deg); }
+}
+
+@keyframes orbit-spin-reverse {
+  0% { transform: rotateX(65deg) rotateY(-10deg) rotateZ(360deg); }
+  100% { transform: rotateX(65deg) rotateY(-10deg) rotateZ(0deg); }
+}
+
+@keyframes node-counter {
+  0% { transform: rotateZ(0deg) rotateY(-15deg) rotateX(-72deg); }
+  100% { transform: rotateZ(-360deg) rotateY(-15deg) rotateX(-72deg); }
+}
+
+@keyframes node-counter-reverse {
+  0% { transform: rotateZ(-360deg) rotateY(10deg) rotateX(-65deg); }
+  100% { transform: rotateZ(0deg) rotateY(10deg) rotateX(-65deg); }
+}
+
+@keyframes lights-blink {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes cloud-float {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-15px); }
+}
+
+@keyframes particle-move {
+  0% { transform: rotateZ(0deg) translateX(50%) rotateZ(0deg); }
+  100% { transform: rotateZ(360deg) translateX(50%) rotateZ(-360deg); }
+}
+
+@keyframes particle-move-reverse {
+  0% { transform: rotateZ(360deg) translateX(50%) rotateZ(-360deg); }
+  100% { transform: rotateZ(0deg) translateX(50%) rotateZ(0deg); }
+}
+
+@media(max-width: 900px) {
+  .reference-home {
+    background-position: center right 20%;
+    /* On mobile, text is at the top, so we darken the top instead of the left */
+    background-image: 
+      linear-gradient(to bottom, rgba(5, 59, 89, 0.9) 0%, rgba(8, 86, 125, 0.6) 50%, rgba(10, 105, 153, 0) 100%),
+      url("../images/hd-cloud.jpg");
+  }
+}
