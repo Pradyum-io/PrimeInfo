@@ -13,61 +13,66 @@ def chrome(root: str, page: str):
         return " is-active" if page == name else ""
 
     header = f'''<header class="site-header">
-  <a class="brand" href="{href("")}" aria-label="Primecoreinfo home"><span class="brand-mark"></span><span>PRIMECOREINFO</span></a>
+  <a class="brand" href="{href("")}" aria-label="Primecore Info Systems home"><span class="brand-mark"></span><span>PRIMECORE INFO SYSTEMS</span></a>
   <nav class="nav" aria-label="Primary">
-    <a class="{active("about").strip()}" href="{href("about/")}">About</a>
+    <a class="{active("about").strip()}" href="{href("about/")}">About Us</a>
     <a class="{active("services").strip()}" href="{href("services/")}">Services</a>
-    <a class="{active("insights").strip()}" href="{href("insights/")}">Insights</a>
+    <a class="{active("solutions").strip()}" href="{href("#solutions")}">Solutions</a>
+    <a class="{active("technologies").strip()}" href="{href("#technologies")}">Technologies</a>
     <a class="{active("contact").strip()}" href="{href("contact/")}">Contact</a>
-    <a class="btn-talk" data-magnetic href="{href("contact/")}">Let's talk</a>
+    <a class="btn-talk" data-magnetic href="{href("contact/")}">Get Started</a>
   </nav>
   <button class="menu-btn" type="button" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span><b class="sr-only">Open menu</b></button>
 </header>
 <nav class="mobile-nav" id="mobile-nav" hidden>
-  <a href="{href("about/")}">About</a>
+  <a href="{href("about/")}">About Us</a>
   <a href="{href("services/")}">Services</a>
-  <a href="{href("insights/")}">Insights</a>
+  <a href="{href("#solutions")}">Solutions</a>
+  <a href="{href("#technologies")}">Technologies</a>
   <a href="{href("contact/")}">Contact</a>
-  <a href="{href("contact/")}">Let's talk</a>
+  <a href="{href("contact/")}">Get Started</a>
 </nav>'''
 
     cta = f'''<section class="wrap" style="padding-bottom:96px">
   <div class="cta-band reveal">
-    <p class="kicker">Next conversation</p>
-    <h2>Let's build what's next.</h2>
-    <p>Share your environment, constraints, and goals. We'll help you move from complexity to a clearer operating model.</p>
-    <a class="btn" data-magnetic href="{href("contact/")}">Let's talk <span aria-hidden="true">→</span></a>
+    <p class="kicker">Get Started</p>
+    <h2>Build. Migrate. Automate. Optimize.</h2>
+    <p>Primecore Info Systems helps businesses design, migrate, automate and optimize their IT infrastructure across AWS, Microsoft Azure and hybrid cloud environments.</p>
+    <a class="btn" data-magnetic href="{href("contact/")}">Get Started <span aria-hidden="true">→</span></a>
   </div>
 </section>'''
 
     footer = f'''<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="{href("")}"><span class="brand-mark"></span><span>PRIMECOREINFO</span></a>
-      <p>A practical technology partner for cloud transformation, infrastructure modernization, and dependable IT operations.</p>
+      <a class="brand" href="{href("")}"><span class="brand-mark"></span><span>PRIMECORE INFO SYSTEMS</span></a>
+      <p>Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize their infrastructure, adopt cloud technologies and build reliable digital platforms.</p>
     </div>
     <div>
-      <h4>Navigate</h4>
-      <a href="{href("about/")}">About</a>
+      <h4>Navigation</h4>
+      <a href="{href("about/")}">About Us</a>
       <a href="{href("services/")}">Services</a>
-      <a href="{href("insights/")}">Insights</a>
+      <a href="{href("#solutions")}">Solutions</a>
+      <a href="{href("#technologies")}">Technologies</a>
       <a href="{href("contact/")}">Contact</a>
     </div>
     <div>
       <h4>Services</h4>
-      <a href="{href("cloud-transformation/")}">Cloud Transformation</a>
-      <a href="{href("infrastructure-modernization/")}">Infrastructure Modernization</a>
-      <a href="{href("managed-it-services/")}">Managed IT Services</a>
+      <a href="{href("services/#cloud-infrastructure")}">Cloud Infrastructure</a>
+      <a href="{href("services/#devops-sre")}">DevOps &amp; SRE</a>
+      <a href="{href("services/#cloud-migration")}">Cloud Migration</a>
+      <a href="{href("services/#managed-infrastructure")}">Managed Infrastructure</a>
+      <a href="{href("services/#security-governance")}">Security &amp; Governance</a>
+      <a href="{href("services/#cloud-finops")}">Cloud Cost Optimization</a>
     </div>
     <div>
       <h4>Contact</h4>
       <a href="mailto:hello@primecoreinfo.com">hello@primecoreinfo.com</a>
-      <a href="{href("privacy-policy/")}">Privacy</a>
-      <a href="{href("insights/")}">Insights</a>
+      <a href="{href("privacy-policy/")}">Privacy Policy</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Primecoreinfo. Cloud &amp; IT transformation.</span>
+    <span>© 2026 Primecore Info Systems Pvt. Ltd. All rights reserved.</span>
     <span class="sig" aria-hidden="true"></span>
   </div>
 </footer>'''
@@ -114,8 +119,8 @@ ARCH = '''<div class="arch" aria-label="Cloud infrastructure visualization">
   <circle class="particle" r="2.5"><animateMotion dur="8s" repeatCount="indefinite" path="M320,270 L150,400"/></circle>
   <g class="arch-core">
     <rect x="250" y="228" width="140" height="84" rx="18" fill="rgba(10,32,53,0.86)" stroke="url(#g)"/>
-    <text x="320" y="268" text-anchor="middle" class="arch-label">CLOUD CORE</text>
-    <text x="320" y="290" text-anchor="middle" class="arch-label" style="fill:#9BEFE5;font-size:10px;font-weight:600">CONNECTED SYSTEMS</text>
+    <text x="320" y="268" text-anchor="middle" class="arch-label">PRIMECORE</text>
+    <text x="320" y="290" text-anchor="middle" class="arch-label" style="fill:#9BEFE5;font-size:10px;font-weight:600">AWS &amp; AZURE</text>
   </g>
   <g class="arch-float">
     <rect class="arch-node" x="262" y="54" width="116" height="54" rx="14"/>
@@ -123,7 +128,7 @@ ARCH = '''<div class="arch" aria-label="Cloud infrastructure visualization">
   </g>
   <g class="arch-float">
     <rect class="arch-node" x="52" y="140" width="140" height="54" rx="14"/>
-    <text x="122" y="172" text-anchor="middle" class="arch-label">Infrastructure</text>
+    <text x="122" y="172" text-anchor="middle" class="arch-label">DevOps</text>
   </g>
   <g class="arch-float">
     <rect class="arch-node" x="448" y="140" width="140" height="54" rx="14"/>
@@ -131,15 +136,15 @@ ARCH = '''<div class="arch" aria-label="Cloud infrastructure visualization">
   </g>
   <g class="arch-float">
     <rect class="arch-node" x="64" y="374" width="140" height="54" rx="14"/>
-    <text x="134" y="406" text-anchor="middle" class="arch-label">Data</text>
+    <text x="134" y="406" text-anchor="middle" class="arch-label">Migration</text>
   </g>
   <g class="arch-float">
     <rect class="arch-node" x="436" y="374" width="140" height="54" rx="14"/>
-    <text x="506" y="406" text-anchor="middle" class="arch-label">Applications</text>
+    <text x="506" y="406" text-anchor="middle" class="arch-label">FinOps</text>
   </g>
   <g class="arch-float">
     <rect class="arch-node" x="250" y="462" width="140" height="54" rx="14"/>
-    <text x="320" y="494" text-anchor="middle" class="arch-label">Operations</text>
+    <text x="320" y="494" text-anchor="middle" class="arch-label">Managed IT</text>
   </g>
 </svg>
 </div>'''
@@ -171,36 +176,42 @@ def write(rel, html):
 home_body = f'''
 <section class="hero">
   <div class="hero-copy">
-    <p class="kicker reveal">Cloud &amp; IT Transformation</p>
-    <h1 class="reveal">Driving Cloud<br>Transformation<br>With <em class="accent">Clarity</em></h1>
-    <p class="lede reveal">Primecoreinfo helps organizations modernize infrastructure, accelerate cloud adoption, and strengthen day-to-day IT operations — with strategy and execution held together.</p>
-    <div class="hero-actions reveal">
-      <a class="btn" data-magnetic href="contact/">Let's talk</a>
-      <a class="btn-ghost" href="services/">Explore services</a>
+    <p class="kicker reveal">Primecore Info Systems</p>
+    <h1 class="reveal">Build. Migrate.<br>Automate.<br><em class="accent">Optimize.</em></h1>
+    <p class="lede reveal" style="font-weight:600;color:var(--white);margin-bottom:12px">Modern IT Infrastructure &amp; Cloud Solutions for a Smarter, More Secure Business</p>
+    <p class="lede reveal">Primecore Info Systems helps businesses design, migrate, automate and optimize their IT infrastructure across AWS, Microsoft Azure and hybrid cloud environments.</p>
+    <div class="hero-actions reveal" style="margin-top:28px">
+      <a class="btn" data-magnetic href="contact/">Get Started</a>
+      <a class="btn-ghost" href="services/">Explore Our Services</a>
     </div>
   </div>
   {ARCH}
   <div class="scroll-hint"><i></i> Scroll</div>
 </section>
 
-<section class="trust">
-  <div class="wrap trust-row">
-    <div class="trust-item">Cloud Transformation<span>Planning, architecture, migration, optimization</span></div>
-    <div class="trust-item">Infrastructure Modernization<span>A stronger foundation for growth</span></div>
-    <div class="trust-item">Managed IT<span>Proactive support and continuity</span></div>
-    <div class="trust-item">Enterprise Reliability<span>Security-conscious, operations-ready delivery</span></div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap statement">
-    <div class="reveal">
-      <p class="kicker">Positioning</p>
-      <h2>Technology transformation shouldn't create more complexity.</h2>
-    </div>
-    <div class="reveal">
-      <p class="lede">We bring advisory insight and hands-on delivery together so cloud, infrastructure, and operations decisions stay aligned to business priorities — from early planning through ongoing support.</p>
-      <div class="line-flow"><b>Legacy</b><i></i><b>Modernization</b><i></i><b>Cloud</b><i></i><b>Optimization</b></div>
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="hero-highlights reveal">
+      <div class="highlight-card">
+        <h4>Cloud &amp; Infrastructure</h4>
+        <p>Scalable and reliable cloud infrastructure built around your business needs.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>DevOps &amp; Automation</h4>
+        <p>Accelerate software delivery with modern CI/CD, Infrastructure as Code and automation.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Migration &amp; Modernization</h4>
+        <p>Seamlessly migrate applications, databases and infrastructure to modern cloud platforms.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Security &amp; Governance</h4>
+        <p>Build secure, compliant and well-governed cloud environments.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Cost Optimization</h4>
+        <p>Identify waste, optimize cloud resources and improve infrastructure efficiency.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -208,152 +219,294 @@ home_body = f'''
 <section>
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="kicker">What we transform</p>
-      <h2>Services built for modern growth</h2>
-      <p>From transformation planning to day-to-day support, each engagement is designed to reduce complexity, improve reliability, and keep momentum.</p>
+      <p class="kicker">About Us</p>
+      <h2>Technology That Works for Your Business</h2>
+    </div>
+    <div class="statement">
+      <div class="reveal">
+        <p class="lede" style="font-size:1.15rem;color:var(--white)">Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize their infrastructure, adopt cloud technologies and build reliable digital platforms.</p>
+        <p style="margin-top:16px">Our expertise spans AWS, Microsoft Azure, Kubernetes, DevOps, Infrastructure Automation, Cloud Migration, Security, Governance and FinOps.</p>
+      </div>
+      <div class="reveal">
+        <p>We work with businesses of different sizes to simplify complex infrastructure challenges and deliver solutions that are scalable, secure, reliable and cost-efficient.</p>
+        <div class="line-flow">
+          <b>Assess</b><i></i>
+          <b>Plan</b><i></i>
+          <b>Implement</b><i></i>
+          <b>Optimize</b><i></i>
+          <b>Support</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Our Services</p>
+      <h2>Comprehensive IT &amp; Cloud Capabilities</h2>
+      <p>From cloud architecture to ongoing FinOps and managed infrastructure, we cover every aspect of modern IT operations.</p>
     </div>
     <div class="service-stack stagger">
-      <a class="service-panel reveal" href="cloud-transformation/">
+      <a class="service-panel reveal" href="services/#cloud-infrastructure">
         <span class="sp-num">01</span>
-        <div class="sp-copy"><h3>Cloud Transformation</h3><p>Plan and execute cloud initiatives that improve scalability, streamline operations, and keep control of cost, security, and governance.</p></div>
+        <div class="sp-copy">
+          <h3>Cloud Infrastructure</h3>
+          <p>AWS Cloud Solutions, Microsoft Azure Solutions, Cloud Architecture, Hybrid &amp; Multi-Cloud, Landing Zones, Networking &amp; Infrastructure, High Availability, Disaster Recovery.</p>
+        </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="infrastructure-modernization/">
+      <a class="service-panel reveal" href="services/#devops-sre">
         <span class="sp-num">02</span>
-        <div class="sp-copy"><h3>Infrastructure Modernization</h3><p>Refresh legacy environments with modern architecture, stronger performance, and a foundation built for hybrid and cloud-first operations.</p></div>
+        <div class="sp-copy">
+          <h3>DevOps &amp; SRE</h3>
+          <p>DevOps Consulting, Site Reliability Engineering, CI/CD Implementation, Infrastructure as Code, Terraform / OpenTofu, Kubernetes, Containerization, Monitoring &amp; Observability, Automation.</p>
+        </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="managed-it-services/">
+      <a class="service-panel reveal" href="services/#cloud-migration">
         <span class="sp-num">03</span>
-        <div class="sp-copy"><h3>Managed IT Services</h3><p>Maintain continuity with proactive monitoring, responsive support, and ongoing optimization for the systems your teams rely on.</p></div>
+        <div class="sp-copy">
+          <h3>Cloud Migration</h3>
+          <p>Application Migration, Database Migration, Infrastructure Migration, Cloud Modernization, AWS &amp; Azure Migration, Hybrid Cloud Migration, Migration Planning &amp; Assessment.</p>
+        </div>
+        <span class="sp-go" aria-hidden="true">→</span>
+      </a>
+      <a class="service-panel reveal" href="services/#managed-infrastructure">
+        <span class="sp-num">04</span>
+        <div class="sp-copy">
+          <h3>Managed Infrastructure Services</h3>
+          <p>Cloud Infrastructure Management, Monitoring &amp; Support, Incident Management, Infrastructure Maintenance, Backup &amp; Disaster Recovery, Performance Optimization.</p>
+        </div>
+        <span class="sp-go" aria-hidden="true">→</span>
+      </a>
+      <a class="service-panel reveal" href="services/#security-governance">
+        <span class="sp-num">05</span>
+        <div class="sp-copy">
+          <h3>Security &amp; Governance</h3>
+          <p>Cloud Security, Identity &amp; Access Management, Security Best Practices, Infrastructure Security, Governance Frameworks, Policy &amp; Compliance, Secure Cloud Architecture.</p>
+        </div>
+        <span class="sp-go" aria-hidden="true">→</span>
+      </a>
+      <a class="service-panel reveal" href="services/#cloud-finops">
+        <span class="sp-num">06</span>
+        <div class="sp-copy">
+          <h3>Cloud Cost Optimization / FinOps</h3>
+          <p>Cloud Cost Assessment, Resource Optimization, Kubernetes Cost Optimization, Cost Visibility, Cloud Waste Reduction, FinOps Strategy, Cost Allocation &amp; Reporting.</p>
+        </div>
+        <span class="sp-go" aria-hidden="true">→</span>
+      </a>
+      <a class="service-panel reveal" href="services/#app-tech-services">
+        <span class="sp-num">07</span>
+        <div class="sp-copy">
+          <h3>Application &amp; Technology Services</h3>
+          <p>Application Deployment, Java Application Infrastructure, Automation, Infrastructure Support, Technology Consulting.</p>
+        </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap split">
-    <div class="media reveal">
-      <img class="clip-in" src="assets/images/about-process.jpg" alt="Primecoreinfo infrastructure environment at dusk"/>
-      <div class="media-overlay"></div>
-      <div class="glass-chip" style="left:20px;bottom:20px">FROM<small>Legacy infrastructure</small></div>
-      <div class="glass-chip" style="right:20px;top:20px">TO<small>Scalable cloud architecture</small></div>
-    </div>
-    <div class="reveal">
-      <p class="kicker">Transformation</p>
-      <h2>Making complex environments operable again</h2>
-      <p class="lede" style="margin-top:16px">Aging systems slow delivery and raise operational risk. We assess the current estate, sequence change around business impact, and modernize in measured stages so critical systems stay under control.</p>
-      <div class="stages"><span>Assess</span><span>Modernize</span><span>Migrate</span><span>Optimize</span><span>Operate</span></div>
-    </div>
-  </div>
-</section>
-
-<section>
+<section id="solutions">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="kicker">How we work</p>
-      <h2>Strategy backed by execution</h2>
-      <p>A clear delivery model improves visibility, governance, and performance across the environment.</p>
+      <p class="kicker">Solutions</p>
+      <h2>Targeted Solutions for Critical Challenges</h2>
+    </div>
+    <div class="solutions-grid stagger">
+      <div class="solution-card reveal">
+        <h3>Cloud Migration &amp; Modernization</h3>
+        <p>“Move from traditional infrastructure to modern cloud environments with minimal disruption.”</p>
+      </div>
+      <div class="solution-card reveal">
+        <h3>High Availability &amp; Disaster Recovery</h3>
+        <p>“Design resilient infrastructure to keep critical applications available and recoverable.”</p>
+      </div>
+      <div class="solution-card reveal">
+        <h3>Kubernetes &amp; Container Platforms</h3>
+        <p>“Build, operate and optimize scalable Kubernetes environments across AWS and Azure.”</p>
+      </div>
+      <div class="solution-card reveal">
+        <h3>DevOps Transformation</h3>
+        <p>“Automate development and deployment processes to improve speed, reliability and consistency.”</p>
+      </div>
+      <div class="solution-card reveal">
+        <h3>Cloud Cost Optimization</h3>
+        <p>“Gain visibility into cloud spending and optimize infrastructure without compromising performance.”</p>
+      </div>
+      <div class="solution-card reveal">
+        <h3>Secure Cloud Infrastructure</h3>
+        <p>“Implement security, identity, governance and best practices from the foundation up.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="technologies">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Technologies</p>
+      <h2>Modern Tooling &amp; Platform Ecosystem</h2>
+    </div>
+    <div class="tech-grid stagger">
+      <div class="tech-category reveal">
+        <h3>Cloud</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">Microsoft Azure</span>
+        </div>
+      </div>
+      <div class="tech-category reveal">
+        <h3>Containers</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Kubernetes</span>
+          <span class="tech-tag">Amazon EKS</span>
+          <span class="tech-tag">Azure AKS</span>
+          <span class="tech-tag">Docker</span>
+        </div>
+      </div>
+      <div class="tech-category reveal">
+        <h3>Infrastructure as Code</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Terraform</span>
+          <span class="tech-tag">OpenTofu</span>
+        </div>
+      </div>
+      <div class="tech-category reveal">
+        <h3>CI/CD</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">GitHub Actions</span>
+          <span class="tech-tag">Jenkins</span>
+        </div>
+      </div>
+      <div class="tech-category reveal">
+        <h3>Observability</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Datadog</span>
+          <span class="tech-tag">Prometheus</span>
+          <span class="tech-tag">Grafana</span>
+        </div>
+      </div>
+      <div class="tech-category reveal">
+        <h3>Automation</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Ansible</span>
+          <span class="tech-tag">Chef</span>
+          <span class="tech-tag">Rundeck</span>
+        </div>
+      </div>
+      <div class="tech-category reveal">
+        <h3>Scripting</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Shell</span>
+          <span class="tech-tag">PowerShell</span>
+          <span class="tech-tag">Ruby</span>
+        </div>
+      </div>
+      <div class="tech-category reveal">
+        <h3>Databases &amp; Platforms</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">InfluxDB</span>
+          <span class="tech-tag">Aiven</span>
+          <span class="tech-tag">MongoDB Atlas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-primecore">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Why Primecore</p>
+      <h2>Built Around Technical Precision and Partnership</h2>
+    </div>
+    <div class="why-grid stagger">
+      <article class="why-item reveal">
+        <h3>Deep Technical Expertise</h3>
+        <p>“Strong expertise across cloud, DevOps, infrastructure and automation.”</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Cloud Agnostic Approach</h3>
+        <p>“Solutions designed around your requirements rather than a single technology.”</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Security First</h3>
+        <p>“Security and governance are considered throughout the infrastructure lifecycle.”</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Automation Driven</h3>
+        <p>“Reduce manual effort through Infrastructure as Code and intelligent automation.”</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Cost Conscious</h3>
+        <p>“Build infrastructure with performance, scalability and cost efficiency in mind.”</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Long-Term Partnership</h3>
+        <p>“We don't just implement solutions. We help maintain, improve and evolve them.”</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Industries</p>
+      <h2>Sectors We Serve</h2>
+    </div>
+    <div class="industries-grid stagger">
+      <div class="industry-card reveal"><span class="industry-icon"></span>Financial Services &amp; Banking</div>
+      <div class="industry-card reveal"><span class="industry-icon"></span>Education</div>
+      <div class="industry-card reveal"><span class="industry-icon"></span>Healthcare &amp; Wellness</div>
+      <div class="industry-card reveal"><span class="industry-icon"></span>Retail &amp; E-commerce</div>
+      <div class="industry-card reveal"><span class="industry-icon"></span>Technology Companies</div>
+      <div class="industry-card reveal"><span class="industry-icon"></span>Startups &amp; SMEs</div>
+      <div class="industry-card reveal"><span class="industry-icon"></span>Professional Services</div>
+      <div class="industry-card reveal"><span class="industry-icon"></span>Local Businesses</div>
+    </div>
+  </div>
+</section>
+
+<section id="our-process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Our Process</p>
+      <h2>A Structured Path to Success</h2>
     </div>
     <div class="process">
       <div class="process-line" aria-hidden="true"></div>
-      <article class="step is-on"><span class="step-dot"></span><span class="step-index">01</span><h3>Discover</h3><p>Evaluate the current environment, priorities, risks, and opportunities.</p></article>
-      <article class="step"><span class="step-dot"></span><span class="step-index">02</span><h3>Strategize</h3><p>Build a roadmap for architecture, sequencing, governance, and readiness.</p></article>
-      <article class="step"><span class="step-dot"></span><span class="step-index">03</span><h3>Architect</h3><p>Define target platforms, landing zones, and operating standards.</p></article>
-      <article class="step"><span class="step-dot"></span><span class="step-index">04</span><h3>Transform</h3><p>Execute in disciplined phases with alignment and minimal disruption.</p></article>
-      <article class="step"><span class="step-dot"></span><span class="step-index">05</span><h3>Operate</h3><p>Refine performance, strengthen resilience, and support improvement.</p></article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Why Primecoreinfo</p>
-      <h2>Technology transformation without unnecessary complexity.</h2>
-    </div>
-    <div class="why-grid stagger">
-      <article class="why-item reveal"><h3>Strategy before technology</h3><p>Architecture and sequencing follow business risk, not a catalogue of tools. Clarity first, then execution.</p></article>
-      <article class="why-item reveal"><h3>Execution with accountability</h3><p>Advisory insight is paired with hands-on delivery so plans become operating environments, not slide decks.</p></article>
-      <article class="why-item reveal"><h3>Designed for scale</h3><p>Every engagement is structured around scalable architecture, operational continuity, and long-term partnership.</p></article>
-      <article class="why-item reveal"><h3>Built for reliability</h3><p>Security, monitoring, and support are part of delivery — not an afterthought once systems are live.</p></article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Outcomes</p>
-      <h2>From fragmented operations to a clearer foundation</h2>
-    </div>
-    <div class="outcomes reveal">
-      <div class="outcome">
-        <h3>Before</h3>
-        <ul><li>Legacy infrastructure</li><li>Complex operations</li><li>Fragmented systems</li><li>Limited visibility</li></ul>
-      </div>
-      <div class="outcome-mid">→</div>
-      <div class="outcome after">
-        <h3>After</h3>
-        <ul><li>Modern infrastructure</li><li>Connected systems</li><li>Reliable operations</li><li>Scalable foundation</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap quote reveal">
-    <p class="kicker">Client perspective</p>
-    <div class="stars" aria-label="Five stars">★★★★★</div>
-    <blockquote>“Primecoreinfo brings structure to complex transformation work. Their team balances strategic planning with dependable execution, helping organizations modernize with less disruption and stronger long-term outcomes.”</blockquote>
-    <cite>Technology Leadership<span>Enterprise Transformation Program</span></cite>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Technology leadership</p>
-      <h2>People who hold strategy and operations together</h2>
-      <p>Cloud strategy, infrastructure expertise, service operations, and client leadership — structured to reduce complexity and move with accountability.</p>
-    </div>
-    <div class="team-feature reveal">
-      <div class="team-photo"><img src="assets/images/avery-chen.jpg" alt="Avery Chen"/></div>
-      <div>
-        <p class="team-meta">10+ years experience</p>
-        <h2>Avery Chen</h2>
-        <p class="team-role">Cloud Transformation Lead</p>
-        <p class="lede">Helps organizations move from legacy infrastructure to scalable cloud environments — with landing zones, migration waves, and operational readiness designed as one program.</p>
-      </div>
-    </div>
-    <div class="team-grid stagger">
-      <article class="team-card reveal"><img src="assets/images/jordan-patel.jpg" alt="Jordan Patel"/><div><p class="team-meta">Infrastructure</p><h3>Jordan Patel</h3><p>Infrastructure Modernization Director. Architecture, reliability, and stronger technical foundations.</p></div></article>
-      <article class="team-card reveal"><img src="assets/images/taylor-brooks.jpg" alt="Taylor Brooks"/><div><p class="team-meta">Managed operations</p><h3>Taylor Brooks</h3><p>Managed Services Manager. Continuity, proactive monitoring, and long-term operational stability.</p></div></article>
-      <article class="team-card reveal"><img src="assets/images/morgan-ellis.jpg" alt="Morgan Ellis"/><div><p class="team-meta">Client operations</p><h3>Morgan Ellis</h3><p>Client Success Partner. Connects technology work to business goals and lasting outcomes.</p></div></article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Insights</p>
-      <h2>Clear thinking for technology change</h2>
-    </div>
-    <a class="insight-feature reveal" href="insights/cloud-readiness/">
-      <img src="assets/vendor/wp-content/uploads/2026/08/2286378241.jpg" alt="Technology operations environment"/>
-      <div class="insight-copy">
-        <p class="cat">Cloud</p>
-        <h3>Cloud readiness: what to clarify before the first migration wave</h3>
-        <p style="margin:14px 0 20px">Dependencies, risk, cost, and operating model — the decisions that determine whether cloud work creates clarity or more complexity.</p>
-        <span class="text-link">Read article <span class="arrow">→</span></span>
-      </div>
-    </a>
-    <div class="insight-grid">
-      <a class="insight-card reveal" href="insights/modern-foundations/"><div class="thumb"><img src="assets/vendor/wp-content/uploads/2026/08/1455786903-1-2048x1147.jpg" alt=""/></div><div><p class="cat">Infrastructure</p><h3>Modern foundations</h3><p>How to sequence infrastructure improvements around business risk.</p></div></a>
-      <a class="insight-card reveal" href="insights/operational-resilience/"><div class="thumb"><img src="assets/vendor/wp-content/uploads/2026/08/1928146086-768x512.jpg" alt=""/></div><div><p class="cat">IT Operations</p><h3>Operational resilience</h3><p>Why visibility and ownership matter as environments grow.</p></div></a>
-      <a class="insight-card reveal" href="insights/"><div class="thumb"><img src="assets/images/tech-cloud.jpg" alt=""/></div><div><p class="cat">Transformation</p><h3>All insights</h3><p>Practical perspectives for cloud, infrastructure, and operations decisions.</p></div></a>
+      <article class="step is-on">
+        <span class="step-dot"></span><span class="step-index">01</span>
+        <h3>Discover</h3>
+        <p>“Understand your business, infrastructure and challenges.”</p>
+      </article>
+      <article class="step">
+        <span class="step-dot"></span><span class="step-index">02</span>
+        <h3>Assess</h3>
+        <p>“Analyze your existing environment, technology and costs.”</p>
+      </article>
+      <article class="step">
+        <span class="step-dot"></span><span class="step-index">03</span>
+        <h3>Design</h3>
+        <p>“Create a secure, scalable and cost-effective solution.”</p>
+      </article>
+      <article class="step">
+        <span class="step-dot"></span><span class="step-index">04</span>
+        <h3>Implement</h3>
+        <p>“Migrate, automate and deploy with minimal disruption.”</p>
+      </article>
+      <article class="step">
+        <span class="step-dot"></span><span class="step-index">05</span>
+        <h3>Optimize</h3>
+        <p>“Continuously improve performance, security, reliability and cost.”</p>
+      </article>
     </div>
   </div>
 </section>
@@ -361,67 +514,36 @@ home_body = f'''
 
 about_body = '''
 <section class="page-hero">
-  <p class="kicker reveal">About</p>
-  <h1 class="reveal">Driving Cloud Transformation With <em class="accent">Clarity</em></h1>
-  <p class="lede reveal">Primecoreinfo helps organizations modernize infrastructure, accelerate cloud adoption, and build resilient IT operations with a practical, outcomes-focused approach.</p>
+  <p class="kicker reveal">About Us</p>
+  <h1 class="reveal">Technology That Works for Your Business</h1>
+  <p class="lede reveal" style="font-size:1.25rem;color:var(--white);margin-top:16px">Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize their infrastructure, adopt cloud technologies and build reliable digital platforms.</p>
 </section>
 <section>
   <div class="wrap split">
     <div class="reveal">
-      <p class="kicker">Our story</p>
-      <h2>Built for modern IT change</h2>
-      <p class="lede" style="margin-top:16px">Primecoreinfo was created to help businesses move beyond legacy constraints and adopt cloud strategies that support growth, security, and operational efficiency. We focus on practical transformation plans that align technology decisions with business priorities.</p>
-      <p class="lede">From early planning through implementation and ongoing support, our work is grounded in clear communication, technical depth, and a commitment to measurable progress for every client environment.</p>
-      <p style="margin-top:24px"><a class="btn" href="../services/">Explore services</a></p>
+      <p class="kicker">Our Expertise</p>
+      <h2>Deep Domain Expertise Across AWS, Azure &amp; Modern DevOps</h2>
+      <p class="lede" style="margin-top:16px">Our expertise spans AWS, Microsoft Azure, Kubernetes, DevOps, Infrastructure Automation, Cloud Migration, Security, Governance and FinOps.</p>
+      <p class="lede" style="margin-top:12px">We work with businesses of different sizes to simplify complex infrastructure challenges and deliver solutions that are scalable, secure, reliable and cost-efficient.</p>
+      <p style="margin-top:24px"><a class="btn" href="../services/">Explore Our Services</a></p>
     </div>
     <div class="media reveal"><img class="clip-in" src="../assets/images/about-story.jpg" alt="Technology team collaborating"/><div class="media-overlay"></div></div>
   </div>
 </section>
 <section>
-  <div class="wrap split reverse">
-    <div class="media reveal"><img class="clip-in" src="../assets/images/about-process.jpg" alt="Modern infrastructure"/><div class="media-overlay"></div></div>
-    <div class="reveal">
-      <p class="kicker">How we work</p>
-      <h2>Strategy backed by execution</h2>
-      <p class="lede" style="margin-top:16px">We combine advisory insight with hands-on delivery across cloud transformation, infrastructure modernization, and managed IT services. The team is structured to reduce complexity, improve reliability, and help internal stakeholders move with confidence.</p>
-      <p class="lede">Every engagement is designed around scalable architecture, operational continuity, and long-term partnership so clients can modernize without losing control of critical systems.</p>
-    </div>
-  </div>
-</section>
-<section>
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="kicker">What we believe</p>
-      <h2>Clarity is an operating advantage</h2>
+      <p class="kicker">Our Approach</p>
+      <h2>Assess → Plan → Implement → Optimize → Support</h2>
+      <p>A structured, end-to-end approach to infrastructure and cloud management.</p>
     </div>
-    <div class="why-grid">
-      <article class="why-item reveal"><h3>Business-first strategy</h3><p>Technology choices follow operational reality — risk, continuity, cost visibility, and the work your teams need to do next.</p></article>
-      <article class="why-item reveal"><h3>Measured progress</h3><p>Phased delivery, explicit ownership, and communication that keeps transformation understandable for every stakeholder.</p></article>
-      <article class="why-item reveal"><h3>Technical depth</h3><p>Architecture, migration, modernization, and operations are treated as one system, not disconnected workstreams.</p></article>
-      <article class="why-item reveal"><h3>Long-term partnership</h3><p>Implementation is the midpoint. Optimization, support, and reliability keep the environment useful after go-live.</p></article>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="kicker">Technology leadership</p>
-      <h2>The people behind the work</h2>
-      <p>Cloud strategy, infrastructure expertise, service operations, and client leadership — together.</p>
-    </div>
-    <div class="team-feature reveal">
-      <div class="team-photo"><img src="../assets/images/avery-chen.jpg" alt="Avery Chen"/></div>
-      <div>
-        <p class="team-meta">10+ years experience · Cloud</p>
-        <h2>Avery Chen</h2>
-        <p class="team-role">Cloud Transformation Lead</p>
-        <p class="lede">10+ years in cloud transformation, helping organizations move from legacy infrastructure to scalable cloud environments — with architecture, migration, and operational readiness designed as one program.</p>
-      </div>
-    </div>
-    <div class="team-grid">
-      <article class="team-card reveal"><img src="../assets/images/jordan-patel.jpg" alt="Jordan Patel"/><div><p class="team-meta">Infrastructure</p><h3>Jordan Patel</h3><p class="team-role">Infrastructure Modernization Director</p><p>Specializes in infrastructure modernization, architecture, reliability, and building stronger technical foundations.</p></div></article>
-      <article class="team-card reveal"><img src="../assets/images/taylor-brooks.jpg" alt="Taylor Brooks"/><div><p class="team-meta">Managed operations</p><h3>Taylor Brooks</h3><p class="team-role">Managed Services Manager</p><p>Focused on managed IT operations, service continuity, proactive monitoring, and long-term operational stability.</p></div></article>
-      <article class="team-card reveal"><img src="../assets/images/morgan-ellis.jpg" alt="Morgan Ellis"/><div><p class="team-meta">Client operations</p><h3>Morgan Ellis</h3><p class="team-role">Client Success Partner</p><p>Bridges technology and business goals, ensuring projects deliver measurable outcomes and lasting client value.</p></div></article>
+    <div class="process" style="margin-top:36px">
+      <div class="process-line" aria-hidden="true"></div>
+      <article class="step is-on"><span class="step-dot"></span><span class="step-index">01</span><h3>Assess</h3><p>Understand your business, infrastructure, existing environment, technology and costs.</p></article>
+      <article class="step"><span class="step-dot"></span><span class="step-index">02</span><h3>Plan</h3><p>Build a secure, scalable and cost-effective solution roadmap aligned with your business goals.</p></article>
+      <article class="step"><span class="step-dot"></span><span class="step-index">03</span><h3>Implement</h3><p>Migrate, automate and deploy with minimal disruption to ongoing operations.</p></article>
+      <article class="step"><span class="step-dot"></span><span class="step-index">04</span><h3>Optimize</h3><p>Continuously improve performance, security, reliability and cloud spending.</p></article>
+      <article class="step"><span class="step-dot"></span><span class="step-index">05</span><h3>Support</h3><p>Long-term operational management, proactive monitoring, and evolving technical support.</p></article>
     </div>
   </div>
 </section>
@@ -429,56 +551,125 @@ about_body = '''
 
 services_body = '''
 <section class="page-hero">
-  <p class="kicker reveal">What we do</p>
-  <h1 class="reveal">IT Services Built for Modern Growth</h1>
-  <p class="lede reveal">Primecoreinfo helps organizations modernize infrastructure, accelerate cloud adoption, and maintain dependable IT operations with a strategic, security-conscious approach.</p>
+  <p class="kicker reveal">Services</p>
+  <h1 class="reveal">Our Services</h1>
+  <p class="lede reveal" style="margin-top:14px">Primecore Info Systems delivers end-to-end cloud, DevOps, migration, security, FinOps, and managed infrastructure services.</p>
 </section>
+
 <section>
   <div class="wrap svc-layout">
     <nav class="svc-nav" aria-label="Service categories">
-      <a class="is-active" href="#cloud">01 Cloud</a>
-      <a href="#infra">02 Infrastructure</a>
-      <a href="#managed">03 Managed IT</a>
-      <a href="#process">How we work</a>
+      <a class="is-active" href="#cloud-infrastructure">01 Cloud Infrastructure</a>
+      <a href="#devops-sre">02 DevOps &amp; SRE</a>
+      <a href="#cloud-migration">03 Cloud Migration</a>
+      <a href="#managed-infrastructure">04 Managed Infrastructure</a>
+      <a href="#security-governance">05 Security &amp; Governance</a>
+      <a href="#cloud-finops">06 Cloud Cost Optimization</a>
+      <a href="#app-tech-services">07 App &amp; Tech Services</a>
     </nav>
     <div>
-      <article class="svc-block" id="cloud">
+      <article class="svc-block" id="cloud-infrastructure">
         <p class="num">01</p>
-        <h2>Cloud Transformation</h2>
-        <p class="lede" style="margin-top:14px">Plan and execute cloud initiatives that improve scalability, streamline operations, and align technology investments with business goals — without losing operational control.</p>
-        <div class="caps"><span>Architecture</span><span>Migration</span><span>Optimization</span><span>Security</span><span>Governance</span></div>
-        <p>We map workloads, define the right target architecture, and guide migration in measured stages: assess dependencies and readiness, deliver secure landing zones, then improve governance, performance, and spend.</p>
-        <details class="details"><summary>What this typically includes</summary><p>Workload assessment, target architecture, landing zones, migration waves, cost visibility, security controls, and operational readiness for steady-state operations.</p></details>
-        <p style="margin-top:22px"><a class="btn" href="../cloud-transformation/">Explore cloud transformation</a></p>
+        <h2>Cloud Infrastructure</h2>
+        <p class="lede" style="margin-top:14px">Scalable and reliable cloud infrastructure built around your business needs.</p>
+        <div class="svc-list-grid">
+          <div class="svc-list-item">AWS Cloud Solutions</div>
+          <div class="svc-list-item">Microsoft Azure Solutions</div>
+          <div class="svc-list-item">Cloud Architecture</div>
+          <div class="svc-list-item">Hybrid &amp; Multi-Cloud</div>
+          <div class="svc-list-item">Landing Zones</div>
+          <div class="svc-list-item">Networking &amp; Infrastructure</div>
+          <div class="svc-list-item">High Availability</div>
+          <div class="svc-list-item">Disaster Recovery</div>
+        </div>
       </article>
-      <article class="svc-block" id="infra">
+
+      <article class="svc-block" id="devops-sre">
         <p class="num">02</p>
-        <h2>Infrastructure Modernization</h2>
-        <p class="lede" style="margin-top:14px">Refresh legacy environments with modern architecture, stronger performance, and a foundation built for security, automation, and growth.</p>
-        <div class="caps"><span>Assessment</span><span>Platform refresh</span><span>Hybrid readiness</span><span>Resilience</span></div>
-        <p>Aging infrastructure can slow delivery and increase operational risk. We assess compute, storage, networking, and platform readiness, then sequence upgrades so teams can move faster with confidence.</p>
-        <details class="details"><summary>What this typically includes</summary><p>Server and storage upgrades, network improvements, virtualization, automation, security enhancements, monitoring, backup and recovery, and preparation for hybrid or cloud-connected operations.</p></details>
-        <p style="margin-top:22px"><a class="btn" href="../infrastructure-modernization/">Explore modernization</a></p>
+        <h2>DevOps &amp; SRE</h2>
+        <p class="lede" style="margin-top:14px">Accelerate software delivery with modern CI/CD, Infrastructure as Code and automation.</p>
+        <div class="svc-list-grid">
+          <div class="svc-list-item">DevOps Consulting</div>
+          <div class="svc-list-item">Site Reliability Engineering</div>
+          <div class="svc-list-item">CI/CD Implementation</div>
+          <div class="svc-list-item">Infrastructure as Code</div>
+          <div class="svc-list-item">Terraform / OpenTofu</div>
+          <div class="svc-list-item">Kubernetes</div>
+          <div class="svc-list-item">Containerization</div>
+          <div class="svc-list-item">Monitoring &amp; Observability</div>
+          <div class="svc-list-item">Automation</div>
+        </div>
       </article>
-      <article class="svc-block" id="managed">
+
+      <article class="svc-block" id="cloud-migration">
         <p class="num">03</p>
-        <h2>Managed IT Services</h2>
-        <p class="lede" style="margin-top:14px">Maintain business continuity with proactive monitoring, responsive support, and ongoing optimization for critical systems and users.</p>
-        <div class="caps"><span>Monitoring</span><span>Support</span><span>Maintenance</span><span>Improvement</span></div>
-        <p>We bring structure to routine operations and fast response to unexpected issues — tracking health before small problems become disruptions, and turning operational data into a roadmap for reliability.</p>
-        <details class="details"><summary>What this typically includes</summary><p>Proactive monitoring, responsive support for users and technical teams, operational management, performance and reliability improvements, and ongoing service continuity.</p></details>
-        <p style="margin-top:22px"><a class="btn" href="../managed-it-services/">Explore managed IT</a></p>
+        <h2>Cloud Migration</h2>
+        <p class="lede" style="margin-top:14px">Seamlessly migrate applications, databases and infrastructure to modern cloud platforms.</p>
+        <div class="svc-list-grid">
+          <div class="svc-list-item">Application Migration</div>
+          <div class="svc-list-item">Database Migration</div>
+          <div class="svc-list-item">Infrastructure Migration</div>
+          <div class="svc-list-item">Cloud Modernization</div>
+          <div class="svc-list-item">AWS &amp; Azure Migration</div>
+          <div class="svc-list-item">Hybrid Cloud Migration</div>
+          <div class="svc-list-item">Migration Planning &amp; Assessment</div>
+        </div>
       </article>
-      <article class="svc-block" id="process">
-        <p class="kicker">Delivery</p>
-        <h2>A clear process</h2>
-        <div class="process" style="margin-top:36px">
-          <div class="process-line"></div>
-          <article class="step is-on"><span class="step-dot"></span><span class="step-index">01</span><h3>Discover</h3><p>Evaluate environment, priorities, risks, and opportunities.</p></article>
-          <article class="step"><span class="step-dot"></span><span class="step-index">02</span><h3>Strategy</h3><p>Roadmap for architecture, sequencing, governance, and readiness.</p></article>
-          <article class="step"><span class="step-dot"></span><span class="step-index">03</span><h3>Execute</h3><p>Disciplined delivery, alignment, and minimal disruption.</p></article>
-          <article class="step"><span class="step-dot"></span><span class="step-index">04</span><h3>Optimize</h3><p>Refine performance, strengthen resilience, support improvement.</p></article>
-          <article class="step"><span class="step-dot"></span><span class="step-index">05</span><h3>Support</h3><p>Ongoing operations, monitoring, and partnership after go-live.</p></article>
+
+      <article class="svc-block" id="managed-infrastructure">
+        <p class="num">04</p>
+        <h2>Managed Infrastructure Services</h2>
+        <p class="lede" style="margin-top:14px">Proactive monitoring, maintenance, and continuous optimization for peak uptime.</p>
+        <div class="svc-list-grid">
+          <div class="svc-list-item">Cloud Infrastructure Management</div>
+          <div class="svc-list-item">Monitoring &amp; Support</div>
+          <div class="svc-list-item">Incident Management</div>
+          <div class="svc-list-item">Infrastructure Maintenance</div>
+          <div class="svc-list-item">Backup &amp; Disaster Recovery</div>
+          <div class="svc-list-item">Performance Optimization</div>
+        </div>
+      </article>
+
+      <article class="svc-block" id="security-governance">
+        <p class="num">05</p>
+        <h2>Security &amp; Governance</h2>
+        <p class="lede" style="margin-top:14px">Build secure, compliant and well-governed cloud environments.</p>
+        <div class="svc-list-grid">
+          <div class="svc-list-item">Cloud Security</div>
+          <div class="svc-list-item">Identity &amp; Access Management</div>
+          <div class="svc-list-item">Security Best Practices</div>
+          <div class="svc-list-item">Infrastructure Security</div>
+          <div class="svc-list-item">Governance Frameworks</div>
+          <div class="svc-list-item">Policy &amp; Compliance</div>
+          <div class="svc-list-item">Secure Cloud Architecture</div>
+        </div>
+      </article>
+
+      <article class="svc-block" id="cloud-finops">
+        <p class="num">06</p>
+        <h2>Cloud Cost Optimization / FinOps</h2>
+        <p class="lede" style="margin-top:14px">Identify waste, optimize cloud resources and improve infrastructure efficiency.</p>
+        <div class="svc-list-grid">
+          <div class="svc-list-item">Cloud Cost Assessment</div>
+          <div class="svc-list-item">Resource Optimization</div>
+          <div class="svc-list-item">Kubernetes Cost Optimization</div>
+          <div class="svc-list-item">Cost Visibility</div>
+          <div class="svc-list-item">Cloud Waste Reduction</div>
+          <div class="svc-list-item">FinOps Strategy</div>
+          <div class="svc-list-item">Cost Allocation &amp; Reporting</div>
+        </div>
+      </article>
+
+      <article class="svc-block" id="app-tech-services">
+        <p class="num">07</p>
+        <h2>Application &amp; Technology Services</h2>
+        <p class="lede" style="margin-top:14px">End-to-end technology consulting and application infrastructure support.</p>
+        <div class="svc-list-grid">
+          <div class="svc-list-item">Application Deployment</div>
+          <div class="svc-list-item">Java Application Infrastructure</div>
+          <div class="svc-list-item">Automation</div>
+          <div class="svc-list-item">Infrastructure Support</div>
+          <div class="svc-list-item">Technology Consulting</div>
         </div>
       </article>
     </div>
@@ -780,21 +971,21 @@ home_redirect = '''<!DOCTYPE html>
 
 pages = [
     ("index.html", doc(
-        "Primecoreinfo | Driving Cloud Transformation With Clarity",
-        "Primecoreinfo helps organizations modernize infrastructure, accelerate cloud adoption, and maintain dependable IT operations.",
+        "Primecore Info Systems | Modern IT Infrastructure & Cloud Solutions",
+        "Primecore Info Systems helps businesses design, migrate, automate and optimize their IT infrastructure across AWS, Microsoft Azure and hybrid cloud environments.",
         "./", "home", home_body, True)),
-    ("about/index.html", doc("About | Primecoreinfo", "Driving Cloud Transformation With Clarity — the Primecoreinfo story, approach, and technology leadership.", "../", "about", about_body)),
-    ("services/index.html", doc("Services | Primecoreinfo", "IT services built for modern growth: cloud transformation, infrastructure modernization, and managed IT.", "../", "services", services_body)),
-    ("contact/index.html", doc("Contact | Primecoreinfo", "Start a conversation about cloud strategy, infrastructure priorities, or ongoing IT support.", "../", "contact", contact_body, False)),
-    ("insights/index.html", doc("Insights | Primecoreinfo", "Practical perspectives for cloud, infrastructure, and operations decisions.", "../", "insights", insights_body)),
-    ("privacy-policy/index.html", doc("Privacy Policy | Primecoreinfo", "How Primecoreinfo uses information shared through this website.", "../", "home", privacy_body)),
-    ("cloud-transformation/index.html", doc("Cloud Transformation | Primecoreinfo", "Move to the cloud with a plan you can trust.", "../", "services", cloud_body)),
-    ("infrastructure-modernization/index.html", doc("Infrastructure Modernization | Primecoreinfo", "Modernize core infrastructure for performance, resilience, and cloud-first operations.", "../", "services", infra_body)),
-    ("managed-it-services/index.html", doc("Managed IT Services | Primecoreinfo", "Proactive monitoring, responsive support, and operational ownership.", "../", "services", managed_body)),
-    ("insights/cloud-readiness/index.html", doc("Cloud readiness | Primecoreinfo Insights", "What to clarify before the first migration wave.", "../../", "insights", article_cloud)),
-    ("insights/modern-foundations/index.html", doc("Modern foundations | Primecoreinfo Insights", "How to sequence infrastructure improvements around business risk.", "../../", "insights", article_found)),
-    ("insights/operational-resilience/index.html", doc("Operational resilience | Primecoreinfo Insights", "Why visibility and ownership matter as environments grow.", "../../", "insights", article_ops)),
-    ("404.html", doc("Page Not Found | Primecoreinfo", "The requested route does not exist.", "./", "home", notfound_body, False)),
+    ("about/index.html", doc("About Us | Primecore Info Systems", "Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize infrastructure and adopt cloud.", "../", "about", about_body)),
+    ("services/index.html", doc("Services | Primecore Info Systems", "Cloud Infrastructure, DevOps & SRE, Cloud Migration, Managed Infrastructure, Security & Governance, FinOps, and Technology Services.", "../", "services", services_body)),
+    ("contact/index.html", doc("Contact | Primecore Info Systems", "Get started with Primecore Info Systems for cloud, infrastructure, and DevOps solutions.", "../", "contact", contact_body, False)),
+    ("insights/index.html", doc("Insights | Primecore Info Systems", "Practical perspectives for cloud, infrastructure, and operations decisions.", "../", "insights", insights_body)),
+    ("privacy-policy/index.html", doc("Privacy Policy | Primecore Info Systems", "How Primecore Info Systems uses information shared through this website.", "../", "home", privacy_body)),
+    ("cloud-transformation/index.html", doc("Cloud Transformation | Primecore Info Systems", "Move to the cloud with a plan you can trust.", "../", "services", cloud_body)),
+    ("infrastructure-modernization/index.html", doc("Infrastructure Modernization | Primecore Info Systems", "Modernize core infrastructure for performance, resilience, and cloud-first operations.", "../", "services", infra_body)),
+    ("managed-it-services/index.html", doc("Managed IT Services | Primecore Info Systems", "Proactive monitoring, responsive support, and operational ownership.", "../", "services", managed_body)),
+    ("insights/cloud-readiness/index.html", doc("Cloud readiness | Primecore Info Systems Insights", "What to clarify before the first migration wave.", "../../", "insights", article_cloud)),
+    ("insights/modern-foundations/index.html", doc("Modern foundations | Primecore Info Systems Insights", "How to sequence infrastructure improvements around business risk.", "../../", "insights", article_found)),
+    ("insights/operational-resilience/index.html", doc("Operational resilience | Primecore Info Systems Insights", "Why visibility and ownership matter as environments grow.", "../../", "insights", article_ops)),
+    ("404.html", doc("Page Not Found | Primecore Info Systems", "The requested route does not exist.", "./", "home", notfound_body, False)),
     ("home/index.html", home_redirect),
 ]
 
