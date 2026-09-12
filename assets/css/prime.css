@@ -554,10 +554,18 @@ section { padding: 96px 0; }
 .field { position: relative; }
 .field.full { grid-column: 1 / -1; }
 .field input, .field select, .field textarea {
-  width: 100%; padding: 18px 14px 10px;
-  border-radius: 12px; border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04); outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%; padding: 20px 14px 8px;
+  font-size: 0.95rem; font-weight: 500;
+  border-radius: 12px; border: 1px solid rgba(53, 214, 232, 0.22);
+  background: rgba(10, 32, 53, 0.65); outline: none;
+  color: var(--white);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
+}
+.field select option {
+  background: var(--bg-secondary);
+  color: var(--white);
 }
 .field textarea { min-height: 140px; resize: vertical; }
 .field label {
@@ -566,7 +574,24 @@ section { padding: 96px 0; }
 }
 .field input:focus, .field select:focus, .field textarea:focus,
 .field input:not(:placeholder-shown), .field textarea:not(:placeholder-shown), .field select:valid {
-  border-color: rgba(53,214,232,0.55); box-shadow: 0 0 0 3px rgba(53,214,232,0.12);
+  border-color: rgba(53, 214, 232, 0.65);
+  background: rgba(10, 32, 53, 0.85);
+  box-shadow: 0 0 16px rgba(53, 214, 232, 0.18), 0 0 0 1px rgba(53, 214, 232, 0.35);
+}
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus,
+.field textarea:-webkit-autofill,
+.field textarea:-webkit-autofill:hover,
+.field textarea:-webkit-autofill:focus,
+.field select:-webkit-autofill,
+.field select:-webkit-autofill:hover,
+.field select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f7fafc !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0a2035 inset !important;
+  box-shadow: 0 0 0px 1000px #0a2035 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  border-color: rgba(53, 214, 232, 0.4) !important;
 }
 .field input:focus + label, .field textarea:focus + label,
 .field input:not(:placeholder-shown) + label, .field textarea:not(:placeholder-shown) + label,
