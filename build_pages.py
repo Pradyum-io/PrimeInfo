@@ -13,7 +13,7 @@ def chrome(root: str, page: str):
         return " is-active" if page == name else ""
 
     header = f'''<header class="site-header">
-  <a class="brand" href="{href("")}" aria-label="Primecore Info Systems home"><span class="brand-mark"></span><span>PRIMECORE INFO SYSTEMS</span></a>
+  <a class="brand" href="{href("")}" aria-label="Primecore Info Systems home"><img class="brand-mark-img" src="{href("assets/images/brand-logo.png")}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
   <nav class="nav" aria-label="Primary">
     <a class="{active("about").strip()}" href="{href("about/")}">About Us</a>
     <a class="{active("services").strip()}" href="{href("services/")}">Services</a>
@@ -45,7 +45,7 @@ def chrome(root: str, page: str):
     footer = f'''<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="{href("")}"><span class="brand-mark"></span><span>PRIMECORE INFO SYSTEMS</span></a>
+      <a class="brand" href="{href("")}"><img class="brand-mark-img" src="{href("assets/images/brand-logo.png")}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
       <p>Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize their infrastructure, adopt cloud technologies and build reliable digital platforms.</p>
     </div>
     <div>
@@ -86,6 +86,7 @@ HEAD = '''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>{title}</title>
 <meta name="description" content="{desc}"/>
+<link rel="icon" type="image/png" href="{root}assets/images/favicon.png"/>
 <link rel="stylesheet" href="{css}"/>
 </head>
 <body data-root="{root}" data-page="{page}">

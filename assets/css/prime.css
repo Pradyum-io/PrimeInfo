@@ -175,6 +175,10 @@ em.accent { font-style: italic; font-weight: 600; color: var(--mint); }
   display: flex; align-items: center; gap: 10px;
   font-weight: 800; letter-spacing: 0.08em; font-size: 13px;
 }
+.brand-mark-img {
+  height: 24px; width: auto; object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(53, 214, 232, 0.4));
+}
 .brand-mark {
   width: 13px; height: 13px;
   background: linear-gradient(135deg, var(--mint), var(--cyan));
