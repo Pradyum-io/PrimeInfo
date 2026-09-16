@@ -1,1 +1,18 @@
 .DS_Store
+
+# Environment & Credentials
+.env
+.env.*
+!.env.example
+
+# Database
+*.db
+*.sqlite3
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log

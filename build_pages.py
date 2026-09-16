@@ -67,7 +67,7 @@ def chrome(root: str, page: str):
     </div>
     <div>
       <h4>Contact</h4>
-      <a href="mailto:hello@primecoreinfo.com">hello@primecoreinfo.com</a>
+      <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a>
       <a href="{href("privacy-policy/")}">Privacy Policy</a>
     </div>
   </div>
@@ -691,7 +691,7 @@ contact_body = '''
       <h2 style="font-size:2rem">Tell us what you're building.</h2>
       <p style="margin-top:14px">Share the constraint, the system, or the outcome you need. We'll help shape the next step.</p>
       <dl>
-        <div class="contact-meta"><dt>Email</dt><dd><a href="mailto:hello@primecoreinfo.com">hello@primecoreinfo.com</a></dd></div>
+        <div class="contact-meta"><dt>Email</dt><dd><a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a></dd></div>
         <div class="contact-meta"><dt>Office hours</dt><dd>Monday – Friday<br>9:00 AM – 6:00 PM EST</dd></div>
         <div class="contact-meta"><dt>Response</dt><dd>We aim to respond to all inquiries within 1 business day.</dd></div>
       </dl>
@@ -717,13 +717,14 @@ contact_body = '''
           </div>
           <div class="field full"><textarea id="message" name="message" required placeholder=" "></textarea><label for="message">Project / message</label><p class="help">Tell us what needs to move forward.</p></div>
         </div>
-        <p style="margin:18px 0 20px;font-size:0.92rem">This form opens your email client to send the inquiry to hello@primecoreinfo.com. Information is used only to respond.</p>
+        <p style="margin:18px 0 16px;font-size:0.92rem">Information submitted is used only to respond to your inquiry.</p>
+        <div class="form-error-banner" hidden style="color:#e08a8a;font-size:0.92rem;margin:0 0 16px;padding:10px 14px;border-radius:8px;background:rgba(224,138,138,0.1);border:1px solid rgba(224,138,138,0.3)"></div>
         <button class="btn" type="submit" data-magnetic>Start the conversation →</button>
       </form>
       <div class="form-success">
         <p class="kicker">Received</p>
         <h3>Thank you. We'll take it from here.</h3>
-        <p style="margin-top:12px">If your email client opened, send the message to complete the inquiry. Otherwise write us directly at hello@primecoreinfo.com.</p>
+        <p style="margin-top:12px">If your email client opened, send the message to complete the inquiry. Otherwise write us directly at Sadika.siddiqui55@gmail.com.</p>
       </div>
     </div>
   </div>
@@ -775,7 +776,7 @@ privacy_body = '''
     <p>Information submitted through this static site is used only to respond to your inquiry. We do not sell personal information or use it for unrelated marketing.</p>
     <h2>Questions</h2>
     <p>For privacy questions, contact us directly.</p>
-    <p><a class="btn" href="mailto:hello@primecoreinfo.com?subject=Privacy%20question">Email privacy questions</a></p>
+    <p><a class="btn" href="mailto:Sadika.siddiqui55@gmail.com?subject=Privacy%20question">Email privacy questions</a></p>
   </div>
 </section>
 '''
@@ -990,6 +991,7 @@ pages = [
     ("home/index.html", home_redirect),
 ]
 
-for rel, html in pages:
-    write(rel, html)
-print("done")
+if __name__ == "__main__":
+    for rel, html in pages:
+        write(rel, html)
+    print("done")
