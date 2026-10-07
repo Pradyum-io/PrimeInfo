@@ -956,6 +956,543 @@ article_ops = '''
 </section>
 '''
 
+project_cloud_migration_body = '''
+<!-- 01 — HERO -->
+<section class="hero project-hero">
+  <div class="hero-copy">
+    <p class="kicker reveal">Project Showcase / Cloud Solution</p>
+    <h1 class="reveal">Enterprise Cloud<br><em class="accent">Migration Platform</em></h1>
+    <p class="lede reveal" style="font-weight:600;color:var(--white);margin-bottom:12px">Automated Workload Discovery, Risk-Free Landing Zones &amp; Zero-Downtime Migration Orchestration</p>
+    <p class="lede reveal">Accelerate your transition to AWS, Microsoft Azure, and hybrid cloud environments with automated dependency mapping, security guardrails, and real-time operational telemetry.</p>
+    <div class="hero-actions reveal" style="margin-top:28px">
+      <a class="btn" data-magnetic href="../../contact/?ref=demo">Book Free Demo</a>
+      <a class="btn-ghost project-whatsapp-btn" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hello%20PrimeCoreInfo%20team,%20I%20am%20interested%20in%20the%20Enterprise%20Cloud%20Migration%20Platform" target="_blank" rel="noopener">WhatsApp Us <span class="whatsapp-badge">[Config Placeholder]</span></a>
+    </div>
+  </div>
+  <div class="project-hero-visual reveal">
+    <div class="project-visual-frame">
+      <div class="pv-header">
+        <span class="pv-dot red"></span>
+        <span class="pv-dot yellow"></span>
+        <span class="pv-dot green"></span>
+        <span class="pv-title">cloud-migration-dashboard.v1.0</span>
+      </div>
+      <div class="pv-body">
+        <div class="pv-metric-row">
+          <div class="pv-stat">
+            <span class="pv-label">Migration Status</span>
+            <span class="pv-val highlight">Active Wave 03</span>
+          </div>
+          <div class="pv-stat">
+            <span class="pv-label">Workloads Discovered</span>
+            <span class="pv-val">142 / 142</span>
+          </div>
+          <div class="pv-stat">
+            <span class="pv-label">Downtime Risk</span>
+            <span class="pv-val mint">0% (Zero-Downtime)</span>
+          </div>
+        </div>
+        <div class="pv-diagram">
+          <div class="pv-node src">Legacy Datacenter</div>
+          <div class="pv-flow"><span class="flow-line"></span><span class="flow-particle"></span></div>
+          <div class="pv-node core">PrimeCore Engine</div>
+          <div class="pv-flow"><span class="flow-line"></span><span class="flow-particle"></span></div>
+          <div class="pv-node dest">AWS / Azure Cloud</div>
+        </div>
+        <div class="pv-footer-note">
+          <span class="pv-badge">Live System Architecture</span>
+          <small class="pv-config-text">[ Project Visual Container ]</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — PROBLEM -->
+<section class="project-problem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">02 — The Problem</p>
+      <h2>Enterprise Cloud Migration Risk &amp; Complexity</h2>
+      <p>Legacy systems often delay digital transformation due to unmapped dependencies, fear of downtime, and operational uncertainty.</p>
+    </div>
+    <div class="why-grid stagger">
+      <article class="why-item reveal">
+        <h3>Hidden System Dependencies</h3>
+        <p>Complex enterprise applications often rely on undocumented database linkages, legacy APIs, and hardcoded IPs that risk broken workflows during migration.</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Fear of Unplanned Downtime</h3>
+        <p>Mission-critical applications cannot afford operational cutover outages. Traditional lift-and-shift methods risk hours of revenue-impacting downtime.</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Uncontrolled Cloud Spend</h3>
+        <p>Without upfront workload rightsizing and FinOps governance, cloud environments frequently over-provision resources, resulting in unexpected budget overruns.</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Security &amp; Compliance Gaps</h3>
+        <p>Migrating sensitive workloads requires strict adherence to regulatory standards (CIS, HIPAA, ISO). Missing guardrails during cutover exposes critical vulnerabilities.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 — FEATURES -->
+<section class="project-features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">03 — Core Features</p>
+      <h2>Built for Seamless Transformation</h2>
+      <p>A comprehensive platform engineered to automate, secure, and streamline every stage of your cloud journey.</p>
+    </div>
+    <div class="solutions-grid">
+      <article class="solution-card reveal">
+        <div class="project-feat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="5" rx="2"></rect>
+            <rect x="2" y="16" width="9" height="5" rx="2"></rect>
+            <rect x="13" y="16" width="9" height="5" rx="2"></rect>
+            <path d="M12 8v4"></path>
+            <path d="M6.5 12h11"></path>
+            <path d="M6.5 12v4"></path>
+            <path d="M17.5 12v4"></path>
+          </svg>
+        </div>
+        <h3>Automated Dependency Discovery</h3>
+        <p>Agentless scanning automatically maps all server, database, and API interconnectivity to eliminate migration blind spots.</p>
+      </article>
+      <article class="solution-card reveal">
+        <div class="project-feat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 10a4 4 0 0 0-7.75-1.2A3.5 3.5 0 0 0 4 12a3.5 3.5 0 0 0 3.5 3.5h2"></path>
+            <path d="M12 13.5v7.5s4.5-1.5 4.5-4.5v-3z"></path>
+          </svg>
+        </div>
+        <h3>IaC Landing Zone Generator</h3>
+        <p>Deploys pre-configured, security-hardened AWS and Azure landing zones using Terraform and CloudFormation templates.</p>
+      </article>
+      <article class="solution-card reveal">
+        <div class="project-feat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>
+            <path d="M4 6v6c0 1.66 3.58 3 8 3 1.1 0 2.15-.08 3.12-.24"></path>
+            <path d="M4 12v6c0 1.66 3.58 3 8 3 1.5 0 2.92-.15 4.18-.43"></path>
+            <path d="M20 6v5"></path>
+            <path d="M16 16.5a4 4 0 0 1 3.5-3.5M19.5 13l2 2m-2-2l-2 2"></path>
+            <path d="M22 19.5a4 4 0 0 1-3.5 3.5M18.5 23l-2-2m2 2l2-2"></path>
+          </svg>
+        </div>
+        <h3>Zero-Downtime Data Sync</h3>
+        <p>Continuous block-level and database replication allows live validation before switching traffic over seamlessly.</p>
+      </article>
+      <article class="solution-card reveal">
+        <div class="project-feat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+            <path d="M3 20h18"></path>
+            <path d="M4 11l4-4 4 2 7-7"></path>
+            <polyline points="15 2 19 2 19 6"></polyline>
+          </svg>
+        </div>
+        <h3>Real-Time FinOps Modeling</h3>
+        <p>Simulate target cloud costs prior to cutover and optimize resource instances for maximum cost efficiency.</p>
+      </article>
+      <article class="solution-card reveal">
+        <div class="project-feat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <rect x="9" y="11" width="6" height="5" rx="1"></rect>
+            <path d="M10 11V9a2 2 0 0 1 4 0v2"></path>
+          </svg>
+        </div>
+        <h3>Automated Governance &amp; IAM</h3>
+        <p>Enforces zero-trust access, encrypted transport, and compliance logging automatically across target cloud environments.</p>
+      </article>
+      <article class="solution-card reveal">
+        <div class="project-feat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+            <path d="M6 10h2l2-3 3 6 2-3h3"></path>
+          </svg>
+        </div>
+        <h3>Post-Cutover Telemetry</h3>
+        <p>Unified performance dashboard monitors latency, uptime, and system health in real-time post-migration.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — SCREENSHOTS -->
+<section class="project-screenshots">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">04 — System Screenshots</p>
+      <h2>Platform Interface Showcase</h2>
+      <p>Explore the intuitive interface, real-time migration dashboards, and orchestration tools.</p>
+    </div>
+    
+    <div class="project-screenshot-grid stagger">
+      <!-- Card 01 — Migration Control Center Dashboard -->
+      <div class="project-ss-card reveal">
+        <div class="project-ss-frame">
+          <div class="ss-frame-header">
+            <div class="ss-frame-dots"><span></span><span></span><span></span></div>
+            <span class="ss-frame-title">control-center // wave-03</span>
+            <span class="ss-ph-badge">INTERFACE PREVIEW</span>
+          </div>
+          <div class="ss-frame-canvas">
+            <div class="dash-preview-grid">
+              <div class="dash-mini-card">
+                <span class="dash-mini-label">Migration Wave 03</span>
+                <span class="dash-mini-val mint">78% Complete</span>
+                <div class="dash-progress-bar"><div class="dash-progress-fill" style="width: 78%"></div></div>
+              </div>
+              <div class="dash-mini-card">
+                <span class="dash-mini-label">Discovered Workloads</span>
+                <span class="dash-mini-val cyan">142 / 142 Active</span>
+                <div class="dash-status-dots">
+                  <span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-syncing"></span>
+                </div>
+              </div>
+            </div>
+            <div class="dash-preview-chart">
+              <svg viewBox="0 0 320 80" width="100%" height="80" fill="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="chartGrad1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#35d6e8" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#35d6e8" stop-opacity="0.0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,60 Q40,40 80,50 T160,25 T240,35 T320,15 L320,80 L0,80 Z" fill="url(#chartGrad1)"/>
+                <path d="M0,60 Q40,40 80,50 T160,25 T240,35 T320,15" stroke="#35d6e8" stroke-width="2"/>
+                <circle cx="160" cy="25" r="4" fill="#62e6d1" stroke="#061525" stroke-width="2"/>
+                <circle cx="320" cy="15" r="4" fill="#35d6e8" stroke="#061525" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="project-ss-info">
+          <h4>Migration Control Center Dashboard</h4>
+          <p>Real-time orchestration interface for monitoring active migration waves, server status, and cutover throughput.</p>
+        </div>
+        <div class="project-ss-caption">
+          <strong>Interface Preview</strong> — Live tracking of workload wave execution and automated risk telemetry.
+        </div>
+      </div>
+
+      <!-- Card 02 — Application Dependency Topology Graph -->
+      <div class="project-ss-card reveal">
+        <div class="project-ss-frame">
+          <div class="ss-frame-header">
+            <div class="ss-frame-dots"><span></span><span></span><span></span></div>
+            <span class="ss-frame-title">topology // app-mesh</span>
+            <span class="ss-ph-badge">INTERFACE PREVIEW</span>
+          </div>
+          <div class="ss-frame-canvas canvas-topology">
+            <svg viewBox="0 0 320 150" width="100%" height="150" fill="none" aria-hidden="true">
+              <path d="M50,75 L130,35" stroke="rgba(53, 214, 232, 0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <path d="M50,75 L130,115" stroke="rgba(53, 214, 232, 0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <path d="M130,35 L230,45" stroke="#35d6e8" stroke-width="1.5"/>
+              <path d="M130,35 L230,105" stroke="rgba(98, 230, 209, 0.5)" stroke-width="1.5"/>
+              <path d="M130,115 L230,105" stroke="#62e6d1" stroke-width="1.5"/>
+
+              <g transform="translate(50,75)">
+                <circle r="17" fill="rgba(10,32,53,0.95)" stroke="#35d6e8" stroke-width="2"/>
+                <text y="3.5" text-anchor="middle" fill="#f7fafc" font-size="8.5" font-weight="700" font-family="sans-serif">GATEWAY</text>
+              </g>
+
+              <g transform="translate(130,35)">
+                <circle r="15" fill="rgba(10,32,53,0.95)" stroke="#62e6d1" stroke-width="2"/>
+                <text y="3.5" text-anchor="middle" fill="#f7fafc" font-size="8.5" font-weight="700" font-family="sans-serif">APP-API</text>
+              </g>
+
+              <g transform="translate(130,115)">
+                <circle r="15" fill="rgba(10,32,53,0.95)" stroke="#159fe8" stroke-width="2"/>
+                <text y="3.5" text-anchor="middle" fill="#f7fafc" font-size="8.5" font-weight="700" font-family="sans-serif">AUTH-SVC</text>
+              </g>
+
+              <g transform="translate(230,45)">
+                <rect x="-22" y="-11" width="44" height="22" rx="5" fill="rgba(10,32,53,0.95)" stroke="#35d6e8" stroke-width="2"/>
+                <text y="3" text-anchor="middle" fill="#9BEFE5" font-size="8" font-weight="700" font-family="sans-serif">POSTGRES</text>
+              </g>
+
+              <g transform="translate(230,105)">
+                <rect x="-22" y="-11" width="44" height="22" rx="5" fill="rgba(10,32,53,0.95)" stroke="#62e6d1" stroke-width="2"/>
+                <text y="3" text-anchor="middle" fill="#9BEFE5" font-size="8" font-weight="700" font-family="sans-serif">REDIS</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="project-ss-info">
+          <h4>Application Dependency Topology Graph</h4>
+          <p>Interactive discovery map displaying interconnected microservices, legacy database links, and API routes.</p>
+        </div>
+        <div class="project-ss-caption">
+          <strong>Interface Preview</strong> — Auto-generated network graph mapping system dependencies prior to cutover.
+        </div>
+      </div>
+
+      <!-- Card 03 — FinOps Cloud Cost Optimization Portal -->
+      <div class="project-ss-card reveal">
+        <div class="project-ss-frame">
+          <div class="ss-frame-header">
+            <div class="ss-frame-dots"><span></span><span></span><span></span></div>
+            <span class="ss-frame-title">finops // cost-optimizer</span>
+            <span class="ss-ph-badge">INTERFACE PREVIEW</span>
+          </div>
+          <div class="ss-frame-canvas">
+            <div class="dash-preview-grid">
+              <div class="dash-mini-card">
+                <span class="dash-mini-label">Monthly Cloud Spend</span>
+                <span class="dash-mini-val mint">-32% Optimized</span>
+                <span class="dash-mini-sub">Target spend model</span>
+              </div>
+              <div class="dash-mini-card">
+                <span class="dash-mini-label">Instance Efficiency</span>
+                <span class="dash-mini-val cyan">94% Rightsized</span>
+                <div class="dash-progress-bar"><div class="dash-progress-fill mint-bg" style="width: 94%"></div></div>
+              </div>
+            </div>
+            <div class="finops-bars-preview">
+              <div class="finops-bar-item"><span class="bar-tag">AWS Compute</span><div class="bar-track"><div class="bar-fill cyan-bg" style="width: 75%"></div></div></div>
+              <div class="finops-bar-item"><span class="bar-tag">Azure DB</span><div class="bar-track"><div class="bar-fill mint-bg" style="width: 55%"></div></div></div>
+              <div class="finops-bar-item"><span class="bar-tag">Storage S3</span><div class="bar-track"><div class="bar-fill blue-bg" style="width: 40%"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-ss-info">
+          <h4>FinOps Cloud Cost Optimization Portal</h4>
+          <p>Pre-migration cost simulation dashboard analyzing target cloud expenditure and instance rightsizing.</p>
+        </div>
+        <div class="project-ss-caption">
+          <strong>Interface Preview</strong> — Resource utilization modeling and projected cloud cost management.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — BENEFITS -->
+<section class="project-benefits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">05 — Business Benefits</p>
+      <h2>Quantifiable Business Value</h2>
+      <p>Engineered to deliver tangible operational efficiency, cost reduction, and security assurance.</p>
+    </div>
+    <div class="outcomes">
+      <div class="outcome reveal">
+        <h3>Operational Challenges Avoided</h3>
+        <ul>
+          <li>Manual inventory tracking and lost dependency records</li>
+          <li>High-risk cutovers with extended maintenance windows</li>
+          <li>Unanticipated cloud billing spikes post-migration</li>
+          <li>Inconsistent security policy enforcement across cloud regions</li>
+        </ul>
+      </div>
+      <div class="outcome-mid reveal">VS</div>
+      <div class="outcome after reveal">
+        <h3>Platform Business Outcomes</h3>
+        <ul>
+          <li>Automated 100% dependency visibility prior to migration</li>
+          <li>Predictable, zero-downtime cutover execution</li>
+          <li>Optimized cloud resource allocation for maximum cost savings</li>
+          <li>Continuous compliance and automated zero-trust security</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — PRICING -->
+<section class="project-pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">06 — Pricing &amp; Packages</p>
+      <h2>Flexible Enterprise Investment Plans</h2>
+      <p>Transparent pricing tiers tailored to your organization's workload volume and infrastructure requirements.</p>
+    </div>
+    <div class="project-pricing-grid stagger">
+      <div class="project-price-card reveal">
+        <div class="price-header">
+          <h3>Assessment &amp; Discovery</h3>
+          <p class="price-desc">Ideal for initial cloud readiness audit &amp; workload mapping.</p>
+        </div>
+        <div class="price-amount">
+          <span class="price-num">[ Starting Price Placeholder ]</span>
+          <span class="price-period">Per Environment Audit</span>
+        </div>
+        <ul class="price-features">
+          <li>Automated dependency mapping</li>
+          <li>Cloud readiness risk report</li>
+          <li>FinOps target cost estimation</li>
+          <li>Migration wave roadmap design</li>
+        </ul>
+        <a class="btn-ghost" href="../../contact/?plan=assessment">Request Assessment</a>
+      </div>
+
+      <div class="project-price-card featured reveal">
+        <div class="price-badge">Recommended</div>
+        <div class="price-header">
+          <h3>Full Migration Orchestration</h3>
+          <p class="price-desc">Complete end-to-end migration execution with zero-downtime SLA.</p>
+        </div>
+        <div class="price-amount">
+          <span class="price-num">[ Custom Pricing Placeholder ]</span>
+          <span class="price-period">Based on Workload Volume</span>
+        </div>
+        <ul class="price-features">
+          <li>Everything in Assessment tier</li>
+          <li>IaC Landing zone deployment</li>
+          <li>Zero-downtime data replication</li>
+          <li>24/7 Cutover support &amp; rollback protection</li>
+          <li>Post-cutover performance tuning</li>
+        </ul>
+        <a class="btn" href="../../contact/?plan=enterprise">Schedule Consultation</a>
+      </div>
+
+      <div class="project-price-card reveal">
+        <div class="price-header">
+          <h3>Continuous Managed Cloud</h3>
+          <p class="price-desc">Post-migration 24/7 monitoring, FinOps &amp; governance.</p>
+        </div>
+        <div class="price-amount">
+          <span class="price-num">[ Retainer Placeholder ]</span>
+          <span class="price-period">Monthly Managed Service</span>
+        </div>
+        <ul class="price-features">
+          <li>Continuous monitoring &amp; incident response</li>
+          <li>Ongoing cloud cost optimization</li>
+          <li>Automated compliance audits</li>
+          <li>Dedicated cloud architect support</li>
+        </ul>
+        <a class="btn-ghost" href="../../contact/?plan=managed">Discuss Managed Services</a>
+      </div>
+    </div>
+    <p class="pricing-note reveal" style="text-align:center;margin-top:24px;font-size:0.88rem;color:var(--text-3)">
+      <em>[ Pricing Configuration Placeholder — Final pricing models and figures are customized based on verified project scope ]</em>
+    </p>
+  </div>
+</section>
+
+<!-- 07 — DEMO VIDEO -->
+<section class="project-demo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">07 — Demo Video</p>
+      <h2>Platform Walkthrough in Action</h2>
+      <p>Watch how the Enterprise Cloud Migration Platform automates discovery and executes live migration waves.</p>
+    </div>
+    <div class="project-video-container reveal">
+      <div class="project-video-placeholder">
+        <div class="pvp-play-btn" aria-label="Play Demo Video">▶</div>
+        <h3>[ Project Demo Video Placeholder ]</h3>
+        <p>Supports YouTube, Vimeo, or Hosted MP4 Embed URLs.</p>
+        <span class="pvp-note">[ Configuration Note: Replace this placeholder container with your iframe / video player embed code when available ]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 — CUSTOMER STORY -->
+<section class="project-story">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">08 — Customer Story</p>
+      <h2>Real-World Implementation Journey</h2>
+      <p>A structured look at how complex workload challenges are transformed into operational success.</p>
+    </div>
+    <div class="project-story-flow stagger">
+      <div class="story-step reveal">
+        <div class="story-dot">1</div>
+        <div class="story-content">
+          <span class="cat">Customer Profile</span>
+          <h3>[ Customer Profile Placeholder ]</h3>
+          <p>Enterprise Healthcare / Financial Services Organization with multi-region hybrid datacenters.</p>
+        </div>
+      </div>
+
+      <div class="story-step reveal">
+        <div class="story-dot">2</div>
+        <div class="story-content">
+          <span class="cat">The Challenge</span>
+          <h3>[ Migration Challenge Placeholder ]</h3>
+          <p>150+ legacy VMs with inter-dependent SQL databases requiring zero downtime cutover under strict HIPAA compliance rules.</p>
+        </div>
+      </div>
+
+      <div class="story-step reveal">
+        <div class="story-dot">3</div>
+        <div class="story-content">
+          <span class="cat">The Implementation</span>
+          <h3>[ Implementation Solution Placeholder ]</h3>
+          <p>Deployed automated discovery agents, built automated IaC landing zones in AWS, and executed continuous data replication over 4 wave stages.</p>
+        </div>
+      </div>
+
+      <div class="story-step reveal">
+        <div class="story-dot">4</div>
+        <div class="story-content">
+          <span class="cat">The Business Outcome</span>
+          <h3>[ Business Outcome Placeholder ]</h3>
+          <p>100% of workloads migrated on schedule with zero customer-facing downtime and complete compliance verification.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 — FAQ -->
+<section class="project-faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">09 — Frequently Asked Questions</p>
+      <h2>Project Details &amp; Technical FAQs</h2>
+      <p>Clear answers to common questions about deployment, integration, and security.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What cloud platforms are supported by this migration platform?</summary>
+        <p>The platform natively supports migration to AWS (Amazon Web Services), Microsoft Azure, Google Cloud Platform (GCP), and hybrid VMware/on-premises landing zones.</p>
+      </details>
+      <details>
+        <summary>How does the platform ensure zero-downtime cutover?</summary>
+        <p>It utilizes continuous, block-level and database sync engines that keep target cloud instances completely up-to-date while legacy systems remain live until final DNS cutover.</p>
+      </details>
+      <details>
+        <summary>Are application discovery agents required on every server?</summary>
+        <p>Both agentless (via hypervisor / API credentials) and lightweight agent-based discovery options are available to fit your security and network architecture requirements.</p>
+      </details>
+      <details>
+        <summary>Can pricing be customized for smaller or larger workloads?</summary>
+        <p>Yes. Pricing is flexible and scalable based on the number of workloads, databases, and continuous management requirements.</p>
+      </details>
+      <details>
+        <summary>How do I book a live demonstration or consultation?</summary>
+        <p>You can click the "Book Free Demo" button on this page or reach out directly via our contact form or WhatsApp connection.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 10 & 11 — BOOK FREE DEMO & WHATSAPP US -->
+<section class="project-cta-section wrap" style="padding-bottom:96px">
+  <div class="cta-band reveal">
+    <p class="kicker">10 &amp; 11 — Get Started &amp; Direct Contact</p>
+    <h2>Ready to Accelerate Your Cloud Migration?</h2>
+    <p>Book a personalized demonstration with our cloud infrastructure team or connect with us directly via WhatsApp to discuss your project requirements.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;position:relative;z-index:1">
+      <a class="btn" data-magnetic href="../../contact/?ref=project-cta">Book Free Demo <span aria-hidden="true">→</span></a>
+      <a class="btn-ghost project-whatsapp-btn" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hello%20PrimeCoreInfo%20team,%20I%20would%20like%20to%20book%20a%20demo%20for%20the%20Cloud%20Migration%20Platform" target="_blank" rel="noopener">WhatsApp Us <span class="whatsapp-badge">[Config Placeholder]</span></a>
+    </div>
+  </div>
+</section>
+'''
+
 home_redirect = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -984,6 +1521,7 @@ pages = [
     ("cloud-transformation/index.html", doc("Cloud Transformation | Primecore Info Systems", "Move to the cloud with a plan you can trust.", "../", "services", cloud_body)),
     ("infrastructure-modernization/index.html", doc("Infrastructure Modernization | Primecore Info Systems", "Modernize core infrastructure for performance, resilience, and cloud-first operations.", "../", "services", infra_body)),
     ("managed-it-services/index.html", doc("Managed IT Services | Primecore Info Systems", "Proactive monitoring, responsive support, and operational ownership.", "../", "services", managed_body)),
+    ("projects/cloud-migration-platform/index.html", doc("Enterprise Cloud Migration Platform | Primecore Info Systems", "Automated workload discovery, risk-free landing zones, and zero-downtime cloud migration orchestration.", "../../", "projects", project_cloud_migration_body, False)),
     ("insights/cloud-readiness/index.html", doc("Cloud readiness | Primecore Info Systems Insights", "What to clarify before the first migration wave.", "../../", "insights", article_cloud)),
     ("insights/modern-foundations/index.html", doc("Modern foundations | Primecore Info Systems Insights", "How to sequence infrastructure improvements around business risk.", "../../", "insights", article_found)),
     ("insights/operational-resilience/index.html", doc("Operational resilience | Primecore Info Systems Insights", "Why visibility and ownership matter as environments grow.", "../../", "insights", article_ops)),
