@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Data Protection Statement | Primecore Info Systems</title>
+<meta name="description" content="Data governance, information security principles, and privacy protections at Primecore Info Systems."/>
+<link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
+<link rel="stylesheet" href="../assets/css/prime.css"/>
+</head>
+<body data-root="../" data-page="home">
+<div class="atmosphere" aria-hidden="true"></div>
+<div class="cursor-light" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="../projects/cloud-migration-platform/" aria-label="Primecore Info Systems home"><img class="brand-mark-img" src="../assets/images/brand-logo.png" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a class="" href="../about/">About Us</a>
+    <a class="" href="../services/">Services</a>
+    <a class="" href="../#solutions">Solutions</a>
+    <a class="" href="../#technologies">Technologies</a>
+    <a class="" href="../contact/">Contact</a>
+    <a class="btn-talk" data-magnetic href="../contact/">Get Started</a>
+  </nav>
+  <button class="menu-btn" type="button" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span><b class="sr-only">Open menu</b></button>
+</header>
+<nav class="mobile-nav" id="mobile-nav" hidden>
+  <a href="../about/">About Us</a>
+  <a href="../services/">Services</a>
+  <a href="../#solutions">Solutions</a>
+  <a href="../#technologies">Technologies</a>
+  <a href="../contact/">Contact</a>
+  <a href="../contact/">Get Started</a>
+</nav>
+<main>
+
+<section class="page-hero">
+  <p class="kicker">Security &amp; Governance</p>
+  <h1>Data Protection Statement</h1>
+  <p class="lede">Our operational principles for securing website information, safeguarding visitor data, and maintaining privacy integrity.</p>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <div class="legal-badge">Governance Overview &bull; Active Practice</div>
+
+    <div class="legal-card">
+      <h4>Our Commitment</h4>
+      <p>At Primecore Info Systems Pvt. Ltd., data protection and infrastructure resilience are foundational to our work as enterprise IT architects. This statement explains how we operationalize data security, respect visitor privacy, and manage technical controls across PrimeCoreInfo.com.</p>
+      <p style="margin-top:10px">Looking for our complete legal disclosures? Read our full <a href="../privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+
+    <h2>1. Data Governance Principles</h2>
+    <p>Our handling of digital information is governed by four core tenets:</p>
+    <ul>
+      <li><strong>Data Minimization:</strong> We only collect data that is strictly necessary to conduct direct business correspondence and safeguard website availability.</li>
+      <li><strong>Purpose Limitation:</strong> Information submitted for engineering inquiries is never repurposed for unsolicited commercial broadcasts, data reselling, or unauthorized tracking.</li>
+      <li><strong>Confidentiality &amp; Access Control:</strong> Inbound communications are restricted exclusively to authorized team members who require access to evaluate technical projects.</li>
+      <li><strong>Transparency:</strong> We provide clear, unambiguous documentation of our data flows, tracking status, and contact procedures.</li>
+    </ul>
+
+    <h2>2. Categories of Website Data Handled</h2>
+    <table class="legal-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Specific Elements</th>
+          <th>Storage Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Inquiry Data</strong></td>
+          <td>Name, work email, company name, phone, chosen service, and project message.</td>
+          <td>Application database (SQLite) &amp; encrypted operational email notification.</td>
+        </tr>
+        <tr>
+          <td><strong>Transient Network Logs</strong></td>
+          <td>Client IP address, user-agent string, and request timestamps.</td>
+          <td>Temporary memory-based rate limiting buffers for spam prevention.</td>
+        </tr>
+        <tr>
+          <td><strong>Client UI Preferences</strong></td>
+          <td>Responsive navigation state and motion reduction preferences.</td>
+          <td>Local device CSS/browser execution; zero remote transmission.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Security Practices &amp; Safeguards</h2>
+    <p>We deploy defense-in-depth measures designed to protect information submitted via our digital interfaces:</p>
+    <ul>
+      <li><strong>Transport Layer Security:</strong> All data in transit between your browser and our server is secured using modern TLS encryption protocols.</li>
+      <li><strong>Server-Side Input Validation:</strong> All form inputs are validated and sanitized server-side to prevent cross-site scripting (XSS), SQL injection, and payload overflow attempts.</li>
+      <li><strong>Anti-Abuse Protections:</strong> Our application server incorporates automated honeypot trap fields, burst rate-limiting per IP address, and duplicate submission suppressors to block malicious bots without collecting extraneous visitor identifiers.</li>
+      <li><strong>Infrastructure Isolation:</strong> Databases storing inquiry submissions are isolated within the backend runtime environment without public internet exposure.</li>
+    </ul>
+    <p><em>Please note: While we implement industry-standard safeguards, no digital transmission or internet infrastructure is 100% impenetrable. We do not make unreasonable or absolute security guarantees.</em></p>
+
+    <h2>4. Advertising Tracking &amp; Meta Business Tools Status</h2>
+    <div class="legal-card">
+      <h4>Tracking &amp; Third-Party Pixels</h4>
+      <p><strong>Verified Status:</strong> Meta Pixel, Meta Conversions API (CAPI), and third-party advertising cookies are currently <strong>not implemented</strong> on PrimeCoreInfo.com.</p>
+    </div>
+    <p>We maintain an advertising-tracker-free website baseline. If Meta Business Tools, conversion tracking APIs, or advertising pixels are evaluated or integrated in the future for campaign measurement:</p>
+    <ul>
+      <li>Tracking scripts will not be loaded unconditionally where applicable law requires user consent.</li>
+      <li>Clear opt-in / opt-out controls will be deployed prior to the transmission of client browser identifiers.</li>
+      <li>Any server-side conversions API integration will enforce data hashing (SHA-256) of personal identifiers in accordance with technical privacy guidelines.</li>
+    </ul>
+
+    <h2>5. Third-Party Sharing Principles</h2>
+    <p>Primecore Info Systems operates under a strict no-sale policy:</p>
+    <ul>
+      <li>We do not sell, license, or barter customer or visitor contact information.</li>
+      <li>We do not share your project details with external advertising brokers or behavioral advertising exchanges.</li>
+      <li>Data is only processed by essential operational service partners (such as SMTP mail gateways) acting under our direct instructions.</li>
+    </ul>
+
+    <h2>6. Data Retention &amp; Deletion Process</h2>
+    <p>We retain submitted project inquiries for as long as needed to fulfill consultative discussions, maintain professional business history, and satisfy legitimate record-keeping standards.</p>
+    <p>If you have previously submitted an inquiry through our website and wish to have your contact details purged from our records, you can submit a deletion request:</p>
+    <ul>
+      <li>Email your request to: <a href="mailto:Sadika.siddiqui55@gmail.com?subject=Data%20Deletion%20Request">Sadika.siddiqui55@gmail.com</a></li>
+      <li>Specify the email address associated with your original submission.</li>
+      <li>Our team will locate the record in our database and notify you once the record has been permanently removed.</li>
+    </ul>
+
+    <h2>7. Questions &amp; Data Protection Inquiries</h2>
+    <p>For inquiries regarding our data handling practices or to discuss secure infrastructure integration with our engineering architects, contact our team directly:</p>
+    <div class="legal-card">
+      <h4>Contact Information</h4>
+      <p><strong>Email:</strong> <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a></p>
+      <p><strong>Company:</strong> Primecore Info Systems Pvt. Ltd.</p>
+      <p><strong>Reference:</strong> <a href="../privacy-policy/">View Complete Privacy Policy &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+<section class="wrap" style="padding-bottom:96px">
+  <div class="cta-band reveal">
+    <p class="kicker">Get Started</p>
+    <h2>Build. Migrate. Automate. Optimize.</h2>
+    <p>Primecore Info Systems helps businesses design, migrate, automate and optimize their IT infrastructure across AWS, Microsoft Azure and hybrid cloud environments.</p>
+    <a class="btn" data-magnetic href="../contact/">Get Started <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="../projects/cloud-migration-platform/"><img class="brand-mark-img" src="../assets/images/brand-logo.png" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
+      <p>Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize their infrastructure, adopt cloud technologies and build reliable digital platforms.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <a href="../about/">About Us</a>
+      <a href="../services/">Services</a>
+      <a href="../#solutions">Solutions</a>
+      <a href="../#technologies">Technologies</a>
+      <a href="../contact/">Contact</a>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="../services/#cloud-infrastructure">Cloud Infrastructure</a>
+      <a href="../services/#devops-sre">DevOps &amp; SRE</a>
+      <a href="../services/#cloud-migration">Cloud Migration</a>
+      <a href="../services/#managed-infrastructure">Managed Infrastructure</a>
+      <a href="../services/#security-governance">Security &amp; Governance</a>
+      <a href="../services/#cloud-finops">Cloud Cost Optimization</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a>
+      <a href="../privacy-policy/">Privacy Policy</a>
+      <a href="../data-protection/">Data Protection</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Primecore Info Systems Pvt. Ltd. All rights reserved.</span>
+    <span class="sig" aria-hidden="true"></span>
+  </div>
+</footer>
+<script src="../assets/js/prime.js"></script>
+</body>
+</html>

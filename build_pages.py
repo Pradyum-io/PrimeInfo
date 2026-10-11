@@ -69,6 +69,7 @@ def chrome(root: str, page: str):
       <h4>Contact</h4>
       <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a>
       <a href="{href("privacy-policy/")}">Privacy Policy</a>
+      <a href="{href("data-protection/")}">Data Protection</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -766,20 +767,221 @@ insights_body = '''
 
 privacy_body = '''
 <section class="page-hero">
-  <p class="kicker">Your information</p>
-  <h1>Privacy policy</h1>
-  <p class="lede">We respect the information you share when you explore Primecoreinfo or contact our team.</p>
+  <p class="kicker">Transparency &amp; Legal Notices</p>
+  <h1>Privacy Policy</h1>
+  <p class="lede">How Primecore Info Systems collects, handles, and protects information submitted through this website.</p>
 </section>
+
 <section>
   <div class="wrap prose">
-    <h2>How we use information</h2>
-    <p>Information submitted through this static site is used only to respond to your inquiry. We do not sell personal information or use it for unrelated marketing.</p>
-    <h2>Questions</h2>
-    <p>For privacy questions, contact us directly.</p>
-    <p><a class="btn" href="mailto:Sadika.siddiqui55@gmail.com?subject=Privacy%20question">Email privacy questions</a></p>
+    <div class="legal-badge">Current Policy &bull; Last Updated: October 2026</div>
+
+    <details class="legal-nav-box" open>
+      <summary>Table of Contents</summary>
+      <ul>
+        <li><a href="#introduction">1. Introduction &amp; Scope</a></li>
+        <li><a href="#information-collected">2. Information We Collect</a></li>
+        <li><a href="#processing-purposes">3. Purposes of Processing</a></li>
+        <li><a href="#submissions-storage">4. Contact Inquiries &amp; Storage</a></li>
+        <li><a href="#cookies-tracking">5. Cookies &amp; Tracking Tools</a></li>
+        <li><a href="#service-providers">6. Third-Party Service Providers</a></li>
+        <li><a href="#security-retention">7. Data Security &amp; Retention</a></li>
+        <li><a href="#privacy-rights">8. Your Privacy Rights</a></li>
+        <li><a href="#deletion-correction">9. Correction &amp; Deletion Requests</a></li>
+        <li><a href="#international">10. International Visitors</a></li>
+        <li><a href="#updates-contact">11. Updates &amp; Contact Information</a></li>
+      </ul>
+    </details>
+
+    <h2 id="introduction">1. Introduction &amp; Scope</h2>
+    <p>Primecore Info Systems Pvt. Ltd. (&ldquo;Primecore Info Systems,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) provides IT consulting, cloud infrastructure, and managed technology services. This Privacy Policy outlines our transparent data practices concerning our public website (PrimeCoreInfo.com) and the inquiries submitted by business visitors.</p>
+    <p>This policy applies specifically to personal data and technical details transmitted when visiting our website or reaching out through our contact forms. For dedicated data governance practices, please review our companion <a href="../data-protection/">Data Protection Statement</a>.</p>
+
+    <h2 id="information-collected">2. Information We Collect Through the Website</h2>
+    <p>We believe in data minimization. We only collect information that you knowingly provide or that is technically necessary to serve our web pages reliably:</p>
+    <ul>
+      <li><strong>Contact Form Inputs:</strong> When you submit a project inquiry or request consultation via our contact form, we collect your <em>Full Name</em>, <em>Work Email Address</em>, <em>Company / Organization Name</em> (optional), <em>Phone Number</em> (optional), <em>Service of Interest</em>, and your written <em>Message / Project Description</em>.</li>
+      <li><strong>Direct Inquiries:</strong> If you contact us via direct email links, we collect your email address, subject line, and message body.</li>
+      <li><strong>Technical Request Headers:</strong> Our web server automatically receives standard network transmission data, including your client IP address and user-agent string, strictly used for transient request handling and rate limiting to prevent automated spam and abuse.</li>
+    </ul>
+
+    <h2 id="processing-purposes">3. Purposes for Collecting and Processing Information</h2>
+    <p>We process the information you submit strictly for legitimate business purposes:</p>
+    <ul>
+      <li>To review, evaluate, and respond to your direct service inquiries and technical requests.</li>
+      <li>To scope enterprise IT, cloud transformation, and infrastructure engineering consultations.</li>
+      <li>To protect the security and availability of our website by detecting spam submissions, brute-force attempts, and service abuse.</li>
+      <li>To maintain legitimate business records of inbound communications.</li>
+    </ul>
+    <p><strong>We do not sell, rent, lease, or monetize your personal information</strong> to data brokers, advertising networks, or unrelated third parties.</p>
+
+    <h2 id="submissions-storage">4. Contact-Form Submission, Storage, and Email Notifications</h2>
+    <p>When you submit an inquiry through our website, the data undergoes the following workflow:</p>
+    <ol>
+      <li><strong>Anti-Abuse Verification:</strong> The submission passes an automated honeypot inspection, request-rate checks, and validation on our application server.</li>
+      <li><strong>Database Record:</strong> The inquiry is stored in our internal application database (SQLite) containing the submitted fields and an automated submission timestamp.</li>
+      <li><strong>Internal Notification Dispatch:</strong> The backend generates an automated administrative email notification dispatched via encrypted SMTP to our designated company inbox (<code>Sadika.siddiqui55@gmail.com</code>) so our engineering and operations team can promptly reply.</li>
+      <li><strong>Static Fallback:</strong> If our backend API is temporarily unreachable or operated in a static environment, the form offers a fallback mailto draft mechanism that enables you to send your inquiry directly via your local mail client.</li>
+    </ol>
+
+    <h2 id="cookies-tracking">5. Cookies, Browser Storage, and Third-Party Tracking</h2>
+    <div class="legal-card">
+      <h4>Current Tracking Status</h4>
+      <p><strong>Meta Pixel, Meta Conversions API (CAPI), and third-party tracking scripts are NOT currently installed or active on this website.</strong> We do not track visitors across third-party websites or deploy behavioral advertising cookies.</p>
+    </div>
+    <p>Our website utilizes standard, privacy-friendly front-end architecture. We do not use third-party behavioral profiling cookies or persistent tracking cookies. The only client-side browser mechanisms utilized are standard ephemeral browser document properties and responsive media-query state evaluators required for site navigation and visual layout.</p>
+    <p>If we integrate third-party analytics or business tools (such as Meta Business Tools or analytics platforms) in the future to evaluate marketing campaigns, we will update this policy accordingly and deploy appropriate user consent mechanisms prior to firing non-essential tracking technologies.</p>
+
+    <h2 id="service-providers">6. Third-Party Service Providers and Disclosures</h2>
+    <p>We do not share your inquiry details with external marketers. Information is disclosed only to trusted infrastructure providers that support our direct operations under strict confidentiality:</p>
+    <ul>
+      <li><strong>Hosting and Cloud Infrastructure:</strong> Web hosting and server infrastructure environments that power our site availability.</li>
+      <li><strong>Email Delivery Infrastructure:</strong> Standard SMTP mail servers utilized solely to transmit notifications of your inquiry to our team.</li>
+      <li><strong>Legal and Regulatory Compliance:</strong> We may disclose information if required to comply with a valid legal obligation, court order, or official governmental request.</li>
+    </ul>
+
+    <h2 id="security-retention">7. Data Security and Retention</h2>
+    <p>We implement appropriate technical and administrative safeguards to protect submitted inquiry data against unauthorized access, loss, or disclosure. These measures include server-side input sanitization, rate-limiting spam mitigations, access-controlled server storage, and transport layer security (TLS) for network communications.</p>
+    <p><strong>Retention Period:</strong> Inbound inquiries are retained only for as long as necessary to fulfill the operational business purpose—specifically, answering your inquiry, assessing project feasibility, and maintaining regular business correspondence records—or as required by applicable legal and accounting retention obligations.</p>
+
+    <h2 id="privacy-rights">8. User Privacy Rights</h2>
+    <p>Depending on your jurisdiction (such as the European Economic Area, the United Kingdom, or applicable US state laws), you may have the following statutory privacy rights regarding your personal information:</p>
+    <ul>
+      <li><strong>Right to Access / Know:</strong> The right to request confirmation of whether we hold personal information about you and receive a copy of that data.</li>
+      <li><strong>Right to Rectification:</strong> The right to request correction of inaccurate, incomplete, or outdated personal information.</li>
+      <li><strong>Right to Erasure / Deletion:</strong> The right to request the deletion of your personal contact records, subject to legitimate record-keeping requirements.</li>
+      <li><strong>Right to Restriction or Objection:</strong> The right to object to or restrict processing of your data under specific conditions.</li>
+      <li><strong>Non-Discrimination:</strong> We will never discriminate against you, alter service terms, or deny inquiries because you exercised your privacy rights.</li>
+    </ul>
+
+    <h2 id="deletion-correction">9. Data Deletion and Correction Request Procedures</h2>
+    <p>Because our website provides public informational content without user account logins, requests for data inspection, correction, or deletion are processed directly by our team:</p>
+    <div class="legal-card">
+      <h4>How to Submit a Data Request</h4>
+      <p>Send an email to: <a href="mailto:Sadika.siddiqui55@gmail.com?subject=Privacy%20Data%20Request">Sadika.siddiqui55@gmail.com</a></p>
+      <p>Please include your full name, the email address used when submitting your website inquiry, and the specific action you are requesting (e.g., &ldquo;Delete my inquiry record&rdquo; or &ldquo;Update my contact phone number&rdquo;). We will verify your identity using the associated email address and respond within thirty (30) days without charging a fee.</p>
+    </div>
+
+    <h2 id="international">10. International Visitors &amp; Cross-Border Transfers</h2>
+    <p>Primecore Info Systems operates globally. Information submitted through our website may be received and processed in the regions where our servers or administrative email systems operate. By submitting your inquiry, you acknowledge that your information will be processed in accordance with this Privacy Policy and applicable data protection legislation.</p>
+
+    <h2 id="updates-contact">11. Policy Updates and Contact Information</h2>
+    <p>We may update this Privacy Policy periodically to reflect enhancements in our digital infrastructure, legal requirements, or business operations. Any updates will be published on this page with an updated &ldquo;Last Updated&rdquo; date.</p>
+    <p>For questions, feedback, or privacy concerns regarding this policy, please contact:</p>
+    <div class="legal-card">
+      <h4>Primecore Info Systems Pvt. Ltd.</h4>
+      <p>Inquiry &amp; Privacy Contact: <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a></p>
+      <p>Website: <a href="../">PrimeCoreInfo.com</a></p>
+    </div>
   </div>
 </section>
 '''
+
+data_protection_body = '''
+<section class="page-hero">
+  <p class="kicker">Security &amp; Governance</p>
+  <h1>Data Protection Statement</h1>
+  <p class="lede">Our operational principles for securing website information, safeguarding visitor data, and maintaining privacy integrity.</p>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <div class="legal-badge">Governance Overview &bull; Active Practice</div>
+
+    <div class="legal-card">
+      <h4>Our Commitment</h4>
+      <p>At Primecore Info Systems Pvt. Ltd., data protection and infrastructure resilience are foundational to our work as enterprise IT architects. This statement explains how we operationalize data security, respect visitor privacy, and manage technical controls across PrimeCoreInfo.com.</p>
+      <p style="margin-top:10px">Looking for our complete legal disclosures? Read our full <a href="../privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+
+    <h2>1. Data Governance Principles</h2>
+    <p>Our handling of digital information is governed by four core tenets:</p>
+    <ul>
+      <li><strong>Data Minimization:</strong> We only collect data that is strictly necessary to conduct direct business correspondence and safeguard website availability.</li>
+      <li><strong>Purpose Limitation:</strong> Information submitted for engineering inquiries is never repurposed for unsolicited commercial broadcasts, data reselling, or unauthorized tracking.</li>
+      <li><strong>Confidentiality &amp; Access Control:</strong> Inbound communications are restricted exclusively to authorized team members who require access to evaluate technical projects.</li>
+      <li><strong>Transparency:</strong> We provide clear, unambiguous documentation of our data flows, tracking status, and contact procedures.</li>
+    </ul>
+
+    <h2>2. Categories of Website Data Handled</h2>
+    <table class="legal-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Specific Elements</th>
+          <th>Storage Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Inquiry Data</strong></td>
+          <td>Name, work email, company name, phone, chosen service, and project message.</td>
+          <td>Application database (SQLite) &amp; encrypted operational email notification.</td>
+        </tr>
+        <tr>
+          <td><strong>Transient Network Logs</strong></td>
+          <td>Client IP address, user-agent string, and request timestamps.</td>
+          <td>Temporary memory-based rate limiting buffers for spam prevention.</td>
+        </tr>
+        <tr>
+          <td><strong>Client UI Preferences</strong></td>
+          <td>Responsive navigation state and motion reduction preferences.</td>
+          <td>Local device CSS/browser execution; zero remote transmission.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Security Practices &amp; Safeguards</h2>
+    <p>We deploy defense-in-depth measures designed to protect information submitted via our digital interfaces:</p>
+    <ul>
+      <li><strong>Transport Layer Security:</strong> All data in transit between your browser and our server is secured using modern TLS encryption protocols.</li>
+      <li><strong>Server-Side Input Validation:</strong> All form inputs are validated and sanitized server-side to prevent cross-site scripting (XSS), SQL injection, and payload overflow attempts.</li>
+      <li><strong>Anti-Abuse Protections:</strong> Our application server incorporates automated honeypot trap fields, burst rate-limiting per IP address, and duplicate submission suppressors to block malicious bots without collecting extraneous visitor identifiers.</li>
+      <li><strong>Infrastructure Isolation:</strong> Databases storing inquiry submissions are isolated within the backend runtime environment without public internet exposure.</li>
+    </ul>
+    <p><em>Please note: While we implement industry-standard safeguards, no digital transmission or internet infrastructure is 100% impenetrable. We do not make unreasonable or absolute security guarantees.</em></p>
+
+    <h2>4. Advertising Tracking &amp; Meta Business Tools Status</h2>
+    <div class="legal-card">
+      <h4>Tracking &amp; Third-Party Pixels</h4>
+      <p><strong>Verified Status:</strong> Meta Pixel, Meta Conversions API (CAPI), and third-party advertising cookies are currently <strong>not implemented</strong> on PrimeCoreInfo.com.</p>
+    </div>
+    <p>We maintain an advertising-tracker-free website baseline. If Meta Business Tools, conversion tracking APIs, or advertising pixels are evaluated or integrated in the future for campaign measurement:</p>
+    <ul>
+      <li>Tracking scripts will not be loaded unconditionally where applicable law requires user consent.</li>
+      <li>Clear opt-in / opt-out controls will be deployed prior to the transmission of client browser identifiers.</li>
+      <li>Any server-side conversions API integration will enforce data hashing (SHA-256) of personal identifiers in accordance with technical privacy guidelines.</li>
+    </ul>
+
+    <h2>5. Third-Party Sharing Principles</h2>
+    <p>Primecore Info Systems operates under a strict no-sale policy:</p>
+    <ul>
+      <li>We do not sell, license, or barter customer or visitor contact information.</li>
+      <li>We do not share your project details with external advertising brokers or behavioral advertising exchanges.</li>
+      <li>Data is only processed by essential operational service partners (such as SMTP mail gateways) acting under our direct instructions.</li>
+    </ul>
+
+    <h2>6. Data Retention &amp; Deletion Process</h2>
+    <p>We retain submitted project inquiries for as long as needed to fulfill consultative discussions, maintain professional business history, and satisfy legitimate record-keeping standards.</p>
+    <p>If you have previously submitted an inquiry through our website and wish to have your contact details purged from our records, you can submit a deletion request:</p>
+    <ul>
+      <li>Email your request to: <a href="mailto:Sadika.siddiqui55@gmail.com?subject=Data%20Deletion%20Request">Sadika.siddiqui55@gmail.com</a></li>
+      <li>Specify the email address associated with your original submission.</li>
+      <li>Our team will locate the record in our database and notify you once the record has been permanently removed.</li>
+    </ul>
+
+    <h2>7. Questions &amp; Data Protection Inquiries</h2>
+    <p>For inquiries regarding our data handling practices or to discuss secure infrastructure integration with our engineering architects, contact our team directly:</p>
+    <div class="legal-card">
+      <h4>Contact Information</h4>
+      <p><strong>Email:</strong> <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a></p>
+      <p><strong>Company:</strong> Primecore Info Systems Pvt. Ltd.</p>
+      <p><strong>Reference:</strong> <a href="../privacy-policy/">View Complete Privacy Policy &rarr;</a></p>
+    </div>
+  </div>
+</section>
+'''
+
 
 notfound_body = '''
 <section class="page-hero" style="min-height:58vh;display:flex;flex-direction:column;justify-content:center">
@@ -1518,6 +1720,7 @@ pages = [
     ("contact/index.html", doc("Contact | Primecore Info Systems", "Get started with Primecore Info Systems for cloud, infrastructure, and DevOps solutions.", "../", "contact", contact_body, False)),
     ("insights/index.html", doc("Insights | Primecore Info Systems", "Practical perspectives for cloud, infrastructure, and operations decisions.", "../", "insights", insights_body)),
     ("privacy-policy/index.html", doc("Privacy Policy | Primecore Info Systems", "How Primecore Info Systems uses information shared through this website.", "../", "home", privacy_body)),
+    ("data-protection/index.html", doc("Data Protection Statement | Primecore Info Systems", "Data governance, information security principles, and privacy protections at Primecore Info Systems.", "../", "home", data_protection_body)),
     ("cloud-transformation/index.html", doc("Cloud Transformation | Primecore Info Systems", "Move to the cloud with a plan you can trust.", "../", "services", cloud_body)),
     ("infrastructure-modernization/index.html", doc("Infrastructure Modernization | Primecore Info Systems", "Modernize core infrastructure for performance, resilience, and cloud-first operations.", "../", "services", infra_body)),
     ("managed-it-services/index.html", doc("Managed IT Services | Primecore Info Systems", "Proactive monitoring, responsive support, and operational ownership.", "../", "services", managed_body)),
