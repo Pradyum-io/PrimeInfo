@@ -13,12 +13,13 @@ def chrome(root: str, page: str):
         return " is-active" if page == name else ""
 
     header = f'''<header class="site-header">
-  <a class="brand" href="{href('')}" aria-label="Primecore Info Systems home"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
+  <a class="brand" href="{href('home/')}" aria-label="Primecore Info Systems home"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
   <nav class="nav" aria-label="Primary">
     <a class="{active("about").strip()}" href="{href("about/")}">About Us</a>
     <a class="{active("services").strip()}" href="{href("services/")}">Services</a>
     <a class="{active("solutions").strip()}" href="{href("#solutions")}">Solutions</a>
     <a class="{active("technologies").strip()}" href="{href("#technologies")}">Technologies</a>
+    <a class="{active("privacy").strip()}" href="{href("privacy-policy/")}">Privacy Policy</a>
     <a class="{active("contact").strip()}" href="{href("contact/")}">Contact</a>
     <a class="btn-talk" data-magnetic href="{href("contact/")}">Get Started</a>
   </nav>
@@ -29,6 +30,7 @@ def chrome(root: str, page: str):
   <a href="{href("services/")}">Services</a>
   <a href="{href("#solutions")}">Solutions</a>
   <a href="{href("#technologies")}">Technologies</a>
+  <a href="{href("privacy-policy/")}">Privacy Policy</a>
   <a href="{href("contact/")}">Contact</a>
   <a href="{href("contact/")}">Get Started</a>
 </nav>'''
@@ -45,7 +47,7 @@ def chrome(root: str, page: str):
     footer = f'''<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="{href('')}"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
+      <a class="brand" href="{href('home/')}"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
       <p>Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize their infrastructure, adopt cloud technologies and build reliable digital platforms.</p>
     </div>
     <div>
@@ -1336,7 +1338,7 @@ project_cloud_migration_body = '''
       <h2>Platform Interface Showcase</h2>
       <p>Explore the intuitive interface, real-time migration dashboards, and orchestration tools.</p>
     </div>
-    
+
     <div class="project-screenshot-grid stagger">
       <!-- Card 01 — Migration Control Center Dashboard -->
       <div class="project-ss-card reveal">
@@ -1695,31 +1697,26 @@ project_cloud_migration_body = '''
 </section>
 '''
 
-home_redirect = '''<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="refresh" content="0; url=../"/>
-<link rel="canonical" href="../"/>
-<title>Primecoreinfo</title>
-<script>location.replace("../");</script>
-</head>
-<body>
-<p><a href="../">Continue to Primecoreinfo</a></p>
-</body>
-</html>
-'''
+# Root Landing Page: Cloud Migration Platform with root relative paths ("./")
+root_project_body = (
+    project_cloud_migration_body
+    .replace('href="../../contact/', 'href="contact/')
+)
 
 pages = [
     ("index.html", doc(
+        "Enterprise Cloud Migration Platform | Primecore Info Systems",
+        "Automated workload discovery, risk-free landing zones, and zero-downtime cloud migration orchestration.",
+        "./", "projects", root_project_body, False)),
+    ("home/index.html", doc(
         "Primecore Info Systems | Modern IT Infrastructure & Cloud Solutions",
         "Primecore Info Systems helps businesses design, migrate, automate and optimize their IT infrastructure across AWS, Microsoft Azure and hybrid cloud environments.",
-        "./", "home", home_body, True)),
+        "../", "home", home_body, True)),
     ("about/index.html", doc("About Us | Primecore Info Systems", "Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize infrastructure and adopt cloud.", "../", "about", about_body)),
     ("services/index.html", doc("Services | Primecore Info Systems", "Cloud Infrastructure, DevOps & SRE, Cloud Migration, Managed Infrastructure, Security & Governance, FinOps, and Technology Services.", "../", "services", services_body)),
     ("contact/index.html", doc("Contact | Primecore Info Systems", "Get started with Primecore Info Systems for cloud, infrastructure, and DevOps solutions.", "../", "contact", contact_body, False)),
     ("insights/index.html", doc("Insights | Primecore Info Systems", "Practical perspectives for cloud, infrastructure, and operations decisions.", "../", "insights", insights_body)),
-    ("privacy-policy/index.html", doc("Privacy Policy | Primecore Info Systems", "How Primecore Info Systems uses information shared through this website.", "../", "home", privacy_body)),
+    ("privacy-policy/index.html", doc("Privacy Policy | Primecore Info Systems", "How Primecore Info Systems uses information shared through this website.", "../", "privacy", privacy_body)),
     ("data-protection/index.html", doc("Data Protection Statement | Primecore Info Systems", "Data governance, information security principles, and privacy protections at Primecore Info Systems.", "../", "home", data_protection_body)),
     ("cloud-transformation/index.html", doc("Cloud Transformation | Primecore Info Systems", "Move to the cloud with a plan you can trust.", "../", "services", cloud_body)),
     ("infrastructure-modernization/index.html", doc("Infrastructure Modernization | Primecore Info Systems", "Modernize core infrastructure for performance, resilience, and cloud-first operations.", "../", "services", infra_body)),
@@ -1729,7 +1726,6 @@ pages = [
     ("insights/modern-foundations/index.html", doc("Modern foundations | Primecore Info Systems Insights", "How to sequence infrastructure improvements around business risk.", "../../", "insights", article_found)),
     ("insights/operational-resilience/index.html", doc("Operational resilience | Primecore Info Systems Insights", "Why visibility and ownership matter as environments grow.", "../../", "insights", article_ops)),
     ("404.html", doc("Page Not Found | Primecore Info Systems", "The requested route does not exist.", "./", "home", notfound_body, False)),
-    ("home/index.html", home_redirect),
 ]
 
 if __name__ == "__main__":
