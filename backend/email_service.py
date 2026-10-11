@@ -20,7 +20,7 @@ def send_enquiry_notification(enquiry_data):
         )
         return False
 
-    recipient = NOTIFICATION_EMAIL or "Sadika.siddiqui55@gmail.com"
+    recipient = NOTIFICATION_EMAIL or "connect@primecoreinfo.com"
     subject = f"New Project Inquiry from {enquiry_data['name']}"
     if enquiry_data.get("company"):
         subject += f" ({enquiry_data['company']})"

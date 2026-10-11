@@ -13,7 +13,7 @@ def chrome(root: str, page: str):
         return " is-active" if page == name else ""
 
     header = f'''<header class="site-header">
-  <a class="brand" href="{href('projects/cloud-migration-platform/')}" aria-label="Primecore Info Systems home"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
+  <a class="brand" href="{href('')}" aria-label="Primecore Info Systems home"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
   <nav class="nav" aria-label="Primary">
     <a class="{active("about").strip()}" href="{href("about/")}">About Us</a>
     <a class="{active("services").strip()}" href="{href("services/")}">Services</a>
@@ -45,7 +45,7 @@ def chrome(root: str, page: str):
     footer = f'''<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="{href('projects/cloud-migration-platform/')}"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
+      <a class="brand" href="{href('')}"><img class="brand-mark-img" src="{href('assets/images/brand-logo.png')}" alt="Primecore Info Systems Logo"/><span>PRIMECORE INFO SYSTEMS</span></a>
       <p>Primecore Info Systems Pvt. Ltd. is an IT services and technology solutions company helping organizations modernize their infrastructure, adopt cloud technologies and build reliable digital platforms.</p>
     </div>
     <div>
@@ -67,7 +67,7 @@ def chrome(root: str, page: str):
     </div>
     <div>
       <h4>Contact</h4>
-      <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a>
+      <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a>
       <a href="{href("privacy-policy/")}">Privacy Policy</a>
       <a href="{href("data-protection/")}">Data Protection</a>
     </div>
@@ -692,7 +692,7 @@ contact_body = '''
       <h2 style="font-size:2rem">Tell us what you're building.</h2>
       <p style="margin-top:14px">Share the constraint, the system, or the outcome you need. We'll help shape the next step.</p>
       <dl>
-        <div class="contact-meta"><dt>Email</dt><dd><a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a></dd></div>
+        <div class="contact-meta"><dt>Email</dt><dd><a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></dd></div>
         <div class="contact-meta"><dt>Office hours</dt><dd>Monday – Friday<br>9:00 AM – 6:00 PM EST</dd></div>
         <div class="contact-meta"><dt>Response</dt><dd>We aim to respond to all inquiries within 1 business day.</dd></div>
       </dl>
@@ -725,7 +725,7 @@ contact_body = '''
       <div class="form-success">
         <p class="kicker">Received</p>
         <h3>Thank you. We'll take it from here.</h3>
-        <p style="margin-top:12px">If your email client opened, send the message to complete the inquiry. Otherwise write us directly at Sadika.siddiqui55@gmail.com.</p>
+        <p style="margin-top:12px">If your email client opened, send the message to complete the inquiry. Otherwise write us directly at connect@primecoreinfo.com.</p>
       </div>
     </div>
   </div>
@@ -820,7 +820,7 @@ privacy_body = '''
     <ol>
       <li><strong>Anti-Abuse Verification:</strong> The submission passes an automated honeypot inspection, request-rate checks, and validation on our application server.</li>
       <li><strong>Database Record:</strong> The inquiry is stored in our internal application database (SQLite) containing the submitted fields and an automated submission timestamp.</li>
-      <li><strong>Internal Notification Dispatch:</strong> The backend generates an automated administrative email notification dispatched via encrypted SMTP to our designated company inbox (<code>Sadika.siddiqui55@gmail.com</code>) so our engineering and operations team can promptly reply.</li>
+      <li><strong>Internal Notification Dispatch:</strong> The backend generates an automated administrative email notification dispatched via encrypted SMTP to our designated company inbox (<code>connect@primecoreinfo.com</code>) so our engineering and operations team can promptly reply.</li>
       <li><strong>Static Fallback:</strong> If our backend API is temporarily unreachable or operated in a static environment, the form offers a fallback mailto draft mechanism that enables you to send your inquiry directly via your local mail client.</li>
     </ol>
 
@@ -858,7 +858,7 @@ privacy_body = '''
     <p>Because our website provides public informational content without user account logins, requests for data inspection, correction, or deletion are processed directly by our team:</p>
     <div class="legal-card">
       <h4>How to Submit a Data Request</h4>
-      <p>Send an email to: <a href="mailto:Sadika.siddiqui55@gmail.com?subject=Privacy%20Data%20Request">Sadika.siddiqui55@gmail.com</a></p>
+      <p>Send an email to: <a href="mailto:connect@primecoreinfo.com?subject=Privacy%20Data%20Request">connect@primecoreinfo.com</a></p>
       <p>Please include your full name, the email address used when submitting your website inquiry, and the specific action you are requesting (e.g., &ldquo;Delete my inquiry record&rdquo; or &ldquo;Update my contact phone number&rdquo;). We will verify your identity using the associated email address and respond within thirty (30) days without charging a fee.</p>
     </div>
 
@@ -870,7 +870,7 @@ privacy_body = '''
     <p>For questions, feedback, or privacy concerns regarding this policy, please contact:</p>
     <div class="legal-card">
       <h4>Primecore Info Systems Pvt. Ltd.</h4>
-      <p>Inquiry &amp; Privacy Contact: <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a></p>
+      <p>Inquiry &amp; Privacy Contact: <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></p>
       <p>Website: <a href="../">PrimeCoreInfo.com</a></p>
     </div>
   </div>
@@ -965,7 +965,7 @@ data_protection_body = '''
     <p>We retain submitted project inquiries for as long as needed to fulfill consultative discussions, maintain professional business history, and satisfy legitimate record-keeping standards.</p>
     <p>If you have previously submitted an inquiry through our website and wish to have your contact details purged from our records, you can submit a deletion request:</p>
     <ul>
-      <li>Email your request to: <a href="mailto:Sadika.siddiqui55@gmail.com?subject=Data%20Deletion%20Request">Sadika.siddiqui55@gmail.com</a></li>
+      <li>Email your request to: <a href="mailto:connect@primecoreinfo.com?subject=Data%20Deletion%20Request">connect@primecoreinfo.com</a></li>
       <li>Specify the email address associated with your original submission.</li>
       <li>Our team will locate the record in our database and notify you once the record has been permanently removed.</li>
     </ul>
@@ -974,7 +974,7 @@ data_protection_body = '''
     <p>For inquiries regarding our data handling practices or to discuss secure infrastructure integration with our engineering architects, contact our team directly:</p>
     <div class="legal-card">
       <h4>Contact Information</h4>
-      <p><strong>Email:</strong> <a href="mailto:Sadika.siddiqui55@gmail.com">Sadika.siddiqui55@gmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></p>
       <p><strong>Company:</strong> Primecore Info Systems Pvt. Ltd.</p>
       <p><strong>Reference:</strong> <a href="../privacy-policy/">View Complete Privacy Policy &rarr;</a></p>
     </div>

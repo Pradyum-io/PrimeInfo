@@ -196,7 +196,7 @@
           "",
           data.message
         ].join("\n");
-        const mailto = `mailto:Sadika.siddiqui55@gmail.com?subject=${encodeURIComponent("Project inquiry from " + data.name)}&body=${encodeURIComponent(bodyText)}`;
+        const mailto = `mailto:connect@primecoreinfo.com?subject=${encodeURIComponent("Project inquiry from " + data.name)}&body=${encodeURIComponent(bodyText)}`;
 
         card.classList.add("is-done");
         window.location.href = mailto;

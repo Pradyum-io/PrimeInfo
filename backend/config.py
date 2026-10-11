@@ -31,7 +31,7 @@ CORS_ORIGINS = os.environ.get("CORS_ORIGINS", "*")
 DATABASE_PATH = os.environ.get("DATABASE_PATH", str(BASE_DIR / "enquiries.db"))
 
 # Email Settings
-NOTIFICATION_EMAIL = os.environ.get("NOTIFICATION_EMAIL", "Sadika.siddiqui55@gmail.com")
+NOTIFICATION_EMAIL = os.environ.get("NOTIFICATION_EMAIL", "connect@primecoreinfo.com")
 SMTP_HOST = os.environ.get("SMTP_HOST", "")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", 587))
 SMTP_USER = os.environ.get("SMTP_USER", "")
