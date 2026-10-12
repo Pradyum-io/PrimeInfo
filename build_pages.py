@@ -54,6 +54,7 @@ def chrome(root: str, page: str):
       <h4>Navigation</h4>
       <a href="{href("about/")}">About Us</a>
       <a href="{href("services/")}">Services</a>
+      <a href="{href("projects/")}">Case Studies &amp; Projects</a>
       <a href="{href("#solutions")}">Solutions</a>
       <a href="{href("#technologies")}">Technologies</a>
       <a href="{href("contact/")}">Contact</a>
@@ -185,8 +186,8 @@ home_body = f'''
     <p class="lede reveal" style="font-weight:600;color:var(--white);margin-bottom:12px">Modern IT Infrastructure &amp; Cloud Solutions for a Smarter, More Secure Business</p>
     <p class="lede reveal">Primecore Info Systems helps businesses design, migrate, automate and optimize their IT infrastructure across AWS, Microsoft Azure and hybrid cloud environments.</p>
     <div class="hero-actions reveal" style="margin-top:28px">
-      <a class="btn" data-magnetic href="contact/">Get Started</a>
-      <a class="btn-ghost" href="services/">Explore Our Services</a>
+      <a class="btn" data-magnetic href="../contact/">Get Started</a>
+      <a class="btn-ghost" href="../services/">Explore Our Services</a>
     </div>
   </div>
   {ARCH}
@@ -253,7 +254,7 @@ home_body = f'''
       <p>From cloud architecture to ongoing FinOps and managed infrastructure, we cover every aspect of modern IT operations.</p>
     </div>
     <div class="service-stack stagger">
-      <a class="service-panel reveal" href="services/#cloud-infrastructure">
+      <a class="service-panel reveal" href="../services/#cloud-infrastructure">
         <span class="sp-num">01</span>
         <div class="sp-copy">
           <h3>Cloud Infrastructure</h3>
@@ -261,7 +262,7 @@ home_body = f'''
         </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="services/#devops-sre">
+      <a class="service-panel reveal" href="../services/#devops-sre">
         <span class="sp-num">02</span>
         <div class="sp-copy">
           <h3>DevOps &amp; SRE</h3>
@@ -269,7 +270,7 @@ home_body = f'''
         </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="services/#cloud-migration">
+      <a class="service-panel reveal" href="../services/#cloud-migration">
         <span class="sp-num">03</span>
         <div class="sp-copy">
           <h3>Cloud Migration</h3>
@@ -277,7 +278,7 @@ home_body = f'''
         </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="services/#managed-infrastructure">
+      <a class="service-panel reveal" href="../services/#managed-infrastructure">
         <span class="sp-num">04</span>
         <div class="sp-copy">
           <h3>Managed Infrastructure Services</h3>
@@ -285,7 +286,7 @@ home_body = f'''
         </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="services/#security-governance">
+      <a class="service-panel reveal" href="../services/#security-governance">
         <span class="sp-num">05</span>
         <div class="sp-copy">
           <h3>Security &amp; Governance</h3>
@@ -293,7 +294,7 @@ home_body = f'''
         </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="services/#cloud-finops">
+      <a class="service-panel reveal" href="../services/#cloud-finops">
         <span class="sp-num">06</span>
         <div class="sp-copy">
           <h3>Cloud Cost Optimization / FinOps</h3>
@@ -301,7 +302,7 @@ home_body = f'''
         </div>
         <span class="sp-go" aria-hidden="true">→</span>
       </a>
-      <a class="service-panel reveal" href="services/#app-tech-services">
+      <a class="service-panel reveal" href="../services/#app-tech-services">
         <span class="sp-num">07</span>
         <div class="sp-copy">
           <h3>Application &amp; Technology Services</h3>
@@ -459,6 +460,32 @@ home_body = f'''
   </div>
 </section>
 
+<section id="clients">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Our Clients</p>
+      <h2>Trusted by Industry Leaders</h2>
+      <p>We work with enterprise technology organizations to engineer, optimize, and manage resilient cloud infrastructure.</p>
+    </div>
+    <div class="clients-grid stagger">
+      <div class="client-card reveal">
+        <div class="client-card-header">
+          <span class="client-badge-pill">Enterprise Client</span>
+          <span class="client-domain-tag">AWS Cloud Infrastructure</span>
+        </div>
+        <div class="client-brand-display">
+          <h3 class="client-name-title">StarNext Innovations Pvt. Ltd.</h3>
+          <p class="client-scope-subtitle">AWS Infrastructure, FinOps, Disaster Recovery &amp; Monitoring</p>
+        </div>
+        <p class="client-description">StarNext Innovations Pvt. Ltd. is an enterprise technology client leveraging AWS cloud infrastructure to support business-critical applications, reliable operations, and scalable IT services.</p>
+        <div class="client-card-footer">
+          <a class="client-case-link" href="../projects/starnext-innovations-aws-infrastructure/">Read Case Study <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="industries">
   <div class="wrap">
     <div class="section-head reveal">
@@ -548,6 +575,31 @@ about_body = '''
       <article class="step"><span class="step-dot"></span><span class="step-index">03</span><h3>Implement</h3><p>Migrate, automate and deploy with minimal disruption to ongoing operations.</p></article>
       <article class="step"><span class="step-dot"></span><span class="step-index">04</span><h3>Optimize</h3><p>Continuously improve performance, security, reliability and cloud spending.</p></article>
       <article class="step"><span class="step-dot"></span><span class="step-index">05</span><h3>Support</h3><p>Long-term operational management, proactive monitoring, and evolving technical support.</p></article>
+    </div>
+  </div>
+</section>
+<section id="clients">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Our Clients</p>
+      <h2>Client Partnerships &amp; Engagements</h2>
+      <p>We partner with enterprise organizations to deliver dependable cloud solutions, FinOps optimization, and resilient IT operations.</p>
+    </div>
+    <div class="clients-grid stagger">
+      <div class="client-card reveal">
+        <div class="client-card-header">
+          <span class="client-badge-pill">Enterprise Client</span>
+          <span class="client-domain-tag">AWS Cloud Infrastructure</span>
+        </div>
+        <div class="client-brand-display">
+          <h3 class="client-name-title">StarNext Innovations Pvt. Ltd.</h3>
+          <p class="client-scope-subtitle">AWS Infrastructure, FinOps, Disaster Recovery &amp; Monitoring</p>
+        </div>
+        <p class="client-description">StarNext Innovations Pvt. Ltd. is an enterprise technology client leveraging AWS cloud infrastructure to support business-critical applications, reliable operations, and scalable IT services.</p>
+        <div class="client-card-footer">
+          <a class="client-case-link" href="../projects/starnext-innovations-aws-infrastructure/">Read Case Study <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1650,6 +1702,33 @@ project_cloud_migration_body = '''
   </div>
 </section>
 
+<!-- OUR CLIENTS -->
+<section class="project-clients">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Our Clients</p>
+      <h2>Ongoing Client Engagements</h2>
+      <p>Primecore Info Systems partners with forward-looking technology enterprises across cloud infrastructure, FinOps, and continuous operations.</p>
+    </div>
+    <div class="clients-grid stagger">
+      <div class="client-card reveal">
+        <div class="client-card-header">
+          <span class="client-badge-pill">Enterprise Client</span>
+          <span class="client-domain-tag">AWS Cloud Infrastructure</span>
+        </div>
+        <div class="client-brand-display">
+          <h3 class="client-name-title">StarNext Innovations Pvt. Ltd.</h3>
+          <p class="client-scope-subtitle">AWS Infrastructure, FinOps, Disaster Recovery &amp; Monitoring</p>
+        </div>
+        <p class="client-description">StarNext Innovations Pvt. Ltd. is an enterprise technology client leveraging AWS cloud infrastructure to support business-critical applications, reliable operations, and scalable IT services.</p>
+        <div class="client-card-footer">
+          <a class="client-case-link" href="../../projects/starnext-innovations-aws-infrastructure/">Read Case Study <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 09 — FAQ -->
 <section class="project-faq">
   <div class="wrap">
@@ -1697,10 +1776,282 @@ project_cloud_migration_body = '''
 </section>
 '''
 
+# Projects & Case Studies Listing Page
+projects_listing_body = '''
+<section class="page-hero">
+  <p class="kicker reveal">Projects &amp; Case Studies</p>
+  <h1 class="reveal">Enterprise Engagements &amp; Solutions</h1>
+  <p class="lede reveal" style="margin-top:14px">Real-world cloud infrastructure management, FinOps optimization, disaster recovery, and automated migration solutions delivered by Primecore Info Systems.</p>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Case Studies</p>
+      <h2>Featured Client Work &amp; Platforms</h2>
+      <p>Explore how we help technology enterprises modernize, optimize, and operate dependable cloud platforms.</p>
+    </div>
+
+    <div class="projects-grid stagger">
+      <!-- Card 01 — StarNext Innovations -->
+      <article class="project-card reveal">
+        <div class="client-card-header">
+          <span class="client-badge-pill">Enterprise Client</span>
+          <span class="client-domain-tag">AWS Cloud</span>
+        </div>
+        <div>
+          <h2>StarNext Innovations Pvt. Ltd.</h2>
+          <p class="client-scope-subtitle">AWS Infrastructure, FinOps, Disaster Recovery &amp; Monitoring</p>
+        </div>
+        <p>StarNext Innovations Pvt. Ltd. is an enterprise technology client leveraging AWS cloud infrastructure to support business-critical applications, reliable operations, and scalable IT services.</p>
+        <div class="project-tags">
+          <span class="project-tag">AWS Data Centre</span>
+          <span class="project-tag">Cloud FinOps</span>
+          <span class="project-tag">Disaster Recovery (DR)</span>
+          <span class="project-tag">Monitoring &amp; Observability</span>
+        </div>
+        <div style="margin-top:auto;padding-top:12px">
+          <a class="btn" href="starnext-innovations-aws-infrastructure/">Read Case Study <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+
+      <!-- Card 02 — Cloud Migration Platform -->
+      <article class="project-card reveal">
+        <div class="client-card-header">
+          <span class="client-badge-pill">Solution Showcase</span>
+          <span class="client-domain-tag">AWS &amp; Azure</span>
+        </div>
+        <div>
+          <h2>Enterprise Cloud Migration Platform</h2>
+          <p class="client-scope-subtitle">Discovery, Landing Zones &amp; Zero-Downtime Migration</p>
+        </div>
+        <p>Automated workload discovery, risk-free landing zones, and zero-downtime cloud migration orchestration for mission-critical enterprise environments.</p>
+        <div class="project-tags">
+          <span class="project-tag">Workload Discovery</span>
+          <span class="project-tag">IaC Landing Zones</span>
+          <span class="project-tag">Zero-Downtime Replication</span>
+          <span class="project-tag">FinOps Modeling</span>
+        </div>
+        <div style="margin-top:auto;padding-top:12px">
+          <a class="btn-ghost" href="cloud-migration-platform/">Explore Platform <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+'''
+
+# StarNext Innovations Case Study Page
+starnext_case_study_body = '''
+<!-- 01 — HERO -->
+<section class="hero project-hero">
+  <div class="hero-copy">
+    <div class="back-nav-bar reveal" style="margin-bottom:16px">
+      <a class="client-case-link" href="../../projects/" style="font-size:0.88rem;letter-spacing:0.04em;text-transform:uppercase">&larr; Back to Projects &amp; Case Studies</a>
+    </div>
+    <p class="kicker reveal">Client Case Study / AWS Cloud Infrastructure</p>
+    <h1 class="reveal">StarNext Innovations<br><em class="accent">Pvt. Ltd.</em></h1>
+    <p class="lede reveal" style="font-weight:600;color:var(--white);margin-bottom:12px">AWS Infrastructure, FinOps, Disaster Recovery &amp; Monitoring</p>
+    <p class="lede reveal">StarNext Innovations Pvt. Ltd. is an enterprise technology client leveraging AWS cloud infrastructure to support business-critical applications, reliable operations, and scalable IT services.</p>
+    <div class="hero-actions reveal" style="margin-top:28px">
+      <a class="btn" data-magnetic href="../../contact/?ref=starnext-case-study">Discuss Your Infrastructure</a>
+      <a class="btn-ghost" href="../../projects/">Explore All Case Studies</a>
+    </div>
+  </div>
+  <div class="project-hero-visual reveal">
+    <div class="project-visual-frame">
+      <div class="pv-header">
+        <span class="pv-dot red"></span>
+        <span class="pv-dot yellow"></span>
+        <span class="pv-dot green"></span>
+        <span class="pv-title">starnext.aws-infrastructure.telemetry</span>
+      </div>
+      <div class="pv-body">
+        <div class="pv-metric-row">
+          <div class="pv-stat">
+            <span class="pv-label">Infrastructure Scope</span>
+            <span class="pv-val highlight">AWS Cloud</span>
+          </div>
+          <div class="pv-stat">
+            <span class="pv-label">FinOps &amp; DR</span>
+            <span class="pv-val cyan">Active Governance</span>
+          </div>
+          <div class="pv-stat">
+            <span class="pv-label">Observability</span>
+            <span class="pv-val mint">Continuous Monitoring</span>
+          </div>
+        </div>
+        <div class="pv-diagram">
+          <div class="pv-node src">AWS Data Centre</div>
+          <div class="pv-flow"><span class="flow-line"></span><span class="flow-particle"></span></div>
+          <div class="pv-node core">FinOps &amp; DR</div>
+          <div class="pv-flow"><span class="flow-line"></span><span class="flow-particle"></span></div>
+          <div class="pv-node dest">Monitoring &amp; Obs</div>
+        </div>
+        <div class="pv-footer-note">
+          <span class="pv-badge">Client Engagement</span>
+          <small class="pv-config-text">StarNext Innovations Pvt. Ltd.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — OVERVIEW -->
+<section class="project-overview">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">01 — Client Overview</p>
+      <h2>Enterprise Technology Client</h2>
+      <p>StarNext Innovations Pvt. Ltd. is an enterprise technology client leveraging AWS cloud infrastructure to support business-critical applications, reliable operations, and scalable IT services.</p>
+    </div>
+    <div class="hero-highlights reveal" style="margin-top:28px">
+      <div class="highlight-card">
+        <h4>Enterprise Technology</h4>
+        <p>Supporting business-critical applications with dependable, high-availability architecture.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>AWS Cloud Infrastructure</h4>
+        <p>Scalable cloud environments tailored for operational reliability and performance.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Scalable IT Services</h4>
+        <p>Continuous operational support engineered for business agility and sustained resilience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 — THE CHALLENGES -->
+<section class="project-problem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">02 — The Challenges</p>
+      <h2>AWS Infrastructure Reliability, Cost Optimization &amp; Disaster Recovery</h2>
+      <p>Managing AWS data centre infrastructure required continuous monitoring, cost optimization, effective disaster recovery planning, and improved operational visibility. The objective was to optimize cloud spending while maintaining infrastructure reliability, security, and business continuity.</p>
+    </div>
+    <div class="why-grid stagger">
+      <article class="why-item reveal">
+        <h3>Infrastructure Reliability</h3>
+        <p>Managing AWS data centre infrastructure to maintain high system reliability, security, and consistent application delivery.</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Cost Optimization</h3>
+        <p>Analyzing and optimizing cloud resource utilization to curb unwarranted spend while preserving performance.</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Disaster Recovery Planning</h3>
+        <p>Establishing effective disaster recovery readiness, connectivity protocols, and recovery initiatives to safeguard business continuity.</p>
+      </article>
+      <article class="why-item reveal">
+        <h3>Operational Visibility</h3>
+        <p>Overcoming operational blind spots through continuous monitoring and real-time detection of infrastructure issues.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — IMPLEMENTATION SOLUTION -->
+<section class="project-story">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">03 — Implementation Solution</p>
+      <h2>AWS Infrastructure Management &amp; Cloud Optimization</h2>
+      <p>Primecore Infosystems supported StarNext Innovations through four key initiatives:</p>
+    </div>
+    <div class="project-story-flow stagger">
+      <div class="story-step reveal">
+        <div class="story-dot">1</div>
+        <div class="story-content">
+          <span class="cat">Key Initiative 01</span>
+          <h3>AWS Data Centre Infrastructure</h3>
+          <p>Infrastructure management, configuration, deployment, and operational support for AWS environments.</p>
+        </div>
+      </div>
+
+      <div class="story-step reveal">
+        <div class="story-dot">2</div>
+        <div class="story-content">
+          <span class="cat">Key Initiative 02</span>
+          <h3>Cloud Cost Optimization</h3>
+          <p>Analysis and optimization of cloud resource utilization to improve cost efficiency.</p>
+        </div>
+      </div>
+
+      <div class="story-step reveal">
+        <div class="story-dot">3</div>
+        <div class="story-content">
+          <span class="cat">Key Initiative 03</span>
+          <h3>Disaster Recovery (DR)</h3>
+          <p>DR planning, infrastructure readiness, connectivity, and recovery initiatives to strengthen business continuity.</p>
+        </div>
+      </div>
+
+      <div class="story-step reveal">
+        <div class="story-dot">4</div>
+        <div class="story-content">
+          <span class="cat">Key Initiative 04</span>
+          <h3>Monitoring &amp; Observability</h3>
+          <p>Infrastructure monitoring, performance visibility, and operational issue detection to support reliable services.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — BUSINESS OUTCOME -->
+<section class="project-benefits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">04 — Business Outcome</p>
+      <h2>Improved Cloud Efficiency, Visibility &amp; Resilience</h2>
+      <p>The engagement focused on improving AWS infrastructure reliability, optimizing cloud expenditure, strengthening disaster recovery preparedness, and enhancing monitoring capabilities.</p>
+    </div>
+    <div class="outcomes">
+      <div class="outcome reveal">
+        <h3>Engagement Initiatives</h3>
+        <ul>
+          <li>AWS Data Centre infrastructure management and deployment support</li>
+          <li>Cloud resource utilization analysis and cost efficiency optimization</li>
+          <li>Disaster recovery readiness, connectivity, and recovery planning</li>
+          <li>Infrastructure monitoring and operational issue detection</li>
+        </ul>
+      </div>
+      <div class="outcome-mid reveal">&rarr;</div>
+      <div class="outcome after reveal">
+        <h3>Delivered Outcomes</h3>
+        <p style="margin-bottom:16px;color:var(--text-1)">Through these initiatives, Primecore Infosystems supports StarNext Innovations in building a more cost-efficient, observable, and resilient cloud infrastructure environment.</p>
+        <ul>
+          <li>Improved AWS infrastructure reliability and operational stability</li>
+          <li>Optimized cloud expenditure and reduced resource waste</li>
+          <li>Strengthened disaster recovery preparedness and continuity</li>
+          <li>Enhanced visibility across operational services and performance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — CTA BAND -->
+<section class="wrap" style="padding-bottom:96px">
+  <div class="cta-band reveal">
+    <p class="kicker">Get Started</p>
+    <h2>Build. Migrate. Automate. Optimize.</h2>
+    <p>Primecore Info Systems helps businesses design, migrate, automate and optimize their IT infrastructure across AWS, Microsoft Azure and hybrid cloud environments.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;position:relative;z-index:1;margin-top:20px">
+      <a class="btn" data-magnetic href="../../contact/?ref=starnext-case-study">Get Started <span aria-hidden="true">&rarr;</span></a>
+      <a class="btn-ghost" href="../../projects/">← View All Projects &amp; Case Studies</a>
+    </div>
+  </div>
+</section>
+'''
+
 # Root Landing Page: Cloud Migration Platform with root relative paths ("./")
 root_project_body = (
     project_cloud_migration_body
     .replace('href="../../contact/', 'href="contact/')
+    .replace('href="../../projects/', 'href="projects/')
+    .replace('href="../../home/', 'href="home/')
 )
 
 pages = [
@@ -1721,7 +2072,18 @@ pages = [
     ("cloud-transformation/index.html", doc("Cloud Transformation | Primecore Info Systems", "Move to the cloud with a plan you can trust.", "../", "services", cloud_body)),
     ("infrastructure-modernization/index.html", doc("Infrastructure Modernization | Primecore Info Systems", "Modernize core infrastructure for performance, resilience, and cloud-first operations.", "../", "services", infra_body)),
     ("managed-it-services/index.html", doc("Managed IT Services | Primecore Info Systems", "Proactive monitoring, responsive support, and operational ownership.", "../", "services", managed_body)),
-    ("projects/cloud-migration-platform/index.html", doc("Enterprise Cloud Migration Platform | Primecore Info Systems", "Automated workload discovery, risk-free landing zones, and zero-downtime cloud migration orchestration.", "../../", "projects", project_cloud_migration_body, False)),
+    ("projects/index.html", doc(
+        "Projects & Case Studies | Primecore Info Systems",
+        "Explore Primecore Info Systems enterprise client case studies and cloud solution platforms.",
+        "../", "projects", projects_listing_body)),
+    ("projects/cloud-migration-platform/index.html", doc(
+        "Enterprise Cloud Migration Platform | Primecore Info Systems",
+        "Automated workload discovery, risk-free landing zones, and zero-downtime cloud migration orchestration.",
+        "../../", "projects", project_cloud_migration_body, False)),
+    ("projects/starnext-innovations-aws-infrastructure/index.html", doc(
+        "StarNext Innovations Pvt. Ltd. — AWS Infrastructure, FinOps, Disaster Recovery & Monitoring | Primecore Info Systems",
+        "StarNext Innovations Pvt. Ltd. is an enterprise technology client leveraging AWS cloud infrastructure to support business-critical applications, reliable operations, and scalable IT services.",
+        "../../", "projects", starnext_case_study_body, False)),
     ("insights/cloud-readiness/index.html", doc("Cloud readiness | Primecore Info Systems Insights", "What to clarify before the first migration wave.", "../../", "insights", article_cloud)),
     ("insights/modern-foundations/index.html", doc("Modern foundations | Primecore Info Systems Insights", "How to sequence infrastructure improvements around business risk.", "../../", "insights", article_found)),
     ("insights/operational-resilience/index.html", doc("Operational resilience | Primecore Info Systems Insights", "Why visibility and ownership matter as environments grow.", "../../", "insights", article_ops)),
