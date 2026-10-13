@@ -1947,8 +1947,8 @@ project_cloud_migration_body = '''
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
-              <video class="demo-player" id="demo-video-0" poster="./assets/videos/poster-01.jpg" controls preload="none">
-                <source src="./assets/videos/01.mp4" type="video/mp4"/>
+              <video class="demo-player" id="demo-video-0" poster="../../assets/videos/poster-01.jpg" controls preload="none">
+                <source src="../../assets/videos/01.mp4" type="video/mp4"/>
               </video>
             </div>
           </div>
@@ -1973,8 +1973,8 @@ project_cloud_migration_body = '''
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
-              <video class="demo-player" id="demo-video-1" poster="./assets/videos/poster-02.jpg" controls preload="none">
-                <source src="./assets/videos/02.mp4" type="video/mp4"/>
+              <video class="demo-player" id="demo-video-1" poster="../../assets/videos/poster-02.jpg" controls preload="none">
+                <source src="../../assets/videos/02.mp4" type="video/mp4"/>
               </video>
             </div>
           </div>
@@ -1999,8 +1999,8 @@ project_cloud_migration_body = '''
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
-              <video class="demo-player" id="demo-video-2" poster="./assets/videos/poster-03.jpg" controls preload="none">
-                <source src="./assets/videos/03.mp4" type="video/mp4"/>
+              <video class="demo-player" id="demo-video-2" poster="../../assets/videos/poster-03.jpg" controls preload="none">
+                <source src="../../assets/videos/03.mp4" type="video/mp4"/>
               </video>
             </div>
           </div>
