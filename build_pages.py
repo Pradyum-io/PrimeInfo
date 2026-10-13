@@ -515,7 +515,6 @@ home_body = f'''
                 <span class="demo-dot yellow"></span>
                 <span class="demo-dot green"></span>
               </div>
-              <span class="demo-frame-title">kitchen-order-system.mp4</span>
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
@@ -541,7 +540,6 @@ home_body = f'''
                 <span class="demo-dot yellow"></span>
                 <span class="demo-dot green"></span>
               </div>
-              <span class="demo-frame-title">restaurant-os.mp4</span>
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
@@ -567,7 +565,6 @@ home_body = f'''
                 <span class="demo-dot yellow"></span>
                 <span class="demo-dot green"></span>
               </div>
-              <span class="demo-frame-title">clinic-os.mp4</span>
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
@@ -1947,7 +1944,6 @@ project_cloud_migration_body = '''
                 <span class="demo-dot yellow"></span>
                 <span class="demo-dot green"></span>
               </div>
-              <span class="demo-frame-title">kitchen-order-system.mp4</span>
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
@@ -1974,7 +1970,6 @@ project_cloud_migration_body = '''
                 <span class="demo-dot yellow"></span>
                 <span class="demo-dot green"></span>
               </div>
-              <span class="demo-frame-title">restaurant-os.mp4</span>
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
@@ -2001,7 +1996,6 @@ project_cloud_migration_body = '''
                 <span class="demo-dot yellow"></span>
                 <span class="demo-dot green"></span>
               </div>
-              <span class="demo-frame-title">clinic-os.mp4</span>
               <span class="demo-badge">LIVE DEMO</span>
             </div>
             <div class="demo-video-wrapper">
