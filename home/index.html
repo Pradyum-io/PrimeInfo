@@ -390,6 +390,144 @@
   </div>
 </section>
 
+<section class="demo-slideshow-section" id="demo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">See Our Solutions in Action</p>
+      <h2>Explore our software solutions through quick product demonstrations.</h2>
+    </div>
+    <div class="demo-showcase-container">
+      <div class="demo-tab-nav" role="tablist" aria-label="Demo videos">
+        <button class="demo-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="home-demo-slide-0" data-demo="0">
+          <span class="demo-tab-num">01</span> Kitchen Order System
+        </button>
+        <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="home-demo-slide-1" data-demo="1">
+          <span class="demo-tab-num">02</span> Restaurant OS
+        </button>
+        <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="home-demo-slide-2" data-demo="2">
+          <span class="demo-tab-num">03</span> Clinic OS
+        </button>
+      </div>
+      <div class="demo-viewport">
+        <div class="demo-slide" id="home-demo-slide-0" role="tabpanel">
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">kitchen-order-system.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="home-demo-video-0" poster="../assets/videos/poster-01.jpg" controls preload="none">
+                <source src="../assets/videos/01.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Restaurant Tech</span>
+            </div>
+            <h3 class="demo-title">Kitchen Order System</h3>
+            <p class="demo-desc">Explore kitchen order management and ticket tracking.</p>
+          </div>
+        </div>
+        <div class="demo-slide" id="home-demo-slide-1" role="tabpanel" hidden>
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">restaurant-os.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="home-demo-video-1" poster="../assets/videos/poster-02.jpg" controls preload="none">
+                <source src="../assets/videos/02.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Restaurant Tech</span>
+            </div>
+            <h3 class="demo-title">Restaurant OS</h3>
+            <p class="demo-desc">End-to-end restaurant operations and management platform.</p>
+          </div>
+        </div>
+        <div class="demo-slide" id="home-demo-slide-2" role="tabpanel" hidden>
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">clinic-os.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="home-demo-video-2" poster="../assets/videos/poster-03.jpg" controls preload="none">
+                <source src="../assets/videos/03.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Healthcare Tech</span>
+            </div>
+            <h3 class="demo-title">Clinic OS</h3>
+            <p class="demo-desc">Clinic management and patient operations platform.</p>
+          </div>
+        </div>
+      </div>
+      <div class="demo-controls-bar">
+        <button class="demo-nav-btn" id="home-demo-prev" aria-label="Previous demo" type="button">&#8592;</button>
+        <div class="demo-indicators" role="group" aria-label="Demo slide indicators">
+          <button class="demo-dot-btn is-active" type="button" aria-label="Demo 1" data-demo="0"></button>
+          <button class="demo-dot-btn" type="button" aria-label="Demo 2" data-demo="1"></button>
+          <button class="demo-dot-btn" type="button" aria-label="Demo 3" data-demo="2"></button>
+        </div>
+        <button class="demo-nav-btn" id="home-demo-next" aria-label="Next demo" type="button">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  (function() {
+    var section = document.getElementById('demo');
+    if (!section) return;
+    var tabs = section.querySelectorAll('.demo-tab');
+    var slides = section.querySelectorAll('.demo-slide');
+    var dots = section.querySelectorAll('.demo-dot-btn');
+    var videos = section.querySelectorAll('.demo-player');
+    var current = 0;
+    function switchTo(n) {
+      videos[current].pause();
+      slides[current].hidden = true;
+      tabs[current].classList.remove('is-active');
+      tabs[current].setAttribute('aria-selected', 'false');
+      dots[current].classList.remove('is-active');
+      current = (n + slides.length) % slides.length;
+      slides[current].hidden = false;
+      tabs[current].classList.add('is-active');
+      tabs[current].setAttribute('aria-selected', 'true');
+      dots[current].classList.add('is-active');
+    }
+    tabs.forEach(function(tab, i) { tab.addEventListener('click', function() { switchTo(i); }); });
+    dots.forEach(function(dot, i) { dot.addEventListener('click', function() { switchTo(i); }); });
+    document.getElementById('home-demo-prev').addEventListener('click', function() { switchTo(current - 1); });
+    document.getElementById('home-demo-next').addEventListener('click', function() { switchTo(current + 1); });
+  })();
+</script>
+
 <section id="industries">
   <div class="wrap">
     <div class="section-head reveal">
@@ -484,6 +622,8 @@
       <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a>
       <a href="../privacy-policy/">Privacy Policy</a>
       <a href="../data-protection/">Data Protection</a>
+      <a href="../terms-of-service/">Terms of Service</a>
+      <a href="../data-deletion/">Data Deletion</a>
     </div>
   </div>
   <div class="footer-bottom">

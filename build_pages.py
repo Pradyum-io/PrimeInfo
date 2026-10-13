@@ -73,6 +73,8 @@ def chrome(root: str, page: str):
       <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a>
       <a href="{href("privacy-policy/")}">Privacy Policy</a>
       <a href="{href("data-protection/")}">Data Protection</a>
+      <a href="{href("terms-of-service/")}">Terms of Service</a>
+      <a href="{href("data-deletion/")}">Data Deletion</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -485,6 +487,144 @@ home_body = f'''
     </div>
   </div>
 </section>
+
+<section class="demo-slideshow-section" id="demo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">See Our Solutions in Action</p>
+      <h2>Explore our software solutions through quick product demonstrations.</h2>
+    </div>
+    <div class="demo-showcase-container">
+      <div class="demo-tab-nav" role="tablist" aria-label="Demo videos">
+        <button class="demo-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="home-demo-slide-0" data-demo="0">
+          <span class="demo-tab-num">01</span> Kitchen Order System
+        </button>
+        <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="home-demo-slide-1" data-demo="1">
+          <span class="demo-tab-num">02</span> Restaurant OS
+        </button>
+        <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="home-demo-slide-2" data-demo="2">
+          <span class="demo-tab-num">03</span> Clinic OS
+        </button>
+      </div>
+      <div class="demo-viewport">
+        <div class="demo-slide" id="home-demo-slide-0" role="tabpanel">
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">kitchen-order-system.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="home-demo-video-0" poster="../assets/videos/poster-01.jpg" controls preload="none">
+                <source src="../assets/videos/01.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Restaurant Tech</span>
+            </div>
+            <h3 class="demo-title">Kitchen Order System</h3>
+            <p class="demo-desc">Explore kitchen order management and ticket tracking.</p>
+          </div>
+        </div>
+        <div class="demo-slide" id="home-demo-slide-1" role="tabpanel" hidden>
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">restaurant-os.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="home-demo-video-1" poster="../assets/videos/poster-02.jpg" controls preload="none">
+                <source src="../assets/videos/02.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Restaurant Tech</span>
+            </div>
+            <h3 class="demo-title">Restaurant OS</h3>
+            <p class="demo-desc">End-to-end restaurant operations and management platform.</p>
+          </div>
+        </div>
+        <div class="demo-slide" id="home-demo-slide-2" role="tabpanel" hidden>
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">clinic-os.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="home-demo-video-2" poster="../assets/videos/poster-03.jpg" controls preload="none">
+                <source src="../assets/videos/03.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Healthcare Tech</span>
+            </div>
+            <h3 class="demo-title">Clinic OS</h3>
+            <p class="demo-desc">Clinic management and patient operations platform.</p>
+          </div>
+        </div>
+      </div>
+      <div class="demo-controls-bar">
+        <button class="demo-nav-btn" id="home-demo-prev" aria-label="Previous demo" type="button">&#8592;</button>
+        <div class="demo-indicators" role="group" aria-label="Demo slide indicators">
+          <button class="demo-dot-btn is-active" type="button" aria-label="Demo 1" data-demo="0"></button>
+          <button class="demo-dot-btn" type="button" aria-label="Demo 2" data-demo="1"></button>
+          <button class="demo-dot-btn" type="button" aria-label="Demo 3" data-demo="2"></button>
+        </div>
+        <button class="demo-nav-btn" id="home-demo-next" aria-label="Next demo" type="button">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  (function() {{
+    var section = document.getElementById('demo');
+    if (!section) return;
+    var tabs = section.querySelectorAll('.demo-tab');
+    var slides = section.querySelectorAll('.demo-slide');
+    var dots = section.querySelectorAll('.demo-dot-btn');
+    var videos = section.querySelectorAll('.demo-player');
+    var current = 0;
+    function switchTo(n) {{
+      videos[current].pause();
+      slides[current].hidden = true;
+      tabs[current].classList.remove('is-active');
+      tabs[current].setAttribute('aria-selected', 'false');
+      dots[current].classList.remove('is-active');
+      current = (n + slides.length) % slides.length;
+      slides[current].hidden = false;
+      tabs[current].classList.add('is-active');
+      tabs[current].setAttribute('aria-selected', 'true');
+      dots[current].classList.add('is-active');
+    }}
+    tabs.forEach(function(tab, i) {{ tab.addEventListener('click', function() {{ switchTo(i); }}); }});
+    dots.forEach(function(dot, i) {{ dot.addEventListener('click', function() {{ switchTo(i); }}); }});
+    document.getElementById('home-demo-prev').addEventListener('click', function() {{ switchTo(current - 1); }});
+    document.getElementById('home-demo-next').addEventListener('click', function() {{ switchTo(current + 1); }});
+  }})();
+</script>
 
 <section id="industries">
   <div class="wrap">
@@ -931,6 +1071,147 @@ privacy_body = '''
 </section>
 '''
 
+terms_body = '''
+<section class="page-hero">
+  <p class="kicker">Legal &amp; Usage</p>
+  <h1>Terms of Service</h1>
+  <p class="lede">Conditions governing the use of Primecore Info Systems' website and services.</p>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <div class="legal-badge">Current Version &bull; Last Updated: October 2026</div>
+    <details class="legal-nav-box" open>
+      <summary>Table of Contents</summary>
+      <ul>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#use-of-site">2. Use of the Site</a></li>
+        <li><a href="#intellectual-property">3. Intellectual Property</a></li>
+        <li><a href="#disclaimer">4. Disclaimer &amp; Limitation of Liability</a></li>
+        <li><a href="#governing-law">5. Governing Law</a></li>
+        <li><a href="#contact-info">6. Contact Information</a></li>
+      </ul>
+    </details>
+
+    <h2 id="introduction">1. Introduction</h2>
+    <p>Welcome to the website of Primecore Info Systems Pvt. Ltd. (&ldquo;Primecore Info Systems,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). By accessing or using our website at PrimeCoreInfo.com (the &ldquo;Site&rdquo;), you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). If you do not agree with any part of these Terms, you should not use this Site.</p>
+    <p>These Terms apply to all visitors, users, and others who access or use the Site. We may update these Terms from time to time. Continued use of the Site after changes constitutes acceptance of the revised Terms.</p>
+
+    <h2 id="use-of-site">2. Use of the Site</h2>
+    <p>You may use this Site for lawful purposes only. You agree not to:</p>
+    <ul>
+      <li>Use the Site in any way that violates applicable local, national, or international laws or regulations.</li>
+      <li>Attempt to gain unauthorized access to any portion of the Site, its servers, or any systems connected to the Site.</li>
+      <li>Use automated tools, bots, or scripts to scrape, collect, or extract data from the Site without our prior written consent.</li>
+      <li>Transmit any material that is defamatory, obscene, fraudulent, or otherwise objectionable.</li>
+      <li>Interfere with or disrupt the integrity or performance of the Site or its underlying infrastructure.</li>
+    </ul>
+    <p>We reserve the right to restrict or terminate access to the Site for any user who violates these Terms.</p>
+
+    <h2 id="intellectual-property">3. Intellectual Property</h2>
+    <p>All content on this Site&mdash;including but not limited to text, graphics, logos, images, icons, software, and the overall design and layout&mdash;is the property of Primecore Info Systems Pvt. Ltd. or its content suppliers and is protected by applicable intellectual property laws.</p>
+    <p>You may not reproduce, distribute, modify, create derivative works of, publicly display, or otherwise use any content from this Site without our prior written permission, except for personal, non-commercial viewing purposes.</p>
+    <p>The Primecore Info Systems name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Primecore Info Systems Pvt. Ltd. You must not use such marks without our prior written permission.</p>
+
+    <h2 id="disclaimer">4. Disclaimer &amp; Limitation of Liability</h2>
+    <p>The information provided on this Site is for general informational purposes only. While we strive to keep the content accurate and up to date, we make no warranties or representations of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the Site or the information, products, services, or related content contained on the Site.</p>
+    <p>To the fullest extent permitted by applicable law:</p>
+    <ul>
+      <li>Primecore Info Systems shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of this Site.</li>
+      <li>Our total liability for any claims related to the Site shall not exceed the amount you paid to us (if any) for accessing the Site.</li>
+      <li>We are not responsible for any loss or damage resulting from reliance on information published on this Site.</li>
+    </ul>
+    <p>This Site may contain links to external websites. We have no control over the content or availability of those sites and accept no responsibility for them.</p>
+
+    <h2 id="governing-law">5. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under or in connection with these Terms shall be subject to the jurisdiction of the competent courts in India.</p>
+    <p><em>Note: The specific court jurisdiction for dispute resolution will be updated once the registered office details are confirmed by the company.</em></p>
+
+    <h2 id="contact-info">6. Contact Information</h2>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <div class="legal-card">
+      <h4>Primecore Info Systems Pvt. Ltd.</h4>
+      <p>Email: <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></p>
+      <p>Website: <a href="../">PrimeCoreInfo.com</a></p>
+    </div>
+  </div>
+</section>
+'''
+
+data_deletion_body = '''
+<section class="page-hero">
+  <p class="kicker">User Rights</p>
+  <h1>Data Deletion Request</h1>
+  <p class="lede">How to request removal of personal data from Primecore Info Systems' records.</p>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <div class="legal-badge">Policy Effective: October 2026</div>
+    <details class="legal-nav-box" open>
+      <summary>Table of Contents</summary>
+      <ul>
+        <li><a href="#request-process">1. Request Process</a></li>
+        <li><a href="#verification">2. Verification of Identity</a></li>
+        <li><a href="#timeline">3. Timeline &amp; Confirmation</a></li>
+        <li><a href="#scope">4. Scope of Deletion</a></li>
+        <li><a href="#contact">5. Contact &amp; Support</a></li>
+      </ul>
+    </details>
+
+    <h2 id="request-process">1. How to Request Data Deletion</h2>
+    <p>If you have previously submitted personal information through our website&mdash;for example, via the contact form or a direct email inquiry&mdash;you may request that we delete that information from our records.</p>
+    <p>To submit a data deletion request, send an email to:</p>
+    <div class="legal-card">
+      <h4>Data Deletion Request</h4>
+      <p>Email: <a href="mailto:connect@primecoreinfo.com?subject=Data%20Deletion%20Request">connect@primecoreinfo.com</a></p>
+      <p>Subject line: <strong>Data Deletion Request</strong></p>
+    </div>
+    <p>In your email, please include:</p>
+    <ul>
+      <li>Your <strong>full name</strong> as it was provided in your original inquiry.</li>
+      <li>The <strong>email address</strong> used when contacting us or submitting the form.</li>
+      <li>A brief description of the data you would like deleted (e.g., &ldquo;Delete my contact form submission from [approximate date]&rdquo;).</li>
+    </ul>
+
+    <h2 id="verification">2. Verification of Identity</h2>
+    <p>To protect your privacy, we will verify your identity before processing any deletion request. Verification is performed by confirming that the deletion request originates from the same email address associated with the original submission.</p>
+    <p>If the request is sent from a different email address, we may ask for additional information to confirm your identity before proceeding.</p>
+
+    <h2 id="timeline">3. Timeline &amp; Confirmation</h2>
+    <p>We aim to process all verified data deletion requests within <strong>30 days</strong> of receiving the request. Once your data has been deleted, we will send a confirmation email to the address from which the request was made.</p>
+    <p>Please note:</p>
+    <ul>
+      <li>Deletion is permanent and cannot be reversed.</li>
+      <li>If your data has already been deleted as part of our standard retention practices, we will inform you accordingly.</li>
+      <li>We do not charge any fee for processing deletion requests.</li>
+    </ul>
+
+    <h2 id="scope">4. Scope of Deletion</h2>
+    <p>Data deletion covers personal information stored in our internal systems as a result of your website inquiry, including:</p>
+    <ul>
+      <li>Contact form submission records (name, email, company, phone, message).</li>
+      <li>Associated internal notification emails generated by the submission.</li>
+    </ul>
+    <p>Deletion does not affect:</p>
+    <ul>
+      <li>Publicly available information that was not submitted through our website.</li>
+      <li>Anonymized or aggregated data that cannot be linked back to you.</li>
+      <li>Data we are required to retain for legal or regulatory compliance.</li>
+    </ul>
+
+    <h2 id="contact">5. Contact &amp; Support</h2>
+    <p>If you have questions about the deletion process, your privacy rights, or our data practices, please contact us:</p>
+    <div class="legal-card">
+      <h4>Primecore Info Systems Pvt. Ltd.</h4>
+      <p>Email: <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></p>
+      <p>Website: <a href="../">PrimeCoreInfo.com</a></p>
+    </div>
+    <p>For our complete data practices, please review our <a href="../privacy-policy/">Privacy Policy</a> and <a href="../data-protection/">Data Protection Statement</a>.</p>
+  </div>
+</section>
+'''
+
 data_protection_body = '''
 <section class="page-hero">
   <p class="kicker">Security &amp; Governance</p>
@@ -1222,7 +1503,7 @@ project_cloud_migration_body = '''
     <p class="lede reveal">Accelerate your transition to AWS, Microsoft Azure, and hybrid cloud environments with automated dependency mapping, security guardrails, and real-time operational telemetry.</p>
     <div class="hero-actions reveal" style="margin-top:28px">
       <a class="btn" data-magnetic href="../../contact/?ref=demo">Book Free Demo</a>
-      <a class="btn-ghost project-whatsapp-btn" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hello%20PrimeCoreInfo%20team,%20I%20am%20interested%20in%20the%20Enterprise%20Cloud%20Migration%20Platform" target="_blank" rel="noopener">WhatsApp Us <span class="whatsapp-badge">[Config Placeholder]</span></a>
+      <a class="btn-ghost project-whatsapp-btn" href="https://wa.me/918208531278?text=Hello%20PrimeCoreInfo%20team,%20I%20am%20interested%20in%20the%20Enterprise%20Cloud%20Migration%20Platform" target="_blank" rel="noopener">Chat on WhatsApp</a>
     </div>
   </div>
   <div class="project-hero-visual reveal">
@@ -1636,23 +1917,147 @@ project_cloud_migration_body = '''
 </section>
 
 <!-- 07 — DEMO VIDEO -->
-<section class="project-demo">
+<section class="demo-slideshow-section" id="demo">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="kicker">07 — Demo Video</p>
-      <h2>Platform Walkthrough in Action</h2>
-      <p>Watch how the Enterprise Cloud Migration Platform automates discovery and executes live migration waves.</p>
+      <p class="kicker">See Our Solutions in Action</p>
+      <h2>Explore our software solutions through quick product demonstrations.</h2>
     </div>
-    <div class="project-video-container reveal">
-      <div class="project-video-placeholder">
-        <div class="pvp-play-btn" aria-label="Play Demo Video">▶</div>
-        <h3>[ Project Demo Video Placeholder ]</h3>
-        <p>Supports YouTube, Vimeo, or Hosted MP4 Embed URLs.</p>
-        <span class="pvp-note">[ Configuration Note: Replace this placeholder container with your iframe / video player embed code when available ]</span>
+    <div class="demo-showcase-container">
+      <!-- Tab Nav -->
+      <div class="demo-tab-nav" role="tablist" aria-label="Demo videos">
+        <button class="demo-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="demo-slide-0" data-demo="0">
+          <span class="demo-tab-num">01</span> Kitchen Order System
+        </button>
+        <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="demo-slide-1" data-demo="1">
+          <span class="demo-tab-num">02</span> Restaurant OS
+        </button>
+        <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="demo-slide-2" data-demo="2">
+          <span class="demo-tab-num">03</span> Clinic OS
+        </button>
+      </div>
+      <!-- Viewport -->
+      <div class="demo-viewport">
+        <!-- Slide 0 -->
+        <div class="demo-slide" id="demo-slide-0" role="tabpanel">
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">kitchen-order-system.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="demo-video-0" poster="./assets/videos/poster-01.jpg" controls preload="none">
+                <source src="./assets/videos/01.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Restaurant Tech</span>
+            </div>
+            <h3 class="demo-title">Kitchen Order System</h3>
+            <p class="demo-desc">Explore kitchen order management and ticket tracking.</p>
+          </div>
+        </div>
+        <!-- Slide 1 -->
+        <div class="demo-slide" id="demo-slide-1" role="tabpanel" hidden>
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">restaurant-os.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="demo-video-1" poster="./assets/videos/poster-02.jpg" controls preload="none">
+                <source src="./assets/videos/02.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Restaurant Tech</span>
+            </div>
+            <h3 class="demo-title">Restaurant OS</h3>
+            <p class="demo-desc">End-to-end restaurant operations and management platform.</p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="demo-slide" id="demo-slide-2" role="tabpanel" hidden>
+          <div class="demo-frame">
+            <div class="demo-frame-header">
+              <div class="demo-frame-dots">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <span class="demo-frame-title">clinic-os.mp4</span>
+              <span class="demo-badge">LIVE DEMO</span>
+            </div>
+            <div class="demo-video-wrapper">
+              <video class="demo-player" id="demo-video-2" poster="./assets/videos/poster-03.jpg" controls preload="none">
+                <source src="./assets/videos/03.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+          <div class="demo-details">
+            <div class="demo-meta">
+              <span class="demo-pill">Product Demo</span>
+              <span class="demo-domain">Healthcare Tech</span>
+            </div>
+            <h3 class="demo-title">Clinic OS</h3>
+            <p class="demo-desc">Clinic management and patient operations platform.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <div class="demo-controls-bar">
+        <button class="demo-nav-btn" id="demo-prev" aria-label="Previous demo" type="button">&#8592;</button>
+        <div class="demo-indicators" role="group" aria-label="Demo slide indicators">
+          <button class="demo-dot-btn is-active" type="button" aria-label="Demo 1" data-demo="0"></button>
+          <button class="demo-dot-btn" type="button" aria-label="Demo 2" data-demo="1"></button>
+          <button class="demo-dot-btn" type="button" aria-label="Demo 3" data-demo="2"></button>
+        </div>
+        <button class="demo-nav-btn" id="demo-next" aria-label="Next demo" type="button">&#8594;</button>
       </div>
     </div>
   </div>
 </section>
+<script>
+  (function() {
+    const tabs = document.querySelectorAll('.demo-tab');
+    const slides = document.querySelectorAll('.demo-slide');
+    const dots = document.querySelectorAll('.demo-dot-btn');
+    const videos = document.querySelectorAll('.demo-player');
+    let current = 0;
+    function switchTo(n) {
+      videos[current].pause();
+      slides[current].hidden = true;
+      tabs[current].classList.remove('is-active');
+      tabs[current].setAttribute('aria-selected', 'false');
+      dots[current].classList.remove('is-active');
+      current = (n + slides.length) % slides.length;
+      slides[current].hidden = false;
+      tabs[current].classList.add('is-active');
+      tabs[current].setAttribute('aria-selected', 'true');
+      dots[current].classList.add('is-active');
+    }
+    tabs.forEach((tab, i) => tab.addEventListener('click', () => switchTo(i)));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => switchTo(i)));
+    document.getElementById('demo-prev').addEventListener('click', () => switchTo(current - 1));
+    document.getElementById('demo-next').addEventListener('click', () => switchTo(current + 1));
+  })();
+</script>
 
 <!-- 08 — CUSTOMER STORY -->
 <section class="project-story">
@@ -1770,7 +2175,7 @@ project_cloud_migration_body = '''
     <p>Book a personalized demonstration with our cloud infrastructure team or connect with us directly via WhatsApp to discuss your project requirements.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;position:relative;z-index:1">
       <a class="btn" data-magnetic href="../../contact/?ref=project-cta">Book Free Demo <span aria-hidden="true">→</span></a>
-      <a class="btn-ghost project-whatsapp-btn" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hello%20PrimeCoreInfo%20team,%20I%20would%20like%20to%20book%20a%20demo%20for%20the%20Cloud%20Migration%20Platform" target="_blank" rel="noopener">WhatsApp Us <span class="whatsapp-badge">[Config Placeholder]</span></a>
+      <a class="btn-ghost project-whatsapp-btn" href="https://wa.me/918208531278?text=Hello%20PrimeCoreInfo%20team,%20I%20would%20like%20to%20book%20a%20demo%20for%20the%20Cloud%20Migration%20Platform" target="_blank" rel="noopener">Chat on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -2069,6 +2474,8 @@ pages = [
     ("insights/index.html", doc("Insights | Primecore Info Systems", "Practical perspectives for cloud, infrastructure, and operations decisions.", "../", "insights", insights_body)),
     ("privacy-policy/index.html", doc("Privacy Policy | Primecore Info Systems", "How Primecore Info Systems uses information shared through this website.", "../", "privacy", privacy_body)),
     ("data-protection/index.html", doc("Data Protection Statement | Primecore Info Systems", "Data governance, information security principles, and privacy protections at Primecore Info Systems.", "../", "home", data_protection_body)),
+    ("terms-of-service/index.html", doc("Terms of Service | Primecore Info Systems", "Conditions governing use of the Primecore Info Systems website and services.", "../", "terms", terms_body)),
+    ("data-deletion/index.html", doc("Data Deletion Request | Primecore Info Systems", "How users can request removal of their personal data.", "../", "deletion", data_deletion_body)),
     ("cloud-transformation/index.html", doc("Cloud Transformation | Primecore Info Systems", "Move to the cloud with a plan you can trust.", "../", "services", cloud_body)),
     ("infrastructure-modernization/index.html", doc("Infrastructure Modernization | Primecore Info Systems", "Modernize core infrastructure for performance, resilience, and cloud-first operations.", "../", "services", infra_body)),
     ("managed-it-services/index.html", doc("Managed IT Services | Primecore Info Systems", "Proactive monitoring, responsive support, and operational ownership.", "../", "services", managed_body)),
