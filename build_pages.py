@@ -1062,7 +1062,7 @@ privacy_body = '''
     <div class="legal-card">
       <h4>Primecore Info Systems Pvt. Ltd.</h4>
       <p>Inquiry &amp; Privacy Contact: <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></p>
-      <p>Website: <a href="../">PrimeCoreInfo.com</a></p>
+      <p>Website: <a href="https://primecoreinfo.com" target="_blank" rel="noopener noreferrer">primecoreinfo.com</a></p>
     </div>
   </div>
 </section>
@@ -1129,7 +1129,7 @@ terms_body = '''
     <div class="legal-card">
       <h4>Primecore Info Systems Pvt. Ltd.</h4>
       <p>Email: <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></p>
-      <p>Website: <a href="../">PrimeCoreInfo.com</a></p>
+      <p>Website: <a href="https://primecoreinfo.com" target="_blank" rel="noopener noreferrer">primecoreinfo.com</a></p>
     </div>
   </div>
 </section>
@@ -1202,7 +1202,7 @@ data_deletion_body = '''
     <div class="legal-card">
       <h4>Primecore Info Systems Pvt. Ltd.</h4>
       <p>Email: <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a></p>
-      <p>Website: <a href="../">PrimeCoreInfo.com</a></p>
+      <p>Website: <a href="https://primecoreinfo.com" target="_blank" rel="noopener noreferrer">primecoreinfo.com</a></p>
     </div>
     <p>For our complete data practices, please review our <a href="../privacy-policy/">Privacy Policy</a> and <a href="../data-protection/">Data Protection Statement</a>.</p>
   </div>
@@ -1857,8 +1857,9 @@ project_cloud_migration_body = '''
           <p class="price-desc">Ideal for initial cloud readiness audit &amp; workload mapping.</p>
         </div>
         <div class="price-amount">
-          <span class="price-num">[ Starting Price Placeholder ]</span>
+          <span class="price-num">Contact us for pricing</span>
           <span class="price-period">Per Environment Audit</span>
+          <p class="price-desc">Need help choosing the right plan? Connect with our team at <a href="mailto:connect@primecoreinfo.com">connect@primecoreinfo.com</a>.</p>
         </div>
         <ul class="price-features">
           <li>Automated dependency mapping</li>
