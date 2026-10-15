@@ -1877,7 +1877,7 @@ project_cloud_migration_body = '''
           <p class="price-desc">Complete end-to-end migration execution with zero-downtime SLA.</p>
         </div>
         <div class="price-amount">
-          <span class="price-num">[ Custom Pricing Placeholder ]</span>
+          <span class="price-num">Custom Quote</span>
           <span class="price-period">Based on Workload Volume</span>
         </div>
         <ul class="price-features">
@@ -1896,7 +1896,7 @@ project_cloud_migration_body = '''
           <p class="price-desc">Post-migration 24/7 monitoring, FinOps &amp; governance.</p>
         </div>
         <div class="price-amount">
-          <span class="price-num">[ Retainer Placeholder ]</span>
+          <span class="price-num">Contact us</span>
           <span class="price-period">Monthly Managed Service</span>
         </div>
         <ul class="price-features">
@@ -1909,7 +1909,7 @@ project_cloud_migration_body = '''
       </div>
     </div>
     <p class="pricing-note reveal" style="text-align:center;margin-top:24px;font-size:0.88rem;color:var(--text-3)">
-      <em>[ Pricing Configuration Placeholder — Final pricing models and figures are customized based on verified project scope ]</em>
+      <em>Final pricing depends on your workloads, migration scope, and ongoing support requirements.</em>
     </p>
   </div>
 </section>
@@ -2054,48 +2054,48 @@ project_cloud_migration_body = '''
   })();
 </script>
 
-<!-- 08 — CUSTOMER STORY -->
+<!-- 08 — MIGRATION APPROACH -->
 <section class="project-story">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="kicker">08 — Customer Story</p>
-      <h2>Real-World Implementation Journey</h2>
-      <p>A structured look at how complex workload challenges are transformed into operational success.</p>
+      <p class="kicker">08 — Migration Approach</p>
+      <h2>A Structured Approach to Cloud Migration</h2>
+      <p>A practical, phased approach to assessing workloads, planning migration, executing cutovers, and validating results.</p>
     </div>
     <div class="project-story-flow stagger">
       <div class="story-step reveal">
         <div class="story-dot">1</div>
         <div class="story-content">
-          <span class="cat">Customer Profile</span>
-          <h3>[ Customer Profile Placeholder ]</h3>
-          <p>Enterprise Healthcare / Financial Services Organization with multi-region hybrid datacenters.</p>
+          <span class="cat">Step 1 — Assessment</span>
+          <h3>Workload Assessment</h3>
+          <p>Review the existing infrastructure, applications, dependencies, business priorities, and cloud readiness.</p>
         </div>
       </div>
 
       <div class="story-step reveal">
         <div class="story-dot">2</div>
         <div class="story-content">
-          <span class="cat">The Challenge</span>
-          <h3>[ Migration Challenge Placeholder ]</h3>
-          <p>150+ legacy VMs with inter-dependent SQL databases requiring zero downtime cutover under strict HIPAA compliance rules.</p>
+          <span class="cat">Step 2 — Planning</span>
+          <h3>Risk &amp; Dependency Mapping</h3>
+          <p>Identify application dependencies, security requirements, migration risks, downtime constraints, and workload priorities.</p>
         </div>
       </div>
 
       <div class="story-step reveal">
         <div class="story-dot">3</div>
         <div class="story-content">
-          <span class="cat">The Implementation</span>
-          <h3>[ Implementation Solution Placeholder ]</h3>
-          <p>Deployed automated discovery agents, built automated IaC landing zones in AWS, and executed continuous data replication over 4 wave stages.</p>
+          <span class="cat">Step 3 — Execution</span>
+          <h3>Phased Migration Execution</h3>
+          <p>Prepare the target cloud environment, migrate workloads in planned phases, validate data, and follow an agreed cutover and rollback plan.</p>
         </div>
       </div>
 
       <div class="story-step reveal">
         <div class="story-dot">4</div>
         <div class="story-content">
-          <span class="cat">The Business Outcome</span>
-          <h3>[ Business Outcome Placeholder ]</h3>
-          <p>100% of workloads migrated on schedule with zero customer-facing downtime and complete compliance verification.</p>
+          <span class="cat">Step 4 — Validation</span>
+          <h3>Validation &amp; Optimization</h3>
+          <p>Verify application functionality, performance, security, and data integrity, then identify opportunities for ongoing cost and performance optimization.</p>
         </div>
       </div>
     </div>
@@ -2449,6 +2449,7 @@ starnext_case_study_body = '''
 # Root Landing Page: Cloud Migration Platform with root relative paths ("./")
 root_project_body = (
     project_cloud_migration_body
+    .replace("../../assets/videos/", "./assets/videos/")
     .replace('href="../../contact/', 'href="contact/')
     .replace('href="../../projects/', 'href="projects/')
     .replace('href="../../home/', 'href="home/')
