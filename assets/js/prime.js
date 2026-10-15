@@ -146,10 +146,25 @@
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
 
-      let apiUrl = "/api/contact";
-      if (window.location.protocol === "file:") {
-        apiUrl = "http://127.0.0.1:8000/api/contact";
-      }
+      // Endpoint: data-api-url on the form (hosted backend), else same-origin.
+      const configured = (form.dataset.apiUrl || "").trim().replace(/\/+$/, "");
+      let apiUrl = configured ? configured + "/api/contact" : "/api/contact";
+
+      const failSubmit = () => {
+        card.classList.remove("is-loading");
+        if (submitBtn) submitBtn.disabled = false;
+      };
+
+      const showUnavailable = () => {
+        if (!errorBanner) return;
+        errorBanner.textContent = "We couldn't reach our inquiry service. Please try again later or email us at ";
+        const link = document.createElement("a");
+        link.href = "mailto:connect@primecoreinfo.com";
+        link.textContent = "connect@primecoreinfo.com";
+        errorBanner.appendChild(link);
+        errorBanner.appendChild(document.createTextNode("."));
+        errorBanner.hidden = false;
+      };
 
       try {
         const res = await fetch(apiUrl, {
@@ -161,45 +176,35 @@
           body: JSON.stringify(data)
         });
 
-        const json = await res.json().catch(() => ({}));
+        const ctype = res.headers.get("content-type") || "";
+        const json = ctype.includes("application/json") ? await res.json().catch(() => null) : null;
 
-        if (res.ok && json.success) {
+        if (json && res.ok && json.success) {
           card.classList.remove("is-loading");
           card.classList.add("is-done");
+        } else if (!json) {
+          // Non-JSON reply (e.g. static host without backend): service unavailable.
+          failSubmit();
+          showUnavailable();
         } else {
-          card.classList.remove("is-loading");
-          if (submitBtn) submitBtn.disabled = false;
+          failSubmit();
 
+          const messages = [];
           if (json.details) {
             Object.entries(json.details).forEach(([key, msg]) => {
               const field = form.querySelector(`[name="${key}"]`);
-              if (field) {
-                const wrap = field.closest(".field");
-                if (wrap) wrap.classList.add("error");
-              }
+              const wrap = field && field.closest(".field");
+              if (wrap) wrap.classList.add("error");
+              messages.push(msg);
             });
           }
 
-          showError(json.error || "Failed to submit inquiry. Please check your information and try again.");
+          showError(messages.length ? messages.join(" ") : (json.error || "Failed to submit inquiry. Please try again."));
         }
       } catch (err) {
-        // Fallback for offline or static hosting where API is not reachable
-        card.classList.remove("is-loading");
-        if (submitBtn) submitBtn.disabled = false;
-
-        const bodyText = [
-          `Name: ${data.name}`,
-          `Company: ${data.company || "—"}`,
-          `Email: ${data.email}`,
-          `Phone: ${data.phone || "—"}`,
-          `Service: ${data.service}`,
-          "",
-          data.message
-        ].join("\n");
-        const mailto = `mailto:connect@primecoreinfo.com?subject=${encodeURIComponent("Project inquiry from " + data.name)}&body=${encodeURIComponent(bodyText)}`;
-
-        card.classList.add("is-done");
-        window.location.href = mailto;
+        // Network failure / CORS block: nothing was submitted, so do not show success.
+        failSubmit();
+        showUnavailable();
       }
     });
   }

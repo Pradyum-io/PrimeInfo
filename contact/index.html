@@ -53,7 +53,7 @@
       </dl>
     </aside>
     <div class="form-card reveal">
-      <form id="contact-form" novalidate>
+      <form id="contact-form" novalidate data-api-url="">
         <div class="form-grid">
           <div class="field"><input id="name" name="name" type="text" required placeholder=" "/><label for="name">Name</label><p class="help">Please add your name.</p></div>
           <div class="field"><input id="company" name="company" type="text" placeholder=" "/><label for="company">Company</label></div>
@@ -73,6 +73,7 @@
           </div>
           <div class="field full"><textarea id="message" name="message" required placeholder=" "></textarea><label for="message">Project / message</label><p class="help">Tell us what needs to move forward.</p></div>
         </div>
+        <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label for="_website">Leave this field empty</label><input id="_website" name="_website" type="text" tabindex="-1" autocomplete="off" value=""/></div>
         <p style="margin:18px 0 16px;font-size:0.92rem">Information submitted is used only to respond to your inquiry.</p>
         <div class="form-error-banner" hidden style="color:#e08a8a;font-size:0.92rem;margin:0 0 16px;padding:10px 14px;border-radius:8px;background:rgba(224,138,138,0.1);border:1px solid rgba(224,138,138,0.3)"></div>
         <button class="btn" type="submit" data-magnetic>Start the conversation →</button>
@@ -80,7 +81,7 @@
       <div class="form-success">
         <p class="kicker">Received</p>
         <h3>Thank you. We'll take it from here.</h3>
-        <p style="margin-top:12px">If your email client opened, send the message to complete the inquiry. Otherwise write us directly at connect@primecoreinfo.com.</p>
+        <p style="margin-top:12px">Your inquiry has been submitted successfully. Our team will review it and get back to you.</p>
       </div>
     </div>
   </div>

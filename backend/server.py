@@ -1,11 +1,14 @@
 import json
 import logging
 import urllib.parse
-from http.server import SimpleHTTPRequestHandler, HTTPServer
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
 from threading import Thread
 import os
 
-from backend.config import HOST, PORT, CORS_ORIGINS
+from backend.config import (
+    BASE_DIR, HOST, PORT, IS_PRODUCTION, CORS_ALLOWED_ORIGINS, SERVE_STATIC, TRUSTED_PROXY_COUNT
+)
 from backend.database import init_db, save_enquiry
 from backend.validation import validate_contact_form
 from backend.email_service import send_enquiry_notification
@@ -18,14 +21,47 @@ logging.basicConfig(
 )
 logger = logging.getLogger("backend.server")
 
+# Only these file types are ever served as static files (local development only).
+PUBLIC_STATIC_EXTENSIONS = {
+    ".html", ".css", ".js", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif",
+    ".ico", ".mp4", ".webm", ".woff", ".woff2", ".xml",
+}
+BLOCKED_TOP_LEVEL_DIRS = {"backend", "__pycache__", "node_modules"}
+
 class ContactAPIHandler(SimpleHTTPRequestHandler):
-    """HTTP Request Handler providing /api/contact endpoint & static file server."""
+    """HTTP Request Handler providing /api/contact endpoint & (dev-only) static file server."""
+
+    timeout = 15  # seconds; drops stalled connections
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=str(BASE_DIR), **kwargs)
+
+    def _allowed_origin(self):
+        """Return the Access-Control-Allow-Origin value for this request, or None."""
+        if "*" in CORS_ALLOWED_ORIGINS:
+            return "*"
+        origin = (self.headers.get("Origin") or "").rstrip("/")
+        return origin if origin in CORS_ALLOWED_ORIGINS else None
 
     def _set_cors_headers(self):
-        """Set Cross-Origin Resource Sharing (CORS) headers."""
-        self.send_header("Access-Control-Allow-Origin", CORS_ORIGINS)
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type, Accept")
+        """Set Cross-Origin Resource Sharing (CORS) headers for allowed origins only."""
+        allowed = self._allowed_origin()
+        if allowed:
+            self.send_header("Access-Control-Allow-Origin", allowed)
+            self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type, Accept")
+        self.send_header("Vary", "Origin")
+
+    def _client_ip(self):
+        """Direct socket address, unless trusted proxies are configured."""
+        direct = self.client_address[0]
+        if TRUSTED_PROXY_COUNT <= 0:
+            return direct
+        hops = [h.strip() for h in (self.headers.get("X-Forwarded-For") or "").split(",") if h.strip()]
+        # Each trusted proxy appends the address it saw; count from the right.
+        if len(hops) >= TRUSTED_PROXY_COUNT:
+            return hops[-TRUSTED_PROXY_COUNT]
+        return direct
 
     def _send_json_response(self, status_code, payload):
         """Helper to send a JSON HTTP response."""
@@ -34,31 +70,66 @@ class ContactAPIHandler(SimpleHTTPRequestHandler):
         self._set_cors_headers()
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(response_data)))
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
         self.end_headers()
         self.wfile.write(response_data)
+
+    def _static_allowed(self):
+        """Allowlist check for static requests (dev only)."""
+        if not SERVE_STATIC:
+            return False
+        try:
+            target = Path(self.translate_path(self.path)).resolve()
+            rel = target.relative_to(Path(BASE_DIR).resolve())
+        except (ValueError, OSError):
+            return False
+        parts = rel.parts
+        if any(p.startswith(".") for p in parts):
+            return False
+        if parts and parts[0] in BLOCKED_TOP_LEVEL_DIRS:
+            return False
+        if target.is_dir():
+            return (target / "index.html").is_file()
+        return target.suffix.lower() in PUBLIC_STATIC_EXTENSIONS and target.is_file()
+
+    def list_directory(self, path):
+        self.send_error(404, "Not found")
+        return None
+
+    def do_HEAD(self):
+        if self.path.startswith("/api/") or not self._static_allowed():
+            self.send_error(404, "Not found")
+            return
+        super().do_HEAD()
 
     def do_OPTIONS(self):
         """Handle CORS preflight requests."""
         if self.path.startswith("/api/"):
+            if not self._allowed_origin():
+                self._send_json_response(403, {"success": False, "error": "Origin not allowed."})
+                return
             self.send_response(204)
             self._set_cors_headers()
             self.end_headers()
         else:
-            super().do_OPTIONS()
+            self.send_error(404, "Not found")
 
     def do_GET(self):
-        """Handle GET requests for API health check or static files."""
+        """Handle GET requests for API health check or (dev-only) static files."""
         parsed_path = urllib.parse.urlparse(self.path).path.rstrip("/")
-        
+
         if parsed_path == "/api/contact" or parsed_path == "/api/health":
             self._send_json_response(200, {
                 "status": "online",
-                "service": "PrimeCoreInfo Contact API",
-                "version": "1.0.0"
+                "service": "PrimeCoreInfo Contact API"
             })
             return
 
-        # Fallback to standard static file handling
+        if parsed_path.startswith("/api") or not self._static_allowed():
+            self._send_json_response(404, {"success": False, "error": "Not found."})
+            return
+
         super().do_GET()
 
     def do_POST(self):
@@ -69,8 +140,14 @@ class ContactAPIHandler(SimpleHTTPRequestHandler):
             self._send_json_response(404, {"success": False, "error": "Endpoint not found."})
             return
 
-        # Get client IP address
-        client_ip = self.headers.get("X-Forwarded-For", self.client_address[0]).split(",")[0].strip()
+        # Browsers always send Origin on cross-origin POSTs; reject unlisted ones.
+        # (Requests with no Origin header, e.g. curl, are still subject to all other checks.)
+        if self.headers.get("Origin") and not self._allowed_origin():
+            self._send_json_response(403, {"success": False, "error": "Origin not allowed."})
+            return
+
+        # Client address: direct socket peer unless trusted proxies are configured
+        client_ip = self._client_ip()
 
         # Check Rate Limiting
         if is_rate_limited(client_ip):
@@ -168,8 +245,9 @@ def run_server(host=HOST, port=PORT):
     """Initialize DB and run HTTP Server."""
     init_db()
     server_address = (host, port)
-    httpd = HTTPServer(server_address, ContactAPIHandler)
-    logger.info("PrimeCoreInfo Backend Server running on http://%s:%d", host if host != "0.0.0.0" else "127.0.0.1", port)
+    httpd = ThreadingHTTPServer(server_address, ContactAPIHandler)
+    logger.info("PrimeCoreInfo Backend Server (%s) listening on %s:%d, static=%s",
+                "production" if IS_PRODUCTION else "development", host, port, SERVE_STATIC)
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

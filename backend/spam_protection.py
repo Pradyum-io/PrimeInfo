@@ -1,11 +1,13 @@
 import time
 import logging
+import threading
 from collections import defaultdict
 from backend.config import RATE_LIMIT_MAX_REQUESTS, RATE_LIMIT_WINDOW_SECONDS
 
 logger = logging.getLogger("backend.spam_protection")
 
-# In-memory IP submission history
+# In-memory IP submission history (guarded by a lock: the server is threaded)
+_lock = threading.Lock()
 _ip_history = defaultdict(list)
 _last_submission = {}
 
@@ -17,28 +19,30 @@ def is_rate_limited(ip_address):
     now = time.time()
     cutoff = now - RATE_LIMIT_WINDOW_SECONDS
 
-    # Filter out requests older than window
-    recent_requests = [t for t in _ip_history[ip_address] if t > cutoff]
-    _ip_history[ip_address] = recent_requests
+    with _lock:
+        # Filter out requests older than window
+        recent_requests = [t for t in _ip_history[ip_address] if t > cutoff]
+        _ip_history[ip_address] = recent_requests
 
-    if len(recent_requests) >= RATE_LIMIT_MAX_REQUESTS:
-        logger.warning("Rate limit exceeded for IP %s (%d requests in %ds).",
-                       ip_address, len(recent_requests), RATE_LIMIT_WINDOW_SECONDS)
-        return True
+        if len(recent_requests) >= RATE_LIMIT_MAX_REQUESTS:
+            logger.warning("Rate limit exceeded for IP %s (%d requests in %ds).",
+                           ip_address, len(recent_requests), RATE_LIMIT_WINDOW_SECONDS)
+            return True
 
-    recent_requests.append(now)
-    return False
+        recent_requests.append(now)
+        return False
 
 def is_rapid_duplicate(ip_address, email):
     """Check if same IP/email submitted within 5 seconds."""
     key = f"{ip_address}:{email}"
     now = time.time()
-    last_time = _last_submission.get(key, 0)
-    if now - last_time < 5.0:
-        logger.warning("Rapid duplicate submission blocked for key %s.", key)
-        return True
-    _last_submission[key] = now
-    return False
+    with _lock:
+        last_time = _last_submission.get(key, 0)
+        if now - last_time < 5.0:
+            logger.warning("Rapid duplicate submission blocked for an IP/email pair.")
+            return True
+        _last_submission[key] = now
+        return False
 
 def check_honeypot(data):
     """Check if honeypot field is filled by spam bot."""
